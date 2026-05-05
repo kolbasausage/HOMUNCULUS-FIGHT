@@ -1,0 +1,140 @@
+[gd_scene format=3 uid="uid://ctpp224yw2jvk"]
+
+[ext_resource type="Texture2D" uid="uid://bg180lmsfc57w" path="res://lighter-solid-grey-background-lg6bup60ibh9mpel.jpg" id="1_trxqc"]
+[ext_resource type="Texture2D" uid="uid://dc7m388bj45xj" path="res://Background test FARM.png" id="2_qdl6u"]
+[ext_resource type="Texture2D" uid="uid://bj14mbn3nuifn" path="res://random dude.png" id="3_yudn3"]
+[ext_resource type="Script" uid="uid://cvjbhwqmlauty" path="res://player_hp_bar.gd" id="4_qdl6u"]
+[ext_resource type="Script" uid="uid://c5b0aqnblxost" path="res://player.gd" id="4_unus2"]
+[ext_resource type="Script" uid="uid://3tu3a28y7ijm" path="res://energy.gd" id="6_unus2"]
+[ext_resource type="Texture2D" uid="uid://4yrwx0k2twlm" path="res://Dummy.png" id="6_wu0ve"]
+[ext_resource type="Script" uid="uid://cdmfc8024m7om" path="res://enemyenergy.gd" id="7_08trx"]
+[ext_resource type="Script" uid="uid://cop8qenbcocsd" path="res://enemy.gd" id="7_x1xbu"]
+[ext_resource type="Script" uid="uid://baymd8y8r4jp3" path="res://enemy_hp_bar.gd" id="9_qdl6u"]
+[ext_resource type="Texture2D" uid="uid://cjn5v85wjenqv" path="res://panel 1.png" id="11_wu0ve"]
+[ext_resource type="Texture2D" uid="uid://berlula641y3b" path="res://panel scarecrow.png" id="12_6soco"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7sl15"]
+size = Vector2(1155.5, 166)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_81wyk"]
+size = Vector2(1462.7354, 1535.6764)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yudn3"]
+size = Vector2(888.01306, 1721.2278)
+
+[sub_resource type="Gradient" id="Gradient_08trx"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_x1xbu"]
+gradient = SubResource("Gradient_08trx")
+width = 1058
+height = 631
+
+[node name="Node2D" type="Node2D" unique_id=382972580]
+scale = Vector2(1.664222, 1.664222)
+
+[node name="Greybox" type="Sprite2D" parent="." unique_id=1737828216]
+position = Vector2(577, 565)
+scale = Vector2(1.1258667, 0.26093698)
+texture = ExtResource("1_trxqc")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Greybox" unique_id=1987649324]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Greybox/CharacterBody2D" unique_id=1030333235]
+position = Vector2(0.2220459, 0)
+scale = Vector2(0.88820463, 3.832343)
+shape = SubResource("RectangleShape2D_7sl15")
+
+[node name="GhettoHood72Uphtjoiaod55Du" type="Sprite2D" parent="." unique_id=181043682]
+position = Vector2(576.00006, 324)
+scale = Vector2(0.60937506, 0.60409725)
+texture = ExtResource("2_qdl6u")
+
+[node name="Player" type="Sprite2D" parent="." unique_id=175160999 node_paths=PackedStringArray("enemy_hp_bar")]
+position = Vector2(262, 373.00003)
+scale = Vector2(0.37103176, 0.3773809)
+texture = ExtResource("3_yudn3")
+script = ExtResource("4_unus2")
+enemy_hp_bar = NodePath("../EnemyEnergyBar/EnemyHPBar")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Player" unique_id=175865194]
+position = Vector2(1840.8127, -2.6499023)
+scale = Vector2(0.6346383, 0.6239611)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/CharacterBody2D" unique_id=1336008240]
+position = Vector2(-2900.5703, 14.864014)
+scale = Vector2(0.39321166, 0.4839504)
+shape = SubResource("RectangleShape2D_81wyk")
+
+[node name="Enemy" type="Sprite2D" parent="." unique_id=1807806464 node_paths=PackedStringArray("player_hp_bar")]
+position = Vector2(845.00006, 379.00003)
+scale = Vector2(0.48, 0.47908443)
+texture = ExtResource("6_wu0ve")
+script = ExtResource("7_x1xbu")
+player_hp_bar = NodePath("../PlayerEnergyBar/PlayerHPBar")
+
+[node name="CharacterBody2D2" type="CharacterBody2D" parent="Enemy" unique_id=396969706]
+position = Vector2(0.00024414063, 0)
+scale = Vector2(0.929, 0.93)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Enemy/CharacterBody2D2" unique_id=1437988467]
+position = Vector2(14.576416, -1.1221313)
+rotation = -3.1415925
+scale = Vector2(0.3156702, 0.28035286)
+shape = SubResource("RectangleShape2D_yudn3")
+
+[node name="PlayerEnergyBar" type="TextureProgressBar" parent="." unique_id=1277075371]
+offset_left = 215.00002
+offset_top = 513.0
+offset_right = 1273.0
+offset_bottom = 1153.0
+scale = Vector2(0.18574072, 0.05365717)
+texture_under = SubResource("GradientTexture2D_x1xbu")
+texture_progress = ExtResource("1_trxqc")
+script = ExtResource("6_unus2")
+metadata/_edit_use_anchors_ = true
+
+[node name="PlayerHPBar" type="TextureProgressBar" parent="PlayerEnergyBar" unique_id=1988750124]
+layout_mode = 0
+offset_top = 764.1109
+offset_right = 1058.0
+offset_bottom = 1404.1108
+texture_under = SubResource("GradientTexture2D_x1xbu")
+texture_progress = ExtResource("1_trxqc")
+tint_progress = Color(0.99607843, 0, 0, 1)
+script = ExtResource("4_qdl6u")
+metadata/_edit_use_anchors_ = true
+
+[node name="EnemyEnergyBar" type="TextureProgressBar" parent="." unique_id=2025529345]
+offset_left = 912.00006
+offset_top = 513.0
+offset_right = 1970.0
+offset_bottom = 1153.0001
+scale = Vector2(-0.185, 0.053)
+texture_under = SubResource("GradientTexture2D_x1xbu")
+texture_progress = ExtResource("1_trxqc")
+script = ExtResource("7_08trx")
+metadata/_edit_use_anchors_ = true
+
+[node name="EnemyHPBar" type="TextureProgressBar" parent="EnemyEnergyBar" unique_id=1269053381]
+layout_mode = 0
+offset_left = 0.000104904175
+offset_top = 751.14575
+offset_right = 1058.0001
+offset_bottom = 1391.1458
+scale = Vector2(1.0007827, 1)
+texture_under = SubResource("GradientTexture2D_x1xbu")
+texture_progress = ExtResource("1_trxqc")
+tint_progress = Color(0.99607843, 0, 0, 1)
+script = ExtResource("9_qdl6u")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel1" type="Sprite2D" parent="." unique_id=2058987691]
+position = Vector2(265, 550)
+scale = Vector2(0.37407994, 0.37407994)
+texture = ExtResource("11_wu0ve")
+
+[node name="Panel2" type="Sprite2D" parent="." unique_id=607078499]
+position = Vector2(861.9999, 550)
+scale = Vector2(-0.374, 0.374)
+texture = ExtResource("12_6soco")
