@@ -16,6 +16,15 @@ func take_damage(amount: float):
 	if player_hp <= 0:
 		die()
 
+func heal(amount):
+	player_hp += amount
+	
+	# Clamp HP between 0 and max_value
+	player_hp = clamp(player_hp, 0, max_value)
+	
+	# Update the visible bar immediately
+	value = player_hp
+	
 func die():
 	print("Your homunculus died!")
 	

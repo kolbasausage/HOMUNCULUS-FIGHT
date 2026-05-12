@@ -3,23 +3,61 @@ extends Sprite2D
 @onready var energy_bar = $"../PlayerEnergyBar"  #path to my energy node
 @export var enemy_hp_bar: TextureProgressBar #Enemy HP Bar
 
+
 var original_scale: Vector2 #Original scale of the sprite
 
 func _ready():
 	original_scale = scale
 
-#Processes attack input
-func _process(_delta: float) -> void: 
-	if Input.is_action_just_pressed("ui_right"):
-		try_attack()
-
 #Attack when theres enough energy
+# PLAYER SCRIPT
+# Add these new functions anywhere below try_attack()
+
 func try_attack():
-	if energy_bar.has_enough(20):
-		attack()
-		energy_bar.energy -= 20  # or energy_bar.consume(20)
-	else:
-		print("Not enough energy")
+	# Basic attack on Right Arrow (20 energy)
+	if Input.is_action_just_pressed("ui_right"):
+		if energy_bar.has_enough(20):
+			attack()
+			energy_bar.energy -= 20
+		else:
+			print("Not enough energy")
+
+	# Heal on Up Arrow (50 energy)
+	if Input.is_action_just_pressed("ui_up"):
+		if energy_bar.has_enough(50):
+			heal()
+			energy_bar.energy -= 50
+		else:
+			print("Not enough energy to heal")
+
+	# Ultimate on Left Arrow (90 energy)
+	if Input.is_action_just_pressed("ui_left"):
+		if energy_bar.has_enough(90):
+			ultimate()
+			energy_bar.energy -= 90
+		else:
+			print("Not enough energy for ultimate")
+
+
+# Replace your _process() with this
+func _process(_delta: float) -> void:
+	try_attack()
+
+
+# New ability: Heal
+func heal():
+	print("Player heals!")
+	# Assuming your HP bar has a heal(amount) function
+	$"../PlayerEnergyBar/PlayerHPBar".heal(50)
+	squish()
+
+
+# New ability: Ultimate
+func ultimate():
+	print("PLAYER ULTIMATE!")
+	enemy_hp_bar.take_damage(60)
+	squish()
+	await attack_move()
 
 #Squish effect when the homunculus attacks
 func squish():

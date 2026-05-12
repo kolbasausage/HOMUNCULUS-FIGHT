@@ -67,7 +67,7 @@ scale = Vector2(0.39321166, 0.4839504)
 shape = SubResource("RectangleShape2D_81wyk")
 
 [node name="Enemy" type="Sprite2D" parent="." unique_id=1807806464 node_paths=PackedStringArray("player_hp_bar")]
-position = Vector2(845.00006, 379.00003)
+position = Vector2(845.00006, 359.92798)
 scale = Vector2(0.48, 0.47908443)
 texture = ExtResource("6_wu0ve")
 script = ExtResource("7_x1xbu")
