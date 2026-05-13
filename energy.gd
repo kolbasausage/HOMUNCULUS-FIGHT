@@ -9,6 +9,8 @@ func _ready() -> void:
 	value = energy
 
 func _process(delta: float) -> void:
+	if get_parent().battle_busy:
+		return
 	energy += energy_speed * delta
 	energy = clamp(energy, min_value, max_value)
 	value = energy

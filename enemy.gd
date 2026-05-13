@@ -19,6 +19,8 @@ func random_attack_loop() -> void:
 		try_attack()
 
 func try_attack():
+	if get_parent().battle_busy:
+		return
 	if energy_bar.has_enough(20):
 		attack()
 		energy_bar.energy -= 20  #reduce energy by 20
@@ -28,7 +30,7 @@ func try_attack():
 func squish():
 	scale = original_scale * Vector2(1.2, 0.8)
 	
-	var timer = get_tree().create_timer(0.1)
+	var timer = get_tree().create_timer(0.3)
 	timer.timeout.connect(_on_squish_finished)
 
 func _on_squish_finished():
@@ -43,8 +45,8 @@ func attack():
 func attack_move():
 	var original_pos = position #Original position
 	
-	position += Vector2(-400, 0) #Position the enemy sprite moves to the left
+	position += Vector2(-200, 0) #Position the enemy sprite moves to the left
 	
-	await get_tree().create_timer(0.2).timeout #Timer 0.2 seconds
+	await get_tree().create_timer(0.7).timeout #Timer 0.2 seconds
 	
 	position = original_pos #Return to original position of the sprite
