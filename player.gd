@@ -39,12 +39,11 @@ func try_attack():
 			print("Not enough energy for ultimate")
 
 
-# Replace your _process() with this
 func _process(_delta: float) -> void:
 	try_attack()
 
 
-# New ability: Heal
+# Heal ability connected to player hp bar
 func heal():
 	print("Player heals!")
 	# Assuming your HP bar has a heal(amount) function
@@ -52,7 +51,7 @@ func heal():
 	squish()
 
 
-# New ability: Ultimate
+# Ultimate attack
 func ultimate():
 	print("PLAYER ULTIMATE!")
 	enemy_hp_bar.take_damage(60)
