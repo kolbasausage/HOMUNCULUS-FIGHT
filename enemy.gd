@@ -21,9 +21,9 @@ func random_attack_loop() -> void:
 func try_attack():
 	if get_parent().battle_busy:
 		return
-	if energy_bar.has_enough(20):
+	if energy_bar.has_enough(25):
 		attack()
-		energy_bar.energy -= 20  #reduce energy by 20
+		energy_bar.energy -= 25  #reduce energy by 20
 	else:
 		print("Enemy attempted his attack but appeared to be exhausted")
 

@@ -14,25 +14,25 @@ func try_attack():
 		return
 	# Basic attack on Right Arrow (20 energy)
 	if Input.is_action_just_pressed("Ability_1"):
-		if energy_bar.has_enough(20):
+		if energy_bar.has_enough(25):
 			attack()
-			energy_bar.energy -= 20
+			energy_bar.energy -= 25
 		else:
 			print("Not enough energy")
 
 	# Heal on Up Arrow (50 energy)
 	if Input.is_action_just_pressed("Ability_2"):
-		if energy_bar.has_enough(50):
+		if energy_bar.has_enough(65):
 			heal()
-			energy_bar.energy -= 50
+			energy_bar.energy -= 65
 		else:
 			print("Not enough energy to heal")
 
 	# Ultimate on Left Arrow (90 energy)
 	if Input.is_action_just_pressed("Ability_3"):
-		if energy_bar.has_enough(90):
+		if energy_bar.has_enough(100):
 			ultimate()
-			energy_bar.energy -= 90
+			energy_bar.energy -= 100
 		else:
 			print("Not enough energy for ultimate")
 
