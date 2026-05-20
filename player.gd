@@ -37,7 +37,6 @@ func try_attack():
 			print("Not enough energy for ultimate")
 
 
-# Replace your _process() with this
 func _process(_delta: float) -> void:
 	try_attack()
 
@@ -46,7 +45,6 @@ func _process(_delta: float) -> void:
 func heal():
 	get_parent().battle_busy = true 
 	print("Player heals!")
-	# Assuming your HP bar has a heal(amount) function
 	$"../PlayerHPBar".heal(50)
 	squish()
 	get_parent().battle_busy = false
