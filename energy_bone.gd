@@ -20,4 +20,4 @@ func _ready():
 	var y = bar_height * (1.0 - ratio)
 
 	# Move the sprite vertically to that exact position.
-	position.y = y
+	position.y = y + (texture.get_height() * scale.y / 2.0)
