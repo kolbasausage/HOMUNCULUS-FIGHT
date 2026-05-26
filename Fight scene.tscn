@@ -16,8 +16,10 @@
 [ext_resource type="Texture2D" uid="uid://berlula641y3b" path="res://panel scarecrow.png" id="12_6soco"]
 [ext_resource type="Texture2D" uid="uid://digwpr8vrk4pc" path="res://new ui sketch transparent.png" id="14_0pkur"]
 [ext_resource type="Texture2D" uid="uid://b701kn6qqlsxs" path="res://Energy_bar.png" id="15_vdtfd"]
-[ext_resource type="Texture2D" uid="uid://cr15bx7of2cdk" path="res://Energy_bone.png" id="16_vdtfd"]
-[ext_resource type="Script" uid="uid://dlf4yhtcuqr7i" path="res://energy_bone.gd" id="17_v21ns"]
+[ext_resource type="Texture2D" uid="uid://bfmdowydgglal" path="res://Energy_marker.png" id="17_40dok"]
+[ext_resource type="Script" uid="uid://d1kbe1iema5la" path="res://energy_marker_3.gd" id="18_acq7k"]
+[ext_resource type="Script" uid="uid://c6qo5d3eqno8" path="res://energy_marker_2.gd" id="19_4gpex"]
+[ext_resource type="Script" uid="uid://dulxy3765cmp6" path="res://energy_marker.gd" id="20_c6jd5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7sl15"]
 size = Vector2(1155.5, 166)
@@ -31,20 +33,10 @@ size = Vector2(888.01306, 1721.2278)
 [sub_resource type="Gradient" id="Gradient_08trx"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_40dok"]
-gradient = SubResource("Gradient_08trx")
-width = 974
-height = 749
-
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_x1xbu"]
 gradient = SubResource("Gradient_08trx")
 width = 1052
 height = 631
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_4gpex"]
-gradient = SubResource("Gradient_08trx")
-width = 974
-height = 755
 
 [node name="Node2D" type="Node2D" unique_id=382972580]
 scale = Vector2(1.664222, 1.664222)
@@ -101,16 +93,15 @@ scale = Vector2(0.3156702, 0.28035286)
 shape = SubResource("RectangleShape2D_yudn3")
 
 [node name="PlayerEnergyBar" type="TextureProgressBar" parent="." unique_id=1277075371]
-offset_left = 94.93926
-offset_top = 37.855484
-offset_right = 1152.9392
-offset_bottom = 793.85547
+offset_left = 80.5181
+offset_top = 49.27227
+offset_right = 1138.5181
+offset_bottom = 805.2723
 rotation = -3.1415927
-scale = Vector2(0.06499998, -0.54254663)
+scale = Vector2(0.30885425, -0.51762336)
 min_value = 6.285
-value = 10.285
+value = 100.0
 fill_mode = 3
-texture_under = SubResource("GradientTexture2D_40dok")
 texture_progress = ExtResource("8_40dok")
 script = ExtResource("6_unus2")
 metadata/_edit_use_anchors_ = true
@@ -129,14 +120,14 @@ script = ExtResource("4_qdl6u")
 metadata/_edit_use_anchors_ = true
 
 [node name="EnemyEnergyBar" type="TextureProgressBar" parent="." unique_id=2025529345]
-offset_left = 1066.5645
-offset_top = 36.052883
-offset_right = 2124.5645
-offset_bottom = 676.053
+offset_left = 1074.9768
+offset_top = 55.281082
+offset_right = 2132.9768
+offset_bottom = 811.28107
 rotation = -3.1415927
-scale = Vector2(-0.05652401, -0.552008)
+scale = Vector2(-0.33190614, -0.5182384)
+value = 100.0
 fill_mode = 3
-texture_under = SubResource("GradientTexture2D_4gpex")
 texture_progress = ExtResource("8_40dok")
 script = ExtResource("7_08trx")
 metadata/_edit_use_anchors_ = true
@@ -185,12 +176,26 @@ scale = Vector2(0.59859747, 0.5985975)
 texture = ExtResource("15_vdtfd")
 flip_h = true
 
-[node name="EnergyBone" type="Sprite2D" parent="." unique_id=1496199191]
-visible = false
-position = Vector2(51.675797, 364.735)
-scale = Vector2(0.585, 0.585)
-texture = ExtResource("16_vdtfd")
-script = ExtResource("17_v21ns")
+[node name="EnergyMarker3" type="Sprite2D" parent="." unique_id=636979958]
+top_level = true
+position = Vector2(102.00001, 597.00006)
+scale = Vector2(1.0766308, 1.0766308)
+texture = ExtResource("17_40dok")
+script = ExtResource("18_acq7k")
+
+[node name="EnergyMarker2" type="Sprite2D" parent="." unique_id=1116364653]
+top_level = true
+position = Vector2(102.00001, 597.00006)
+scale = Vector2(1.0766308, 1.0766308)
+texture = ExtResource("17_40dok")
+script = ExtResource("19_4gpex")
+
+[node name="EnergyMarker" type="Sprite2D" parent="." unique_id=1496199191]
+top_level = true
+position = Vector2(102.00001, 597.00006)
+scale = Vector2(1.0766308, 1.0766308)
+texture = ExtResource("17_40dok")
+script = ExtResource("20_c6jd5")
 
 [node name="EnergyBar3" type="Sprite2D" parent="." unique_id=1321383681]
 position = Vector2(60.08814, 242.1552)
