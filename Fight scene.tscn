@@ -93,10 +93,10 @@ scale = Vector2(0.3156702, 0.28035286)
 shape = SubResource("RectangleShape2D_yudn3")
 
 [node name="PlayerEnergyBar" type="TextureProgressBar" parent="." unique_id=1277075371]
-offset_left = 80.5181
-offset_top = 49.27227
-offset_right = 1138.5181
-offset_bottom = 805.2723
+offset_left = 105.75513
+offset_top = 62.491673
+offset_right = 1163.7551
+offset_bottom = 818.4917
 rotation = -3.1415927
 scale = Vector2(0.30885425, -0.51762336)
 min_value = 6.285
@@ -107,11 +107,11 @@ script = ExtResource("6_unus2")
 metadata/_edit_use_anchors_ = true
 
 [node name="PlayerHPBar" type="TextureProgressBar" parent="." unique_id=1988750124]
-offset_left = 12.618508
-offset_top = 473.4945
-offset_right = 1070.6185
-offset_bottom = 1113.4946
-scale = Vector2(0.15134162, 0.25267112)
+offset_left = 38.456406
+offset_top = 499.9333
+offset_right = 1096.4564
+offset_bottom = 1139.9333
+scale = Vector2(0.110658266, 0.183675)
 fill_mode = 3
 texture_under = SubResource("GradientTexture2D_x1xbu")
 texture_progress = ExtResource("1_trxqc")
@@ -120,10 +120,10 @@ script = ExtResource("4_qdl6u")
 metadata/_edit_use_anchors_ = true
 
 [node name="EnemyEnergyBar" type="TextureProgressBar" parent="." unique_id=2025529345]
-offset_left = 1074.9768
-offset_top = 55.281082
-offset_right = 2132.9768
-offset_bottom = 811.28107
+offset_left = 1052.7443
+offset_top = 62.49167
+offset_right = 2110.7441
+offset_bottom = 818.4917
 rotation = -3.1415927
 scale = Vector2(-0.33190614, -0.5182384)
 value = 100.0
@@ -133,11 +133,11 @@ script = ExtResource("7_08trx")
 metadata/_edit_use_anchors_ = true
 
 [node name="EnemyHPBar" type="TextureProgressBar" parent="." unique_id=1269053381]
-offset_left = 975.23047
-offset_top = 475.29715
-offset_right = 2033.2305
-offset_bottom = 1115.2972
-scale = Vector2(0.1575008, 0.25767034)
+offset_left = 999.8666
+offset_top = 499.93332
+offset_right = 2057.8667
+offset_bottom = 1139.9335
+scale = Vector2(0.11018783, 0.18176544)
 fill_mode = 3
 texture_under = SubResource("GradientTexture2D_x1xbu")
 texture_progress = ExtResource("1_trxqc")
@@ -176,33 +176,33 @@ scale = Vector2(0.59859747, 0.5985975)
 texture = ExtResource("15_vdtfd")
 flip_h = true
 
-[node name="EnergyMarker3" type="Sprite2D" parent="." unique_id=636979958]
-top_level = true
-position = Vector2(102.00001, 597.00006)
-scale = Vector2(1.0766308, 1.0766308)
-texture = ExtResource("17_40dok")
-script = ExtResource("18_acq7k")
+[node name="EnergyBar3" type="Sprite2D" parent="." unique_id=1321383681]
+position = Vector2(81.719864, 254.77371)
+scale = Vector2(0.6001824, 0.6001824)
+texture = ExtResource("15_vdtfd")
 
-[node name="EnergyMarker2" type="Sprite2D" parent="." unique_id=1116364653]
+[node name="EnergyMarker" type="Sprite2D" parent="EnergyBar3" unique_id=1496199191]
 top_level = true
-position = Vector2(102.00001, 597.00006)
-scale = Vector2(1.0766308, 1.0766308)
-texture = ExtResource("17_40dok")
-script = ExtResource("19_4gpex")
-
-[node name="EnergyMarker" type="Sprite2D" parent="." unique_id=1496199191]
-top_level = true
-position = Vector2(102.00001, 597.00006)
+position = Vector2(136.1938, 597.00006)
 scale = Vector2(1.0766308, 1.0766308)
 texture = ExtResource("17_40dok")
 script = ExtResource("20_c6jd5")
 
-[node name="EnergyBar3" type="Sprite2D" parent="." unique_id=1321383681]
-position = Vector2(60.08814, 242.1552)
-scale = Vector2(0.6001824, 0.6001824)
-texture = ExtResource("15_vdtfd")
+[node name="EnergyMarker2" type="Sprite2D" parent="EnergyBar3" unique_id=1116364653]
+top_level = true
+position = Vector2(136.1938, 597.00006)
+scale = Vector2(1.0766308, 1.0766308)
+texture = ExtResource("17_40dok")
+script = ExtResource("19_4gpex")
+
+[node name="EnergyMarker3" type="Sprite2D" parent="EnergyBar3" unique_id=636979958]
+top_level = true
+position = Vector2(136.1938, 597.00006)
+scale = Vector2(1.0766308, 1.0766308)
+texture = ExtResource("17_40dok")
+script = ExtResource("18_acq7k")
 
 [node name="EnergyBar4" type="Sprite2D" parent="." unique_id=1750026012]
-position = Vector2(1098.4111, 247.56313)
+position = Vector2(1076.7793, 254.77368)
 scale = Vector2(0.6001824, 0.6001824)
 texture = ExtResource("15_vdtfd")
