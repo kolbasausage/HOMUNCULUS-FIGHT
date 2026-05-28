@@ -35,9 +35,9 @@ func try_attack():
 
 	# Ultimate on Left Arrow (90 energy)
 	if Input.is_action_just_pressed("Ability_3"):
-		if energy_bar.has_enough(100):
+		if energy_bar.has_enough(80):
 			ultimate()
-			energy_bar.energy -= 100
+			energy_bar.energy -= 800
 		else:
 			print("Not enough energy for ultimate")
 

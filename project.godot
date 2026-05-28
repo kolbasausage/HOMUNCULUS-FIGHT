@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Homunculus fight prototype"
-run/main_scene="uid://lrkqy0hf4tim"
+run/main_scene="uid://ctpp224yw2jvk"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
