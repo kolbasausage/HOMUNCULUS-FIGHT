@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://ctpp224yw2jvk"]
 
 [ext_resource type="Script" uid="uid://b1e4iwnakey5u" path="res://fight_scene.gd" id="1_63e0v"]
-[ext_resource type="Texture2D" uid="uid://bg180lmsfc57w" path="res://lighter-solid-grey-background-lg6bup60ibh9mpel.jpg" id="1_trxqc"]
 [ext_resource type="Texture2D" uid="uid://dc7m388bj45xj" path="res://Background test FARM.png" id="2_qdl6u"]
 [ext_resource type="Script" uid="uid://cvjbhwqmlauty" path="res://player_hp_bar.gd" id="4_qdl6u"]
 [ext_resource type="Script" uid="uid://c5b0aqnblxost" path="res://player.gd" id="4_unus2"]
@@ -28,7 +27,14 @@
 [ext_resource type="Texture2D" uid="uid://c3y83ubqkr5b6" path="res://Angrysam_Idle0003.png" id="17_v54l5"]
 [ext_resource type="Texture2D" uid="uid://ept1p3qjgxwr" path="res://Angrysam_Idle0004.png" id="18_fexem"]
 [ext_resource type="Texture2D" uid="uid://c74vexxfvmgfl" path="res://Angrysam_Idle0005.png" id="19_ctrha"]
+[ext_resource type="Texture2D" uid="uid://cjs76nxme803g" path="res://2411557aeedd50cd04de5f752dedd06a--blacker-than-black-a-color.jpg" id="19_purkf"]
 [ext_resource type="Texture2D" uid="uid://daltyhad23c8i" path="res://Angrysam_Idle0006.png" id="20_7nu8l"]
+[ext_resource type="Texture2D" uid="uid://dwdq6pp5iuhv5" path="res://Tongue_Phill.png" id="21_d8cdl"]
+[ext_resource type="Texture2D" uid="uid://c713fo3702wjs" path="res://Blood background.png" id="21_yrub2"]
+[ext_resource type="Script" uid="uid://od7dxny5ldun" path="res://sprite_2d.gd" id="22_d8cdl"]
+[ext_resource type="Texture2D" uid="uid://bcr3lofjhew1w" path="res://Heart.png" id="23_yrub2"]
+[ext_resource type="Script" uid="uid://bw5b5bxso3ab0" path="res://player_heart.gd" id="24_of2us"]
+[ext_resource type="Texture2D" uid="uid://17an8r8xxjdy" path="res://Energy_bar_Phill.png" id="32_purkf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_d8cdl"]
 animations = [{
@@ -100,7 +106,7 @@ height = 631
 script = ExtResource("1_63e0v")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=181043682]
-position = Vector2(961, 541)
+position = Vector2(960, 540)
 texture = ExtResource("2_qdl6u")
 
 [node name="Player" type="Sprite2D" parent="." unique_id=175160999 node_paths=PackedStringArray("enemy_hp_bar")]
@@ -130,19 +136,28 @@ flip_h = true
 
 [node name="PlayerEnergyBar" type="TextureProgressBar" parent="." unique_id=1277075371]
 custom_minimum_size = Vector2(151, 756)
-offset_left = 160.0
+offset_left = 166.99998
 offset_top = 104.0
-offset_right = 1218.0
+offset_right = 1225.0
 offset_bottom = 860.0
 rotation = -3.1415927
-scale = Vector2(0.06409201, -0.8562177)
+scale = Vector2(0.07198495, -0.85516465)
 size_flags_horizontal = 4
 value = 100.0
 fill_mode = 3
 nine_patch_stretch = true
+texture_under = ExtResource("19_purkf")
 texture_progress = ExtResource("8_40dok")
+tint_progress = Color(1, 0.29411727, 0.14686409, 1)
 script = ExtResource("6_unus2")
 metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="PlayerEnergyBar" unique_id=1626977990 node_paths=PackedStringArray("energy_bar")]
+position = Vector2(514.88477, 84.09076)
+scale = Vector2(16.433, 0.982)
+texture = ExtResource("21_d8cdl")
+script = ExtResource("22_d8cdl")
+energy_bar = NodePath("..")
 
 [node name="PlayerHPBar" type="TextureProgressBar" parent="." unique_id=1988750124]
 offset_left = 63.0
@@ -153,10 +168,16 @@ scale = Vector2(0.182, 0.302)
 fill_mode = 3
 nine_patch_stretch = true
 texture_under = SubResource("GradientTexture2D_x1xbu")
-texture_progress = ExtResource("1_trxqc")
-tint_progress = Color(0.99607843, 0, 0, 1)
+texture_progress = ExtResource("21_yrub2")
 script = ExtResource("4_qdl6u")
 metadata/_edit_use_anchors_ = true
+
+[node name="PlayerHeart" type="Sprite2D" parent="PlayerHPBar" unique_id=1167588955 node_paths=PackedStringArray("hp_bar")]
+position = Vector2(478.02203, 331.12573)
+scale = Vector2(2.747253, 1.6556294)
+texture = ExtResource("23_yrub2")
+script = ExtResource("24_of2us")
+hp_bar = NodePath("..")
 
 [node name="EnemyEnergyBar" type="TextureProgressBar" parent="." unique_id=2025529345]
 offset_left = 1752.0
@@ -181,9 +202,13 @@ scale = Vector2(0.18157175, 0.30044073)
 fill_mode = 3
 nine_patch_stretch = true
 texture_under = SubResource("GradientTexture2D_x1xbu")
-texture_progress = ExtResource("1_trxqc")
-tint_progress = Color(0.99607843, 0, 0, 1)
+texture_progress = ExtResource("21_yrub2")
 script = ExtResource("9_qdl6u")
+
+[node name="EnemyHeart" type="Sprite2D" parent="EnemyHPBar" unique_id=1217218032]
+position = Vector2(495.67188, 332.84424)
+scale = Vector2(2.7537324, 1.6642218)
+texture = ExtResource("23_yrub2")
 
 [node name="Panel1" type="Sprite2D" parent="." unique_id=2058987691]
 visible = false
@@ -205,21 +230,24 @@ texture = ExtResource("14_0pkur")
 
 [node name="PlayerEnergyBarCover" type="Sprite2D" parent="." unique_id=1321383681]
 position = Vector2(128, 424)
-texture = ExtResource("15_vdtfd")
+texture = ExtResource("32_purkf")
 
 [node name="EnergyMarker" type="Sprite2D" parent="PlayerEnergyBarCover" unique_id=1496199191]
+visible = false
 top_level = true
 position = Vector2(136.1938, 597.00006)
 scale = Vector2(1.0766308, 1.0766308)
 texture = ExtResource("17_40dok")
 
 [node name="EnergyMarker2" type="Sprite2D" parent="PlayerEnergyBarCover" unique_id=1116364653]
+visible = false
 top_level = true
 position = Vector2(136.1938, 597.00006)
 scale = Vector2(1.0766308, 1.0766308)
 texture = ExtResource("17_40dok")
 
 [node name="EnergyMarker3" type="Sprite2D" parent="PlayerEnergyBarCover" unique_id=636979958]
+visible = false
 top_level = true
 position = Vector2(136.1938, 597.00006)
 scale = Vector2(1.0766308, 1.0766308)

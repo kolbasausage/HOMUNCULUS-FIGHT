@@ -27,7 +27,7 @@ func _ready():
 
 func _place_markers():
 	_place_marker(marker1, 25)
-	_place_marker(marker2, 65)
+	_place_marker(marker2, 45)
 	_place_marker(marker3, 80)
 
 
@@ -52,9 +52,9 @@ func try_attack():
 
 	# Heal on Up Arrow (50 energy)
 	if Input.is_action_just_pressed("Ability_2"):
-		if energy_bar.has_enough(65):
+		if energy_bar.has_enough(45):
 			heal()
-			energy_bar.energy -= 65
+			energy_bar.energy -= 45
 		else:
 			print("Not enough energy to heal")
 
