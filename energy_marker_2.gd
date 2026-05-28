@@ -1,18 +1,17 @@
 extends Sprite2D
 
-# Energy cost where the marker should appear.
-# Example: 20 = marker appears at 20% of the bar.
-@export var energy_cost: float = 50.0
-
-# Maximum energy in your game.
-@export var max_energy: float = 100.0
-
-# Height of the energy bar in pixels.
-# Measure your bar image and type the height here.
-@export var bar_height: float = 400.0
+@export var energy_bar: TextureProgressBar
+@export var cost: float = 25.0
 
 func _ready():
-	# Convert energy cost (0-100) into a percentage.
-	var ratio = energy_cost / max_energy
-	var y = bar_height * ratio
-	position.y = y
+	_update_position()
+
+func _process(_delta):
+	_update_position()
+
+func _update_position():
+	if energy_bar == null:
+		return
+	var ratio = 1.0 - (cost / energy_bar.max_value)
+	global_position.x = 173.0 + 37.0  # bar x + half of 75px width
+	global_position.y = 104.0 + (450.0 * ratio)

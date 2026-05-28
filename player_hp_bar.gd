@@ -26,5 +26,4 @@ func heal(amount):
 	value = player_hp
 	
 func die():
-	print("Your homunculus died!")
-	
+	get_parent().player_loses()

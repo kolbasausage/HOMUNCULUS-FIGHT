@@ -26,18 +26,9 @@
 [ext_resource type="Texture2D" uid="uid://cqfeuj083h1wr" path="res://Angrysam_Idle0002.png" id="16_purkf"]
 [ext_resource type="Texture2D" uid="uid://bfmdowydgglal" path="res://Energy_marker.png" id="17_40dok"]
 [ext_resource type="Texture2D" uid="uid://c3y83ubqkr5b6" path="res://Angrysam_Idle0003.png" id="17_v54l5"]
-[ext_resource type="Script" uid="uid://d1kbe1iema5la" path="res://energy_marker_3.gd" id="18_acq7k"]
 [ext_resource type="Texture2D" uid="uid://ept1p3qjgxwr" path="res://Angrysam_Idle0004.png" id="18_fexem"]
-[ext_resource type="Script" uid="uid://c6qo5d3eqno8" path="res://energy_marker_2.gd" id="19_4gpex"]
 [ext_resource type="Texture2D" uid="uid://c74vexxfvmgfl" path="res://Angrysam_Idle0005.png" id="19_ctrha"]
 [ext_resource type="Texture2D" uid="uid://daltyhad23c8i" path="res://Angrysam_Idle0006.png" id="20_7nu8l"]
-[ext_resource type="Script" uid="uid://dulxy3765cmp6" path="res://energy_marker.gd" id="20_c6jd5"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7sl15"]
-size = Vector2(1155.5, 166)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_81wyk"]
-size = Vector2(939.0764, 1327.1577)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_d8cdl"]
 animations = [{
@@ -65,11 +56,8 @@ animations = [{
 }],
 "loop": true,
 "name": &"moonman_idle",
-"speed": 5.0
+"speed": 10.0
 }]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_yudn3"]
-size = Vector2(888.01306, 1721.2278)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vp0h4"]
 animations = [{
@@ -97,7 +85,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"angrysam_idle",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [sub_resource type="Gradient" id="Gradient_08trx"]
@@ -109,79 +97,46 @@ width = 1052
 height = 631
 
 [node name="Node2D" type="Node2D" unique_id=382972580]
-scale = Vector2(1.664222, 1.664222)
 script = ExtResource("1_63e0v")
 
-[node name="Greybox" type="Sprite2D" parent="." unique_id=1737828216]
-position = Vector2(577, 565)
-scale = Vector2(1.1258667, 0.26093698)
-texture = ExtResource("1_trxqc")
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="Greybox" unique_id=1987649324]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Greybox/CharacterBody2D" unique_id=1030333235]
-position = Vector2(0.2220459, 0)
-scale = Vector2(0.88820463, 3.832343)
-shape = SubResource("RectangleShape2D_7sl15")
-
-[node name="GhettoHood72Uphtjoiaod55Du" type="Sprite2D" parent="." unique_id=181043682]
-position = Vector2(576.8461, 325.10623)
-scale = Vector2(0.60088134, 0.60204864)
+[node name="Background" type="Sprite2D" parent="." unique_id=181043682]
+position = Vector2(961, 541)
 texture = ExtResource("2_qdl6u")
 
 [node name="Player" type="Sprite2D" parent="." unique_id=175160999 node_paths=PackedStringArray("enemy_hp_bar")]
-position = Vector2(397.339, 373)
-scale = Vector2(0.5, 0.508)
+process_mode = 1
+position = Vector2(616, 616)
 script = ExtResource("4_unus2")
 enemy_hp_bar = NodePath("../EnemyHPBar")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="Player" unique_id=175865194]
-position = Vector2(1840.8127, -2.6499023)
-scale = Vector2(0.6346383, 0.6239611)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/CharacterBody2D" unique_id=1336008240]
-position = Vector2(-2902.083, 13.702984)
-scale = Vector2(0.39321166, 0.48395038)
-shape = SubResource("RectangleShape2D_81wyk")
-
-[node name="PlayerAnimation" type="AnimatedSprite2D" parent="Player/CharacterBody2D" unique_id=28280443]
-position = Vector2(-2900.5698, 4.246704)
-scale = Vector2(1.5757006, 1.6026641)
+[node name="PlayerAnimation" type="AnimatedSprite2D" parent="Player" unique_id=28280443]
+position = Vector2(-6.1035156e-05, -0.00018310547)
+scale = Vector2(1, 1.0000001)
 sprite_frames = SubResource("SpriteFrames_d8cdl")
 animation = &"moonman_idle"
 
 [node name="Enemy" type="Sprite2D" parent="." unique_id=1807806464 node_paths=PackedStringArray("player_hp_bar")]
-position = Vector2(770.3299, 359.92798)
-scale = Vector2(0.48, 0.47908443)
+process_mode = 1
+position = Vector2(1336, 578)
 script = ExtResource("7_x1xbu")
 player_hp_bar = NodePath("../PlayerHPBar")
 
-[node name="CharacterBody2D2" type="CharacterBody2D" parent="Enemy" unique_id=396969706]
-position = Vector2(0.00024414063, 0)
-scale = Vector2(0.929, 0.93)
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Enemy/CharacterBody2D2" unique_id=1437988467]
-position = Vector2(14.576416, -1.1221313)
-rotation = -3.1415925
-scale = Vector2(0.3156702, 0.28035286)
-shape = SubResource("RectangleShape2D_yudn3")
-
-[node name="EnemyAnimation" type="AnimatedSprite2D" parent="Enemy/CharacterBody2D2" unique_id=1252860953]
-position = Vector2(-0.00012207031, 41.807533)
-scale = Vector2(1.0764263, 1.0752684)
+[node name="EnemyAnimation" type="AnimatedSprite2D" parent="Enemy" unique_id=1252860953]
+position = Vector2(0.00012207031, 38.88098)
+scale = Vector2(1, 0.99999964)
 sprite_frames = SubResource("SpriteFrames_vp0h4")
 animation = &"angrysam_idle"
 flip_h = true
 
 [node name="PlayerEnergyBar" type="TextureProgressBar" parent="." unique_id=1277075371]
-offset_left = 103.95246
-offset_top = 62.491657
-offset_right = 1161.9525
-offset_bottom = 818.49164
+custom_minimum_size = Vector2(151, 756)
+offset_left = 160.0
+offset_top = 104.0
+offset_right = 1218.0
+offset_bottom = 860.0
 rotation = -3.1415927
-scale = Vector2(0.042728007, -0.5147893)
+scale = Vector2(0.06409201, -0.8562177)
 size_flags_horizontal = 4
-min_value = 6.285
 value = 100.0
 fill_mode = 3
 nine_patch_stretch = true
@@ -190,11 +145,11 @@ script = ExtResource("6_unus2")
 metadata/_edit_use_anchors_ = true
 
 [node name="PlayerHPBar" type="TextureProgressBar" parent="." unique_id=1988750124]
-offset_left = 38.456406
-offset_top = 499.9333
-offset_right = 1096.4564
-offset_bottom = 1139.9333
-scale = Vector2(0.110658266, 0.183675)
+offset_left = 63.0
+offset_top = 832.0
+offset_right = 1121.0
+offset_bottom = 1472.0
+scale = Vector2(0.182, 0.302)
 fill_mode = 3
 nine_patch_stretch = true
 texture_under = SubResource("GradientTexture2D_x1xbu")
@@ -204,12 +159,12 @@ script = ExtResource("4_qdl6u")
 metadata/_edit_use_anchors_ = true
 
 [node name="EnemyEnergyBar" type="TextureProgressBar" parent="." unique_id=2025529345]
-offset_left = 1052.7443
-offset_top = 62.49167
-offset_right = 2110.7441
-offset_bottom = 818.4917
+offset_left = 1752.0
+offset_top = 104.0
+offset_right = 2810.0
+offset_bottom = 860.0
 rotation = -3.1415927
-scale = Vector2(-0.04419254, -0.51823837)
+scale = Vector2(-0.072314866, -0.85968196)
 value = 100.0
 fill_mode = 3
 nine_patch_stretch = true
@@ -218,18 +173,17 @@ script = ExtResource("7_08trx")
 metadata/_edit_use_anchors_ = true
 
 [node name="EnemyHPBar" type="TextureProgressBar" parent="." unique_id=1269053381]
-offset_left = 999.8666
-offset_top = 499.93332
-offset_right = 2057.8667
-offset_bottom = 1139.9335
-scale = Vector2(0.11018783, 0.18176544)
+offset_left = 1664.0
+offset_top = 832.0
+offset_right = 2722.0
+offset_bottom = 1472.0001
+scale = Vector2(0.18157175, 0.30044073)
 fill_mode = 3
 nine_patch_stretch = true
 texture_under = SubResource("GradientTexture2D_x1xbu")
 texture_progress = ExtResource("1_trxqc")
 tint_progress = Color(0.99607843, 0, 0, 1)
 script = ExtResource("9_qdl6u")
-metadata/_edit_use_anchors_ = true
 
 [node name="Panel1" type="Sprite2D" parent="." unique_id=2058987691]
 visible = false
@@ -249,47 +203,28 @@ position = Vector2(576.54565, 325.82797)
 scale = Vector2(0.60119426, 0.6050542)
 texture = ExtResource("14_0pkur")
 
-[node name="EnergyBar" type="Sprite2D" parent="." unique_id=1864594389]
-visible = false
-position = Vector2(57.684612, 248.16402)
-scale = Vector2(0.59859747, 0.5985975)
+[node name="PlayerEnergyBarCover" type="Sprite2D" parent="." unique_id=1321383681]
+position = Vector2(128, 424)
 texture = ExtResource("15_vdtfd")
 
-[node name="EnergyBar2" type="Sprite2D" parent="." unique_id=1804710969]
-visible = false
-position = Vector2(1099.613, 248.16402)
-scale = Vector2(0.59859747, 0.5985975)
-texture = ExtResource("15_vdtfd")
-flip_h = true
-
-[node name="EnergyBar3" type="Sprite2D" parent="." unique_id=1321383681]
-position = Vector2(81.719864, 254.77371)
-scale = Vector2(0.6001824, 0.6001824)
-texture = ExtResource("15_vdtfd")
-
-[node name="EnergyMarker" type="Sprite2D" parent="EnergyBar3" unique_id=1496199191 node_paths=PackedStringArray("energy_bar")]
+[node name="EnergyMarker" type="Sprite2D" parent="PlayerEnergyBarCover" unique_id=1496199191]
 top_level = true
 position = Vector2(136.1938, 597.00006)
 scale = Vector2(1.0766308, 1.0766308)
 texture = ExtResource("17_40dok")
-script = ExtResource("20_c6jd5")
-energy_bar = NodePath("../../PlayerEnergyBar")
 
-[node name="EnergyMarker2" type="Sprite2D" parent="EnergyBar3" unique_id=1116364653]
+[node name="EnergyMarker2" type="Sprite2D" parent="PlayerEnergyBarCover" unique_id=1116364653]
 top_level = true
 position = Vector2(136.1938, 597.00006)
 scale = Vector2(1.0766308, 1.0766308)
 texture = ExtResource("17_40dok")
-script = ExtResource("19_4gpex")
 
-[node name="EnergyMarker3" type="Sprite2D" parent="EnergyBar3" unique_id=636979958]
+[node name="EnergyMarker3" type="Sprite2D" parent="PlayerEnergyBarCover" unique_id=636979958]
 top_level = true
 position = Vector2(136.1938, 597.00006)
 scale = Vector2(1.0766308, 1.0766308)
 texture = ExtResource("17_40dok")
-script = ExtResource("18_acq7k")
 
-[node name="EnergyBar4" type="Sprite2D" parent="." unique_id=1750026012]
-position = Vector2(1076.7793, 254.77368)
-scale = Vector2(0.6001824, 0.6001824)
+[node name="EnemyEnergyBarCover" type="Sprite2D" parent="." unique_id=1750026012]
+position = Vector2(1792, 424)
 texture = ExtResource("15_vdtfd")

@@ -2,12 +2,37 @@ extends Sprite2D
 
 @onready var energy_bar = $"../PlayerEnergyBar"  #path to my energy node
 @export var enemy_hp_bar: TextureProgressBar #Enemy HP Bar
-@onready var anim_player = $CharacterBody2D/PlayerAnimation
+@onready var anim_player = $PlayerAnimation
+@onready var marker1 = $"../PlayerEnergyBarCover/EnergyMarker"
+@onready var marker2 = $"../PlayerEnergyBarCover/EnergyMarker2"
+@onready var marker3 = $"../PlayerEnergyBarCover/EnergyMarker3"
 
-var original_scale: Vector2 #Original scale of the sprite
+var BAR_TOP_Y = 80.0
+var BAR_BOTTOM_Y = 751.0
+var BAR_CENTER_X = 135.0
+
+func _place_marker(marker, cost):
+	var ratio = float(cost) / 100.0
+	marker.global_position.x = BAR_CENTER_X
+	marker.global_position.y = BAR_BOTTOM_Y - ((BAR_BOTTOM_Y - BAR_TOP_Y) * ratio)
 
 func _ready():
 	original_scale = scale
+	var global_scale = energy_bar.get_global_transform().get_scale()
+	var true_height = abs(global_scale.y) * 756.0
+	print("True height: ", true_height)
+	print("Bar global pos: ", energy_bar.global_position)
+	print("Bar bottom Y: ", energy_bar.global_position.y + true_height)
+	_place_markers()
+
+func _place_markers():
+	_place_marker(marker1, 25)
+	_place_marker(marker2, 65)
+	_place_marker(marker3, 80)
+
+
+var original_scale: Vector2 #Original scale of the sprite
+
 
 func _physics_process(delta):
 	if not try_attack():
@@ -37,7 +62,7 @@ func try_attack():
 	if Input.is_action_just_pressed("Ability_3"):
 		if energy_bar.has_enough(80):
 			ultimate()
-			energy_bar.energy -= 800
+			energy_bar.energy -= 80
 		else:
 			print("Not enough energy for ultimate")
 

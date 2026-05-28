@@ -16,4 +16,4 @@ func take_damage(amount: float):
 		die()
 
 func die():
-	print("Enemy died!")
+	get_parent().player_wins()

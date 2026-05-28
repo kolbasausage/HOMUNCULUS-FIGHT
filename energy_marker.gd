@@ -12,15 +12,6 @@ func _process(_delta):
 func _update_position():
 	if energy_bar == null:
 		return
-	
-	# Use the texture size instead of node size
-	var bar_texture = energy_bar.texture_under
-	if bar_texture == null:
-		return
-	
-	var bar_width = bar_texture.get_width()
-	var bar_height = bar_texture.get_height()
-	var ratio = cost / energy_bar.max_value
-	
-	global_position.x = energy_bar.global_position.x + (bar_width * ratio)
-	global_position.y = energy_bar.global_position.y + (bar_height / 2.0)
+	var ratio = 1.0 - (cost / energy_bar.max_value)
+	global_position.x = 173.0 + 37.0  # bar x + half of 75px width
+	global_position.y = 104.0 + (450.0 * ratio)
