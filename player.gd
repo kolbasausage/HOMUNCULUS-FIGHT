@@ -2,12 +2,17 @@ extends Sprite2D
 
 @onready var energy_bar = $"../PlayerEnergyBar"  #path to my energy node
 @export var enemy_hp_bar: TextureProgressBar #Enemy HP Bar
-
+@onready var anim_player = $CharacterBody2D/PlayerAnimation
 
 var original_scale: Vector2 #Original scale of the sprite
 
 func _ready():
 	original_scale = scale
+
+func _physics_process(delta):
+	if not try_attack():
+		anim_player.play("moonman_idle")
+
 #Attack when theres enough energy
 func try_attack():
 	if get_parent().battle_busy: #If enemy is attacking you can't attack

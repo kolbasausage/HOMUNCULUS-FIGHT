@@ -3,32 +3,102 @@
 [ext_resource type="Script" uid="uid://b1e4iwnakey5u" path="res://fight_scene.gd" id="1_63e0v"]
 [ext_resource type="Texture2D" uid="uid://bg180lmsfc57w" path="res://lighter-solid-grey-background-lg6bup60ibh9mpel.jpg" id="1_trxqc"]
 [ext_resource type="Texture2D" uid="uid://dc7m388bj45xj" path="res://Background test FARM.png" id="2_qdl6u"]
-[ext_resource type="Texture2D" uid="uid://bj14mbn3nuifn" path="res://random dude.png" id="3_yudn3"]
+[ext_resource type="Texture2D" uid="uid://3voh0ayb18q5" path="res://idle0000.png" id="4_acq7k"]
 [ext_resource type="Script" uid="uid://cvjbhwqmlauty" path="res://player_hp_bar.gd" id="4_qdl6u"]
 [ext_resource type="Script" uid="uid://c5b0aqnblxost" path="res://player.gd" id="4_unus2"]
+[ext_resource type="Texture2D" uid="uid://dv5123n0ln833" path="res://idle0001.png" id="6_4khq3"]
 [ext_resource type="Script" uid="uid://3tu3a28y7ijm" path="res://energy.gd" id="6_unus2"]
-[ext_resource type="Texture2D" uid="uid://4yrwx0k2twlm" path="res://Dummy.png" id="6_wu0ve"]
 [ext_resource type="Script" uid="uid://cdmfc8024m7om" path="res://enemyenergy.gd" id="7_08trx"]
+[ext_resource type="Texture2D" uid="uid://cqfeuj083h1wr" path="res://idle0002.png" id="7_eqstl"]
 [ext_resource type="Script" uid="uid://cop8qenbcocsd" path="res://enemy.gd" id="7_x1xbu"]
 [ext_resource type="Texture2D" uid="uid://vxmfu7ygykow" path="res://Energy_flow.png" id="8_40dok"]
+[ext_resource type="Texture2D" uid="uid://c3y83ubqkr5b6" path="res://idle0003.png" id="8_q1q38"]
+[ext_resource type="Texture2D" uid="uid://ept1p3qjgxwr" path="res://idle0004.png" id="9_543hs"]
 [ext_resource type="Script" uid="uid://baymd8y8r4jp3" path="res://enemy_hp_bar.gd" id="9_qdl6u"]
+[ext_resource type="Texture2D" uid="uid://c74vexxfvmgfl" path="res://idle0005.png" id="10_yrub2"]
+[ext_resource type="Texture2D" uid="uid://daltyhad23c8i" path="res://idle0006.png" id="11_of2us"]
 [ext_resource type="Texture2D" uid="uid://cjn5v85wjenqv" path="res://panel 1.png" id="11_wu0ve"]
 [ext_resource type="Texture2D" uid="uid://berlula641y3b" path="res://panel scarecrow.png" id="12_6soco"]
 [ext_resource type="Texture2D" uid="uid://digwpr8vrk4pc" path="res://new ui sketch transparent.png" id="14_0pkur"]
+[ext_resource type="Texture2D" uid="uid://3voh0ayb18q5" path="res://Idle0000.png" id="14_725xl"]
+[ext_resource type="Texture2D" uid="uid://dv5123n0ln833" path="res://Idle0001.png" id="15_d8cdl"]
 [ext_resource type="Texture2D" uid="uid://b701kn6qqlsxs" path="res://Energy_bar.png" id="15_vdtfd"]
+[ext_resource type="Texture2D" uid="uid://cqfeuj083h1wr" path="res://Idle0002.png" id="16_purkf"]
 [ext_resource type="Texture2D" uid="uid://bfmdowydgglal" path="res://Energy_marker.png" id="17_40dok"]
+[ext_resource type="Texture2D" uid="uid://c3y83ubqkr5b6" path="res://Idle0003.png" id="17_v54l5"]
 [ext_resource type="Script" uid="uid://d1kbe1iema5la" path="res://energy_marker_3.gd" id="18_acq7k"]
+[ext_resource type="Texture2D" uid="uid://ept1p3qjgxwr" path="res://Idle0004.png" id="18_fexem"]
 [ext_resource type="Script" uid="uid://c6qo5d3eqno8" path="res://energy_marker_2.gd" id="19_4gpex"]
+[ext_resource type="Texture2D" uid="uid://c74vexxfvmgfl" path="res://Idle0005.png" id="19_ctrha"]
+[ext_resource type="Texture2D" uid="uid://daltyhad23c8i" path="res://Idle0006.png" id="20_7nu8l"]
 [ext_resource type="Script" uid="uid://dulxy3765cmp6" path="res://energy_marker.gd" id="20_c6jd5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7sl15"]
 size = Vector2(1155.5, 166)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_81wyk"]
-size = Vector2(1462.7354, 1535.6764)
+size = Vector2(939.0764, 1327.1577)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d8cdl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_acq7k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_4khq3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_eqstl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_q1q38")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_543hs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_yrub2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_of2us")
+}],
+"loop": true,
+"name": &"moonman_idle",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yudn3"]
 size = Vector2(888.01306, 1721.2278)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vp0h4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_725xl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_d8cdl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_purkf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_v54l5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_fexem")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_ctrha")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_7nu8l")
+}],
+"loop": true,
+"name": &"angrysam_idle",
+"speed": 5.0
+}]
 
 [sub_resource type="Gradient" id="Gradient_08trx"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
@@ -60,9 +130,8 @@ scale = Vector2(0.60088134, 0.60204864)
 texture = ExtResource("2_qdl6u")
 
 [node name="Player" type="Sprite2D" parent="." unique_id=175160999 node_paths=PackedStringArray("enemy_hp_bar")]
-position = Vector2(404.99408, 373.00003)
-scale = Vector2(0.37103176, 0.3773809)
-texture = ExtResource("3_yudn3")
+position = Vector2(397.339, 373)
+scale = Vector2(0.5, 0.508)
 script = ExtResource("4_unus2")
 enemy_hp_bar = NodePath("../EnemyHPBar")
 
@@ -71,14 +140,19 @@ position = Vector2(1840.8127, -2.6499023)
 scale = Vector2(0.6346383, 0.6239611)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/CharacterBody2D" unique_id=1336008240]
-position = Vector2(-2900.5703, 14.864014)
-scale = Vector2(0.39321166, 0.4839504)
+position = Vector2(-2902.083, 13.702984)
+scale = Vector2(0.39321166, 0.48395038)
 shape = SubResource("RectangleShape2D_81wyk")
+
+[node name="PlayerAnimation" type="AnimatedSprite2D" parent="Player/CharacterBody2D" unique_id=28280443]
+position = Vector2(-2900.5698, 4.246704)
+scale = Vector2(1.5757006, 1.6026641)
+sprite_frames = SubResource("SpriteFrames_d8cdl")
+animation = &"moonman_idle"
 
 [node name="Enemy" type="Sprite2D" parent="." unique_id=1807806464 node_paths=PackedStringArray("player_hp_bar")]
 position = Vector2(770.3299, 359.92798)
 scale = Vector2(0.48, 0.47908443)
-texture = ExtResource("6_wu0ve")
 script = ExtResource("7_x1xbu")
 player_hp_bar = NodePath("../PlayerHPBar")
 
@@ -91,6 +165,13 @@ position = Vector2(14.576416, -1.1221313)
 rotation = -3.1415925
 scale = Vector2(0.3156702, 0.28035286)
 shape = SubResource("RectangleShape2D_yudn3")
+
+[node name="EnemyAnimation" type="AnimatedSprite2D" parent="Enemy/CharacterBody2D2" unique_id=1252860953]
+position = Vector2(-0.00012207031, 41.807533)
+scale = Vector2(1.0764263, 1.0752684)
+sprite_frames = SubResource("SpriteFrames_vp0h4")
+animation = &"angrysam_idle"
+flip_h = true
 
 [node name="PlayerEnergyBar" type="TextureProgressBar" parent="." unique_id=1277075371]
 offset_left = 105.75513

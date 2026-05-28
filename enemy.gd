@@ -2,6 +2,7 @@ extends Sprite2D
 
 @onready var energy_bar = $"../EnemyEnergyBar"  #path to enemys energy node
 @export var player_hp_bar: TextureProgressBar
+@onready var anim_enemy = $CharacterBody2D2/EnemyAnimation
 
 var original_scale: Vector2
 
@@ -10,7 +11,11 @@ func _ready():
 	original_scale = scale
 	random_attack_loop()
 	print(player_hp_bar)
-	
+
+func _physics_process(delta):
+	if not try_attack():
+		anim_enemy.play("angrysam_idle")
+
 func random_attack_loop() -> void:
 	while true:
 		var wait_time = randf_range(1.0, 5.0)
