@@ -34,6 +34,7 @@
 [ext_resource type="Script" uid="uid://od7dxny5ldun" path="res://sprite_2d.gd" id="22_d8cdl"]
 [ext_resource type="Texture2D" uid="uid://bcr3lofjhew1w" path="res://Heart.png" id="23_yrub2"]
 [ext_resource type="Script" uid="uid://bw5b5bxso3ab0" path="res://player_heart.gd" id="24_of2us"]
+[ext_resource type="Script" uid="uid://dfw8yfjwljqra" path="res://enemy_heart.gd" id="30_v54l5"]
 [ext_resource type="Texture2D" uid="uid://17an8r8xxjdy" path="res://Energy_bar_Phill.png" id="32_purkf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_d8cdl"]
@@ -128,7 +129,7 @@ script = ExtResource("7_x1xbu")
 player_hp_bar = NodePath("../PlayerHPBar")
 
 [node name="EnemyAnimation" type="AnimatedSprite2D" parent="Enemy" unique_id=1252860953]
-position = Vector2(0.00012207031, 38.88098)
+position = Vector2(0.00012207031, -2)
 scale = Vector2(1, 0.99999964)
 sprite_frames = SubResource("SpriteFrames_vp0h4")
 animation = &"angrysam_idle"
@@ -173,7 +174,7 @@ script = ExtResource("4_qdl6u")
 metadata/_edit_use_anchors_ = true
 
 [node name="PlayerHeart" type="Sprite2D" parent="PlayerHPBar" unique_id=1167588955 node_paths=PackedStringArray("hp_bar")]
-position = Vector2(478.02203, 331.12573)
+position = Vector2(532.9671, 317.8807)
 scale = Vector2(2.747253, 1.6556294)
 texture = ExtResource("23_yrub2")
 script = ExtResource("24_of2us")
@@ -205,10 +206,12 @@ texture_under = SubResource("GradientTexture2D_x1xbu")
 texture_progress = ExtResource("21_yrub2")
 script = ExtResource("9_qdl6u")
 
-[node name="EnemyHeart" type="Sprite2D" parent="EnemyHPBar" unique_id=1217218032]
-position = Vector2(495.67188, 332.84424)
+[node name="EnemyHeart" type="Sprite2D" parent="EnemyHPBar" unique_id=1217218032 node_paths=PackedStringArray("hp_bar")]
+position = Vector2(528.7167, 319.53067)
 scale = Vector2(2.7537324, 1.6642218)
 texture = ExtResource("23_yrub2")
+script = ExtResource("30_v54l5")
+hp_bar = NodePath("..")
 
 [node name="Panel1" type="Sprite2D" parent="." unique_id=2058987691]
 visible = false

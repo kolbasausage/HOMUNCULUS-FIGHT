@@ -50,5 +50,5 @@ func attack(): #Handles the full attack sequence
 func attack_move(): #Movement during attack
 	var original_pos = position #Store original position to return to
 	position += Vector2(-200, 0) #Lunge left toward the player
-	await get_tree().create_timer(0.7).timeout #Hold lunge position for 0.7 seconds
+	await get_tree().create_timer(1).timeout #Hold lunge position for 0.7 seconds
 	position = original_pos #Snap back to original position

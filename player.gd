@@ -11,10 +11,12 @@ var BAR_TOP_Y = 80.0
 var BAR_BOTTOM_Y = 751.0
 var BAR_CENTER_X = 135.0
 
+
+#Marker placement
 func _place_marker(marker, cost):
 	var ratio = float(cost) / 100.0
 	marker.global_position.x = BAR_CENTER_X
-	marker.global_position.y = BAR_BOTTOM_Y - ((BAR_BOTTOM_Y - BAR_TOP_Y) * ratio)
+	marker.global_position.y = BAR_BOTTOM_Y - ((BAR_BOTTOM_Y - BAR_TOP_Y) * ratio) 
 
 func _ready():
 	original_scale = scale
@@ -25,6 +27,7 @@ func _ready():
 	print("Bar bottom Y: ", energy_bar.global_position.y + true_height)
 	_place_markers()
 
+#Energy % of where markers are placed
 func _place_markers():
 	_place_marker(marker1, 25)
 	_place_marker(marker2, 45)
@@ -93,7 +96,7 @@ func squish():
 	scale = original_scale * Vector2(1.2, 0.8)
 	
 	var timer = get_tree().create_timer(0.3)
-	timer.timeout.connect(_on_squish_finished) #Timer that resets back to his original scale after 0.1 sec
+	timer.timeout.connect(_on_squish_finished) 
 
 func _on_squish_finished():
 	scale = original_scale #Reset back function
@@ -111,6 +114,6 @@ func attack_move():
 	
 	position += Vector2(200, 0)  # Move right to make it look like Homunculus attacks close range
 	
-	await get_tree().create_timer(0.7).timeout #Timer 0.2 seconds before sprite moves back
+	await get_tree().create_timer(1).timeout #Timer 0.2 seconds before sprite moves back
 	
 	position = original_pos #Return to original position
