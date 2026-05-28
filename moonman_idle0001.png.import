@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxcwf0wpwmjki"
-path="res://.godot/imported/idle0007.png-d1df85c9c8ff2b08fa073249aacbf9b6.ctex"
+uid="uid://dq8soxj6s52fn"
+path="res://.godot/imported/moonman_idle0001.png-bd744010b9d785d4bd5f1f75cb97fd79.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://idle0007.png"
-dest_files=["res://.godot/imported/idle0007.png-d1df85c9c8ff2b08fa073249aacbf9b6.ctex"]
+source_file="res://moonman_idle0001.png"
+dest_files=["res://.godot/imported/moonman_idle0001.png-bd744010b9d785d4bd5f1f75cb97fd79.ctex"]
 
 [params]
 
