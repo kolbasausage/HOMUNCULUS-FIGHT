@@ -22,8 +22,6 @@ func _setup_positions():
 
 func player_wins():
 	get_tree().paused = true
-	print("PLAYER WINS!")
 
 func player_loses():
 	get_tree().paused = true
-	print("PLAYER LOSES!")

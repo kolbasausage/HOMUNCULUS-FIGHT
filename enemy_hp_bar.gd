@@ -17,5 +17,10 @@ func take_damage(amount: float):
 
 signal enemy_died
 
+var is_dead = false
+
 func die():
-	emit_signal("enemy_died")
+	if is_dead:
+		return
+	is_dead = true
+	get_parent().get_node("Enemy")._on_death()

@@ -9,10 +9,9 @@ func _ready() -> void:
 
 func take_damage(amount: float):
 	player_hp -= amount
-	player_hp = max(player_hp, 0) # prevent negative HP
+	player_hp = max(player_hp, 0)
 	value = player_hp
-
-	
+	print("HP: ", player_hp)
 	if player_hp <= 0:
 		die()
 
@@ -27,5 +26,12 @@ func heal(amount):
 	
 signal player_died
 
+var is_dead = false
+
 func die():
-	emit_signal("player_died")
+	if is_dead:
+		return
+	is_dead = true
+	print("die() called!")
+	print("Player node: ", get_parent().get_node("Player"))
+	get_parent().get_node("Player")._on_death()

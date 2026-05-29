@@ -44,7 +44,6 @@
 [ext_resource type="Texture2D" uid="uid://bcr3lofjhew1w" path="res://Heart.png" id="23_yrub2"]
 [ext_resource type="Script" uid="uid://bw5b5bxso3ab0" path="res://player_heart.gd" id="24_of2us"]
 [ext_resource type="Script" uid="uid://dfw8yfjwljqra" path="res://enemy_heart.gd" id="30_v54l5"]
-[ext_resource type="Texture2D" uid="uid://17an8r8xxjdy" path="res://Energy_bar_Phill.png" id="32_purkf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_d8cdl"]
 animations = [{
@@ -163,7 +162,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("12_cfn8m")
 }],
-"loop": true,
+"loop": false,
 "name": &"death_animation",
 "speed": 10.0
 }]
@@ -203,8 +202,7 @@ player_hp_bar = NodePath("../PlayerHPBar")
 [node name="EnemyAnimation" type="AnimatedSprite2D" parent="Enemy" unique_id=1252860953]
 position = Vector2(0.00012207031, -2)
 sprite_frames = SubResource("SpriteFrames_vp0h4")
-animation = &"angrysam_idle"
-frame_progress = 0.46421975
+animation = &"death_animation"
 flip_h = true
 
 [node name="PlayerEnergyBar" type="TextureProgressBar" parent="." unique_id=1277075371]
@@ -305,24 +303,21 @@ texture = ExtResource("14_0pkur")
 
 [node name="PlayerEnergyBarCover" type="Sprite2D" parent="." unique_id=1321383681]
 position = Vector2(128, 424)
-texture = ExtResource("32_purkf")
+texture = ExtResource("15_vdtfd")
 
 [node name="EnergyMarker" type="Sprite2D" parent="PlayerEnergyBarCover" unique_id=1496199191]
-visible = false
 top_level = true
 position = Vector2(136.1938, 597.00006)
 scale = Vector2(1.0766308, 1.0766308)
 texture = ExtResource("17_40dok")
 
 [node name="EnergyMarker2" type="Sprite2D" parent="PlayerEnergyBarCover" unique_id=1116364653]
-visible = false
 top_level = true
 position = Vector2(136.1938, 597.00006)
 scale = Vector2(1.0766308, 1.0766308)
 texture = ExtResource("17_40dok")
 
 [node name="EnergyMarker3" type="Sprite2D" parent="PlayerEnergyBarCover" unique_id=636979958]
-visible = false
 top_level = true
 position = Vector2(136.1938, 597.00006)
 scale = Vector2(1.0766308, 1.0766308)

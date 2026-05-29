@@ -12,12 +12,20 @@ func _ready(): #Called when node enters the scene
 	$"../EnemyHPBar".enemy_died.connect(_on_death)
 
 func _on_death():
+	is_dead = true
+	is_attacking = true
 	anim_enemy.play("death_animation")
 	await anim_enemy.animation_finished
 	get_parent().player_wins()
 
-func _physics_process(_delta): #Called every frame
-	anim_enemy.play("angrysam_idle") #Always idle
+var is_dead = false
+
+func _physics_process(_delta):
+	if is_dead:
+		return
+	anim_enemy.play("angrysam_idle")
+
+
 
 func random_attack_loop() -> void:
 	while true:
@@ -27,7 +35,11 @@ func random_attack_loop() -> void:
 			return
 		try_attack()
 
-func try_attack(): #Checks conditions before allowing an attack
+func try_attack():
+	if get_parent().get_node("PlayerHPBar").is_dead:
+		return
+	if get_parent().get_node("EnemyHPBar").is_dead:
+		return
 	if get_parent().battle_busy or is_attacking: #Skip if battle is busy or already attacking
 		return
 	if energy_bar.has_enough(25): #Check if enemy has enough energy to attack

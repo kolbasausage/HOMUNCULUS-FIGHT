@@ -20,9 +20,14 @@ func _place_marker(marker, cost):
 
 func _ready():
 	original_scale = scale
+	_place_markers()
 	$"../PlayerHPBar".player_died.connect(_on_death)
+	print("Signal connected: ", $"../PlayerHPBar".player_died.is_connected(_on_death))
 
 func _on_death():
+	print("_on_death called!")
+	print("Has death_animation: ", anim_player.sprite_frames.has_animation("death_animation"))
+	is_dead = true
 	anim_player.play("death_animation")
 	await anim_player.animation_finished
 	get_parent().player_loses()
@@ -38,11 +43,15 @@ var original_scale: Vector2 #Original scale of the sprite
 
 
 func _physics_process(_delta):
+	if is_dead:
+		return
 	if not try_attack():
 		anim_player.play("moonman_idle")
+var is_dead = false
 
-#Attack when theres enough energy
 func try_attack():
+	if is_dead:
+		return
 	if get_parent().battle_busy: #If enemy is attacking you can't attack
 		return
 	# Basic attack on Right Arrow (20 energy)
