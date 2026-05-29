@@ -20,12 +20,12 @@ func _place_marker(marker, cost):
 
 func _ready():
 	original_scale = scale
-	var global_scale = energy_bar.get_global_transform().get_scale()
-	var true_height = abs(global_scale.y) * 756.0
-	print("True height: ", true_height)
-	print("Bar global pos: ", energy_bar.global_position)
-	print("Bar bottom Y: ", energy_bar.global_position.y + true_height)
-	_place_markers()
+	$"../PlayerHPBar".player_died.connect(_on_death)
+
+func _on_death():
+	anim_player.play("death_animation")
+	await anim_player.animation_finished
+	get_parent().player_loses()
 
 #Energy % of where markers are placed
 func _place_markers():
@@ -37,7 +37,7 @@ func _place_markers():
 var original_scale: Vector2 #Original scale of the sprite
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if not try_attack():
 		anim_player.play("moonman_idle")
 

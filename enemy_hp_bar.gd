@@ -15,5 +15,7 @@ func take_damage(amount: float):
 	if enemy_hp <= 0:
 		die()
 
+signal enemy_died
+
 func die():
-	get_parent().player_wins()
+	emit_signal("enemy_died")

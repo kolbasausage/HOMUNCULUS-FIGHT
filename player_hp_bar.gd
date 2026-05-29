@@ -25,5 +25,7 @@ func heal(amount):
 	# Update the visible bar immediately
 	value = player_hp
 	
+signal player_died
+
 func die():
-	get_parent().player_loses()
+	emit_signal("player_died")

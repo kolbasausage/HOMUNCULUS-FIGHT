@@ -2,22 +2,31 @@
 
 [ext_resource type="Script" uid="uid://b1e4iwnakey5u" path="res://fight_scene.gd" id="1_63e0v"]
 [ext_resource type="Texture2D" uid="uid://dc7m388bj45xj" path="res://Background test FARM.png" id="2_qdl6u"]
+[ext_resource type="Texture2D" uid="uid://28fa1uu1yli1" path="res://universal_death_animation0000.png" id="4_f4ne6"]
 [ext_resource type="Script" uid="uid://cvjbhwqmlauty" path="res://player_hp_bar.gd" id="4_qdl6u"]
 [ext_resource type="Script" uid="uid://c5b0aqnblxost" path="res://player.gd" id="4_unus2"]
+[ext_resource type="Texture2D" uid="uid://dqsa8ai4hku0q" path="res://universal_death_animation0001.png" id="5_4vjqt"]
 [ext_resource type="Texture2D" uid="uid://celntxx1sq7ex" path="res://moonman_idle0000.png" id="5_of2us"]
+[ext_resource type="Texture2D" uid="uid://oh1slagegx7o" path="res://universal_death_animation0002.png" id="6_75x8t"]
 [ext_resource type="Texture2D" uid="uid://dq8soxj6s52fn" path="res://moonman_idle0001.png" id="6_725xl"]
 [ext_resource type="Script" uid="uid://3tu3a28y7ijm" path="res://energy.gd" id="6_unus2"]
 [ext_resource type="Script" uid="uid://cdmfc8024m7om" path="res://enemyenergy.gd" id="7_08trx"]
 [ext_resource type="Texture2D" uid="uid://ct5wjf1y6g2d5" path="res://moonman_idle0002.png" id="7_d8cdl"]
+[ext_resource type="Texture2D" uid="uid://dwo21il8y8vmn" path="res://universal_death_animation0003.png" id="7_dm0g6"]
 [ext_resource type="Script" uid="uid://cop8qenbcocsd" path="res://enemy.gd" id="7_x1xbu"]
+[ext_resource type="Texture2D" uid="uid://bt0og6bn3rmpl" path="res://universal_death_animation0004.png" id="8_6xq4t"]
 [ext_resource type="Texture2D" uid="uid://vxmfu7ygykow" path="res://Energy_flow.png" id="8_40dok"]
 [ext_resource type="Texture2D" uid="uid://b6cxwqx5i1ma6" path="res://moonman_idle0003.png" id="8_purkf"]
+[ext_resource type="Texture2D" uid="uid://b8uudfwydfew0" path="res://universal_death_animation0005.png" id="9_2niyv"]
 [ext_resource type="Script" uid="uid://baymd8y8r4jp3" path="res://enemy_hp_bar.gd" id="9_qdl6u"]
 [ext_resource type="Texture2D" uid="uid://ci6y0ov6qoo0r" path="res://moonman_idle0004.png" id="9_v54l5"]
+[ext_resource type="Texture2D" uid="uid://de1gouuorga4p" path="res://universal_death_animation0006.png" id="10_57qy3"]
 [ext_resource type="Texture2D" uid="uid://vo4dvi8ayf00" path="res://moonman_idle0005.png" id="10_fexem"]
 [ext_resource type="Texture2D" uid="uid://cgc7op04v2g14" path="res://moonman_idle0006.png" id="11_ctrha"]
+[ext_resource type="Texture2D" uid="uid://bggafqcx1dydq" path="res://universal_death_animation0007.png" id="11_ojfgy"]
 [ext_resource type="Texture2D" uid="uid://cjn5v85wjenqv" path="res://panel 1.png" id="11_wu0ve"]
 [ext_resource type="Texture2D" uid="uid://berlula641y3b" path="res://panel scarecrow.png" id="12_6soco"]
+[ext_resource type="Texture2D" uid="uid://cexev5gdt8ulv" path="res://universal_death_animation0008.png" id="12_cfn8m"]
 [ext_resource type="Texture2D" uid="uid://digwpr8vrk4pc" path="res://new ui sketch transparent.png" id="14_0pkur"]
 [ext_resource type="Texture2D" uid="uid://3voh0ayb18q5" path="res://Angrysam_Idle0000.png" id="14_725xl"]
 [ext_resource type="Texture2D" uid="uid://dv5123n0ln833" path="res://Angrysam_Idle0001.png" id="15_d8cdl"]
@@ -39,6 +48,38 @@
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_d8cdl"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_f4ne6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4vjqt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_75x8t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_dm0g6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_6xq4t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_2niyv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_57qy3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ojfgy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_cfn8m")
+}],
+"loop": false,
+"name": &"death_animation",
+"speed": 10.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("5_of2us")
@@ -93,6 +134,38 @@ animations = [{
 "loop": true,
 "name": &"angrysam_idle",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_f4ne6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4vjqt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_75x8t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_dm0g6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_6xq4t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_2niyv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_57qy3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ojfgy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_cfn8m")
+}],
+"loop": true,
+"name": &"death_animation",
+"speed": 10.0
 }]
 
 [sub_resource type="Gradient" id="Gradient_08trx"]
@@ -118,7 +191,6 @@ enemy_hp_bar = NodePath("../EnemyHPBar")
 
 [node name="PlayerAnimation" type="AnimatedSprite2D" parent="Player" unique_id=28280443]
 position = Vector2(-6.1035156e-05, -0.00018310547)
-scale = Vector2(1, 1.0000001)
 sprite_frames = SubResource("SpriteFrames_d8cdl")
 animation = &"moonman_idle"
 
@@ -130,9 +202,9 @@ player_hp_bar = NodePath("../PlayerHPBar")
 
 [node name="EnemyAnimation" type="AnimatedSprite2D" parent="Enemy" unique_id=1252860953]
 position = Vector2(0.00012207031, -2)
-scale = Vector2(1, 0.99999964)
 sprite_frames = SubResource("SpriteFrames_vp0h4")
 animation = &"angrysam_idle"
+frame_progress = 0.46421975
 flip_h = true
 
 [node name="PlayerEnergyBar" type="TextureProgressBar" parent="." unique_id=1277075371]

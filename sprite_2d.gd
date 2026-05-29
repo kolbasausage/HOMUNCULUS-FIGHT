@@ -7,7 +7,7 @@ var bar_bottom: float = 750.0
 func _ready():
 	_update_position()
 
-func _process(delta):
+func _process(_delta):
 	if get_parent().get_parent().battle_busy:
 		return
 	_update_position()

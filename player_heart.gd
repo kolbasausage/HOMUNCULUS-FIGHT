@@ -7,7 +7,7 @@ var base_scale: Vector2
 func _ready():
 	base_scale = scale
 
-func _process(delta):
+func _process(_delta):
 	if hp_bar == null:
 		return
 	

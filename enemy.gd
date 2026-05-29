@@ -9,9 +9,14 @@ func _ready(): #Called when node enters the scene
 	randomize() #Randomizes the seed for randf_range
 	original_scale = scale #Save original scale before any squish
 	random_attack_loop() #Start the attack timer loop
-	print(player_hp_bar) #Debug: confirm hp bar is linked
+	$"../EnemyHPBar".enemy_died.connect(_on_death)
 
-func _physics_process(delta): #Called every frame
+func _on_death():
+	anim_enemy.play("death_animation")
+	await anim_enemy.animation_finished
+	get_parent().player_wins()
+
+func _physics_process(_delta): #Called every frame
 	anim_enemy.play("angrysam_idle") #Always idle
 
 func random_attack_loop() -> void:
