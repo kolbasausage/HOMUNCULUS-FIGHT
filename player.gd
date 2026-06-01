@@ -10,7 +10,8 @@ extends Sprite2D
 var BAR_TOP_Y = 80.0
 var BAR_BOTTOM_Y = 751.0
 var BAR_CENTER_X = 135.0
-
+var is_dead = false
+var is_attacking = false
 
 #Marker placement
 func _place_marker(marker, cost):
@@ -39,49 +40,46 @@ func _place_markers():
 	_place_marker(marker3, 80)
 
 
-var original_scale: Vector2 #Original scale of the sprite
-
+var original_scale: Vector2 #Original scale of the sprite1
 
 func _physics_process(_delta):
 	if is_dead:
 		return
-	if not try_attack():
+	try_attack()
+	if not get_parent().battle_busy and not is_attacking:
 		anim_player.play("moonman_idle")
-var is_dead = false
 
 func try_attack():
-	if is_dead:
+	if is_dead or is_attacking or get_parent().battle_busy:
 		return
-	if get_parent().battle_busy: #If enemy is attacking you can't attack
-		return
-	# Basic attack on Right Arrow (20 energy)
+
 	if Input.is_action_just_pressed("Ability_1"):
 		if energy_bar.has_enough(25):
-			attack()
+			is_attacking = true
+			anim_player.play("basicattack_moonman")
 			energy_bar.energy -= 25
+			await attack()
+			is_attacking = false
 		else:
 			print("Not enough energy")
 
-	# Heal on Up Arrow (50 energy)
-	if Input.is_action_just_pressed("Ability_2"):
+	elif Input.is_action_just_pressed("Ability_2"):
 		if energy_bar.has_enough(45):
-			heal()
+			is_attacking = true
 			energy_bar.energy -= 45
+			await heal()
+			is_attacking = false
 		else:
 			print("Not enough energy to heal")
 
-	# Ultimate on Left Arrow (90 energy)
-	if Input.is_action_just_pressed("Ability_3"):
+	elif Input.is_action_just_pressed("Ability_3"):
 		if energy_bar.has_enough(80):
-			ultimate()
+			is_attacking = true
 			energy_bar.energy -= 80
+			await ultimate()
+			is_attacking = false
 		else:
 			print("Not enough energy for ultimate")
-
-
-func _process(_delta: float) -> void:
-	try_attack()
-
 
 # Heal ability connected to player hp bar
 func heal():
@@ -123,6 +121,6 @@ func attack_move():
 	
 	position += Vector2(200, 0)  # Move right to make it look like Homunculus attacks close range
 	
-	await get_tree().create_timer(1).timeout #Timer 0.2 seconds before sprite moves back
+	await get_tree().create_timer(0.2).timeout #Timer 0.2 seconds before sprite moves back
 	
 	position = original_pos #Return to original position

@@ -9,29 +9,22 @@
 [ext_resource type="Script" uid="uid://c5b0aqnblxost" path="res://player.gd" id="4_unus2"]
 [ext_resource type="Texture2D" uid="uid://dqsa8ai4hku0q" path="res://universal_death_animation0001.png" id="5_4vjqt"]
 [ext_resource type="Texture2D" uid="uid://cycj4kqdqh8mh" path="res://ghetto_loop0003.png" id="5_mally"]
-[ext_resource type="Texture2D" uid="uid://celntxx1sq7ex" path="res://moonman_idle0000.png" id="5_of2us"]
 [ext_resource type="Texture2D" uid="uid://ytv5e51s4tlf" path="res://ghetto_loop0004.png" id="6_1rupc"]
 [ext_resource type="Texture2D" uid="uid://oh1slagegx7o" path="res://universal_death_animation0002.png" id="6_75x8t"]
-[ext_resource type="Texture2D" uid="uid://dq8soxj6s52fn" path="res://moonman_idle0001.png" id="6_725xl"]
 [ext_resource type="Script" uid="uid://3tu3a28y7ijm" path="res://energy.gd" id="6_unus2"]
 [ext_resource type="Script" uid="uid://cdmfc8024m7om" path="res://enemyenergy.gd" id="7_08trx"]
 [ext_resource type="Texture2D" uid="uid://df4x04clhspur" path="res://ghetto_loop0005.png" id="7_12vya"]
-[ext_resource type="Texture2D" uid="uid://ct5wjf1y6g2d5" path="res://moonman_idle0002.png" id="7_d8cdl"]
 [ext_resource type="Texture2D" uid="uid://dwo21il8y8vmn" path="res://universal_death_animation0003.png" id="7_dm0g6"]
 [ext_resource type="Script" uid="uid://cop8qenbcocsd" path="res://enemy.gd" id="7_x1xbu"]
 [ext_resource type="Texture2D" uid="uid://bt0og6bn3rmpl" path="res://universal_death_animation0004.png" id="8_6xq4t"]
 [ext_resource type="Texture2D" uid="uid://vxmfu7ygykow" path="res://Energy_flow.png" id="8_40dok"]
 [ext_resource type="Texture2D" uid="uid://bmnocvsmv22j" path="res://ghetto_loop0006.png" id="8_nvfd8"]
-[ext_resource type="Texture2D" uid="uid://b6cxwqx5i1ma6" path="res://moonman_idle0003.png" id="8_purkf"]
 [ext_resource type="Texture2D" uid="uid://b8uudfwydfew0" path="res://universal_death_animation0005.png" id="9_2niyv"]
 [ext_resource type="Texture2D" uid="uid://b3qu5whyoqnlh" path="res://ghetto_loop0007.png" id="9_i24dh"]
 [ext_resource type="Script" uid="uid://baymd8y8r4jp3" path="res://enemy_hp_bar.gd" id="9_qdl6u"]
-[ext_resource type="Texture2D" uid="uid://ci6y0ov6qoo0r" path="res://moonman_idle0004.png" id="9_v54l5"]
 [ext_resource type="Texture2D" uid="uid://de1gouuorga4p" path="res://universal_death_animation0006.png" id="10_57qy3"]
-[ext_resource type="Texture2D" uid="uid://vo4dvi8ayf00" path="res://moonman_idle0005.png" id="10_fexem"]
 [ext_resource type="Texture2D" uid="uid://basqtwn2swywn" path="res://ghetto_loop0008.png" id="10_wgdxf"]
 [ext_resource type="Texture2D" uid="uid://bnobuuurpxs32" path="res://ghetto_loop0009.png" id="11_1xjr1"]
-[ext_resource type="Texture2D" uid="uid://cgc7op04v2g14" path="res://moonman_idle0006.png" id="11_ctrha"]
 [ext_resource type="Texture2D" uid="uid://bggafqcx1dydq" path="res://universal_death_animation0007.png" id="11_ojfgy"]
 [ext_resource type="Texture2D" uid="uid://cjn5v85wjenqv" path="res://panel 1.png" id="11_wu0ve"]
 [ext_resource type="Texture2D" uid="uid://berlula641y3b" path="res://panel scarecrow.png" id="12_6soco"]
@@ -87,6 +80,17 @@
 [ext_resource type="Texture2D" uid="uid://w0uvskc71pmo" path="res://ghetto_loop0041.png" id="43_jek7w"]
 [ext_resource type="Texture2D" uid="uid://c6t2oxw2qjnl7" path="res://ghetto_loop0042.png" id="44_x6bkw"]
 [ext_resource type="Script" uid="uid://t5r3rouvpv7s" path="res://animated_sprite_2d.gd" id="45_51lnb"]
+[ext_resource type="Texture2D" uid="uid://b8pcrpa6t5igu" path="res://basicattack_moonman0001.png" id="47_1rupc"]
+[ext_resource type="Texture2D" uid="uid://c3bl1ivhn5mk6" path="res://basicattack_moonman0000.png" id="47_12vya"]
+[ext_resource type="Texture2D" uid="uid://coib2575a8aew" path="res://basicattack_moonman0002.png" id="48_12vya"]
+[ext_resource type="Texture2D" uid="uid://xpfv3yxr23yy" path="res://basicattack_moonman0003.png" id="49_nvfd8"]
+[ext_resource type="Texture2D" uid="uid://cqg8ss1si6vp" path="res://idle_moonman0000.png" id="59_i24dh"]
+[ext_resource type="Texture2D" uid="uid://gspwdkxa421o" path="res://idle_moonman0001.png" id="60_wgdxf"]
+[ext_resource type="Texture2D" uid="uid://pwgi6ggr3wwr" path="res://idle_moonman0002.png" id="61_1xjr1"]
+[ext_resource type="Texture2D" uid="uid://ivdjualwxe25" path="res://idle_moonman0003.png" id="62_ir50m"]
+[ext_resource type="Texture2D" uid="uid://dnnggfdej7pks" path="res://idle_moonman0004.png" id="63_kx45b"]
+[ext_resource type="Texture2D" uid="uid://dn3p52lqycgr2" path="res://idle_moonman0005.png" id="64_82miu"]
+[ext_resource type="Texture2D" uid="uid://s0e2xqhddvll" path="res://idle_moonman0006.png" id="65_tn2hb"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8qpxs"]
 animations = [{
@@ -229,6 +233,23 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("47_12vya")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_1rupc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_12vya")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_nvfd8")
+}],
+"loop": true,
+"name": &"basicattack_moonman",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("4_f4ne6")
 }, {
 "duration": 1.0,
@@ -261,25 +282,25 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_of2us")
+"texture": ExtResource("59_i24dh")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_725xl")
+"texture": ExtResource("60_wgdxf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_d8cdl")
+"texture": ExtResource("61_1xjr1")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_purkf")
+"texture": ExtResource("62_ir50m")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_v54l5")
+"texture": ExtResource("63_kx45b")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_fexem")
+"texture": ExtResource("64_82miu")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_ctrha")
+"texture": ExtResource("65_tn2hb")
 }],
 "loop": true,
 "name": &"moonman_idle",
@@ -375,7 +396,7 @@ enemy_hp_bar = NodePath("../EnemyHPBar")
 [node name="PlayerAnimation" type="AnimatedSprite2D" parent="Player" unique_id=28280443]
 position = Vector2(-6.1035156e-05, -0.00018310547)
 sprite_frames = SubResource("SpriteFrames_d8cdl")
-animation = &"moonman_idle"
+animation = &"basicattack_moonman"
 
 [node name="Enemy" type="Sprite2D" parent="." unique_id=1807806464 node_paths=PackedStringArray("player_hp_bar")]
 process_mode = 1
@@ -384,9 +405,9 @@ script = ExtResource("7_x1xbu")
 player_hp_bar = NodePath("../PlayerHPBar")
 
 [node name="EnemyAnimation" type="AnimatedSprite2D" parent="Enemy" unique_id=1252860953]
-position = Vector2(0.00012207031, -2)
+position = Vector2(-29, 93)
 sprite_frames = SubResource("SpriteFrames_vp0h4")
-animation = &"death_animation"
+animation = &"angrysam_idle"
 flip_h = true
 
 [node name="PlayerEnergyBar" type="TextureProgressBar" parent="." unique_id=1277075371]
