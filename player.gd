@@ -3,9 +3,9 @@ extends Sprite2D
 @onready var energy_bar = $"../PlayerEnergyBar"  #path to my energy node
 @export var enemy_hp_bar: TextureProgressBar #Enemy HP Bar
 @onready var anim_player = $PlayerAnimation
-@onready var marker1 = $"../PlayerEnergyBarCover/EnergyMarker"
-@onready var marker2 = $"../PlayerEnergyBarCover/EnergyMarker2"
-@onready var marker3 = $"../PlayerEnergyBarCover/EnergyMarker3"
+@onready var marker1 = $"../PlayerEnergyBarCover/PlayerEnergyMarker1"
+@onready var marker2 = $"../PlayerEnergyBarCover/PlayerEnergyMarker2"
+@onready var marker3 = $"../PlayerEnergyBarCover/PlayerEnergyMarker3"
 
 var BAR_TOP_Y = 80.0
 var BAR_BOTTOM_Y = 751.0
@@ -37,7 +37,7 @@ func _on_death():
 func _place_markers():
 	_place_marker(marker1, 25)
 	_place_marker(marker2, 45)
-	_place_marker(marker3, 80)
+	_place_marker(marker3, 70)
 
 
 var original_scale: Vector2 #Original scale of the sprite1
@@ -73,13 +73,21 @@ func try_attack():
 			print("Not enough energy to heal")
 
 	elif Input.is_action_just_pressed("Ability_3"):
-		if energy_bar.has_enough(80):
+		if energy_bar.has_enough(70):
 			is_attacking = true
-			energy_bar.energy -= 80
+			energy_bar.energy -= 70
 			await ultimate()
 			is_attacking = false
 		else:
 			print("Not enough energy for ultimate")
+
+func attack():
+	get_parent().battle_busy = true #Tells the game that player is attacking therefore pauses it
+	print("Player attacks!") #Just to make sure the attack registered
+	enemy_hp_bar.take_damage(20) #deals 20 damage to enemy
+	squish() #Squish effect when attack func happens
+	await attack_move()
+	get_parent().battle_busy = false #Tells the game the action is over
 
 # Heal ability connected to player hp bar
 func heal():
@@ -107,19 +115,12 @@ func squish():
 
 func _on_squish_finished():
 	scale = original_scale #Reset back function
-	
-func attack():
-	get_parent().battle_busy = true #Tells the game that player is attacking therefore pauses it
-	print("Player attacks!") #Just to make sure the attack registered
-	enemy_hp_bar.take_damage(20) #deals 20 damage to enemy
-	squish() #Squish effect when attack func happens
-	await attack_move()
-	get_parent().battle_busy = false #Tells the game the action is over
+
 	
 func attack_move():
 	var original_pos = position #Variable of original position
 	
-	position += Vector2(200, 0)  # Move right to make it look like Homunculus attacks close range
+	position += Vector2(300, 0)  # Move right to make it look like Homunculus attacks close range
 	
 	await get_tree().create_timer(0.2).timeout #Timer 0.2 seconds before sprite moves back
 	

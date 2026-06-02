@@ -26,8 +26,6 @@
 [ext_resource type="Texture2D" uid="uid://basqtwn2swywn" path="res://ghetto_loop0008.png" id="10_wgdxf"]
 [ext_resource type="Texture2D" uid="uid://bnobuuurpxs32" path="res://ghetto_loop0009.png" id="11_1xjr1"]
 [ext_resource type="Texture2D" uid="uid://bggafqcx1dydq" path="res://universal_death_animation0007.png" id="11_ojfgy"]
-[ext_resource type="Texture2D" uid="uid://cjn5v85wjenqv" path="res://panel 1.png" id="11_wu0ve"]
-[ext_resource type="Texture2D" uid="uid://berlula641y3b" path="res://panel scarecrow.png" id="12_6soco"]
 [ext_resource type="Texture2D" uid="uid://cexev5gdt8ulv" path="res://universal_death_animation0008.png" id="12_cfn8m"]
 [ext_resource type="Texture2D" uid="uid://dw87m2d7w1f8c" path="res://ghetto_loop0010.png" id="12_ir50m"]
 [ext_resource type="Texture2D" uid="uid://buj5py22vanrh" path="res://ghetto_loop0011.png" id="13_kx45b"]
@@ -39,7 +37,6 @@
 [ext_resource type="Texture2D" uid="uid://b701kn6qqlsxs" path="res://Energy_bar.png" id="15_vdtfd"]
 [ext_resource type="Texture2D" uid="uid://c5kcnraysjvq2" path="res://ghetto_loop0014.png" id="16_k7ndo"]
 [ext_resource type="Texture2D" uid="uid://cqfeuj083h1wr" path="res://Angrysam_Idle0002.png" id="16_purkf"]
-[ext_resource type="Texture2D" uid="uid://bfmdowydgglal" path="res://Energy_marker.png" id="17_40dok"]
 [ext_resource type="Texture2D" uid="uid://bysdl2blk647r" path="res://ghetto_loop0015.png" id="17_ly0sa"]
 [ext_resource type="Texture2D" uid="uid://c3y83ubqkr5b6" path="res://Angrysam_Idle0003.png" id="17_v54l5"]
 [ext_resource type="Texture2D" uid="uid://csntlncceknud" path="res://ghetto_loop0016.png" id="18_1qpdi"]
@@ -91,6 +88,12 @@
 [ext_resource type="Texture2D" uid="uid://dnnggfdej7pks" path="res://idle_moonman0004.png" id="63_kx45b"]
 [ext_resource type="Texture2D" uid="uid://dn3p52lqycgr2" path="res://idle_moonman0005.png" id="64_82miu"]
 [ext_resource type="Texture2D" uid="uid://s0e2xqhddvll" path="res://idle_moonman0006.png" id="65_tn2hb"]
+[ext_resource type="Texture2D" uid="uid://cgw3ab8xwja0k" path="res://moonman_basicattack_icon.png" id="89_mally"]
+[ext_resource type="Script" uid="uid://br70xfykpn7gw" path="res://moonman_basicattack_icon.gd" id="90_1rupc"]
+[ext_resource type="Texture2D" uid="uid://dhgtai20vxeri" path="res://moonman_heal_icon.png" id="91_nvfd8"]
+[ext_resource type="Script" uid="uid://ckb6bebsllqr3" path="res://moonman_heal_icon.gd" id="92_i24dh"]
+[ext_resource type="Texture2D" uid="uid://euusiash1owt" path="res://moonman_ultimate_icon.png" id="93_wgdxf"]
+[ext_resource type="Script" uid="uid://cuij3h7nm4yq4" path="res://moonman_ultimate_icon.gd" id="94_1xjr1"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8qpxs"]
 animations = [{
@@ -368,6 +371,24 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1rupc"]
+load_path = "res://.godot/imported/Energy_marker.png-fd416e5a66ec922a6d3a89271d52fb67.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_12vya"]
+load_path = "res://.godot/imported/Energy_marker.png-fd416e5a66ec922a6d3a89271d52fb67.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nvfd8"]
+load_path = "res://.godot/imported/Energy_marker.png-fd416e5a66ec922a6d3a89271d52fb67.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_i24dh"]
+load_path = "res://.godot/imported/Energy_marker.png-fd416e5a66ec922a6d3a89271d52fb67.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wgdxf"]
+load_path = "res://.godot/imported/Energy_marker.png-fd416e5a66ec922a6d3a89271d52fb67.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1xjr1"]
+load_path = "res://.godot/imported/Energy_marker.png-fd416e5a66ec922a6d3a89271d52fb67.ctex"
+
 [node name="Node2D" type="Node2D" unique_id=382972580]
 script = ExtResource("1_63e0v")
 
@@ -482,18 +503,6 @@ texture = ExtResource("23_yrub2")
 script = ExtResource("30_v54l5")
 hp_bar = NodePath("..")
 
-[node name="Panel1" type="Sprite2D" parent="." unique_id=2058987691]
-visible = false
-position = Vector2(265, 550)
-scale = Vector2(0.37407994, 0.37407994)
-texture = ExtResource("11_wu0ve")
-
-[node name="Panel2" type="Sprite2D" parent="." unique_id=607078499]
-visible = false
-position = Vector2(861.9999, 550)
-scale = Vector2(-0.374, 0.374)
-texture = ExtResource("12_6soco")
-
 [node name="NewUiSketchTransparent" type="Sprite2D" parent="." unique_id=1753305588]
 visible = false
 position = Vector2(576.54565, 325.82797)
@@ -504,24 +513,65 @@ texture = ExtResource("14_0pkur")
 position = Vector2(128, 424)
 texture = ExtResource("15_vdtfd")
 
-[node name="EnergyMarker" type="Sprite2D" parent="PlayerEnergyBarCover" unique_id=1496199191]
+[node name="PlayerEnergyMarker1" type="Sprite2D" parent="PlayerEnergyBarCover" unique_id=1496199191]
 top_level = true
 position = Vector2(136.1938, 597.00006)
 scale = Vector2(1.0766308, 1.0766308)
-texture = ExtResource("17_40dok")
+texture = SubResource("CompressedTexture2D_1rupc")
 
-[node name="EnergyMarker2" type="Sprite2D" parent="PlayerEnergyBarCover" unique_id=1116364653]
-top_level = true
-position = Vector2(136.1938, 597.00006)
-scale = Vector2(1.0766308, 1.0766308)
-texture = ExtResource("17_40dok")
+[node name="MoonmanBasicattackIcon" type="Sprite2D" parent="PlayerEnergyBarCover" unique_id=2137667812 node_paths=PackedStringArray("energy_bar", "marker")]
+position = Vector2(199, 172)
+texture = ExtResource("89_mally")
+script = ExtResource("90_1rupc")
+energy_bar = NodePath("../../PlayerEnergyBar")
+marker = NodePath("../PlayerEnergyMarker1")
 
-[node name="EnergyMarker3" type="Sprite2D" parent="PlayerEnergyBarCover" unique_id=636979958]
+[node name="PlayerEnergyMarker2" type="Sprite2D" parent="PlayerEnergyBarCover" unique_id=1116364653]
 top_level = true
 position = Vector2(136.1938, 597.00006)
 scale = Vector2(1.0766308, 1.0766308)
-texture = ExtResource("17_40dok")
+texture = SubResource("CompressedTexture2D_12vya")
+
+[node name="MoonmanHealIcon" type="Sprite2D" parent="PlayerEnergyBarCover" unique_id=869940375 node_paths=PackedStringArray("energy_bar", "marker")]
+position = Vector2(203, 12)
+texture = ExtResource("91_nvfd8")
+script = ExtResource("92_i24dh")
+energy_bar = NodePath("../../PlayerEnergyBar")
+cost = 45.0
+marker = NodePath("../PlayerEnergyMarker2")
+
+[node name="PlayerEnergyMarker3" type="Sprite2D" parent="PlayerEnergyBarCover" unique_id=636979958]
+top_level = true
+position = Vector2(136.1938, 597.00006)
+scale = Vector2(1.0766308, 1.0766308)
+texture = SubResource("CompressedTexture2D_nvfd8")
+
+[node name="MoonmanUltimateIcon" type="Sprite2D" parent="PlayerEnergyBarCover" unique_id=715746360 node_paths=PackedStringArray("energy_bar", "marker")]
+position = Vector2(205, -158)
+texture = ExtResource("93_wgdxf")
+script = ExtResource("94_1xjr1")
+energy_bar = NodePath("../../PlayerEnergyBar")
+cost = 70.0
+marker = NodePath("../PlayerEnergyMarker3")
 
 [node name="EnemyEnergyBarCover" type="Sprite2D" parent="." unique_id=1750026012]
 position = Vector2(1792, 424)
 texture = ExtResource("15_vdtfd")
+
+[node name="EnemyEnergyMarker1" type="Sprite2D" parent="EnemyEnergyBarCover" unique_id=1934027546]
+top_level = true
+position = Vector2(136.1938, 597.00006)
+scale = Vector2(1.0766308, 1.0766308)
+texture = SubResource("CompressedTexture2D_i24dh")
+
+[node name="EnemyEnergyMarker2" type="Sprite2D" parent="EnemyEnergyBarCover" unique_id=2050967510]
+top_level = true
+position = Vector2(136.1938, 597.00006)
+scale = Vector2(1.0766308, 1.0766308)
+texture = SubResource("CompressedTexture2D_wgdxf")
+
+[node name="EnemyEnergyMarker3" type="Sprite2D" parent="EnemyEnergyBarCover" unique_id=390852910]
+top_level = true
+position = Vector2(136.1938, 597.00006)
+scale = Vector2(1.0766308, 1.0766308)
+texture = SubResource("CompressedTexture2D_1xjr1")
