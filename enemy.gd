@@ -59,7 +59,7 @@ func _on_squish_finished(): #Called when squish timer ends
 func attack(): #Handles the full attack sequence
 	is_attacking = true #Lock to prevent overlapping attacks
 	print("Enemy attacks!") #Debug: attack triggered
-	player_hp_bar.take_damage(20) #Deal 20 damage to player
+	player_hp_bar.take_damage(30) #Deal 20 damage to player
 	squish() #Play squish effect
 	await attack_move() #Wait for movement animation to finish
 	is_attacking = false #Unlock after attack completes

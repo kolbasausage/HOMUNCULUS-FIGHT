@@ -368,14 +368,6 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="Gradient" id="Gradient_08trx"]
-colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_x1xbu"]
-gradient = SubResource("Gradient_08trx")
-width = 1052
-height = 631
-
 [node name="Node2D" type="Node2D" unique_id=382972580]
 script = ExtResource("1_63e0v")
 
@@ -443,8 +435,9 @@ offset_bottom = 1472.0
 scale = Vector2(0.182, 0.302)
 fill_mode = 3
 nine_patch_stretch = true
-texture_under = SubResource("GradientTexture2D_x1xbu")
+texture_under = ExtResource("21_yrub2")
 texture_progress = ExtResource("21_yrub2")
+tint_under = Color(0.33850017, 0, 0.04767386, 1)
 script = ExtResource("4_qdl6u")
 metadata/_edit_use_anchors_ = true
 
@@ -477,8 +470,9 @@ offset_bottom = 1472.0001
 scale = Vector2(0.18157175, 0.30044073)
 fill_mode = 3
 nine_patch_stretch = true
-texture_under = SubResource("GradientTexture2D_x1xbu")
+texture_under = ExtResource("21_yrub2")
 texture_progress = ExtResource("21_yrub2")
+tint_under = Color(0.3372549, 0, 0.047058824, 1)
 script = ExtResource("9_qdl6u")
 
 [node name="EnemyHeart" type="Sprite2D" parent="EnemyHPBar" unique_id=1217218032 node_paths=PackedStringArray("hp_bar")]
