@@ -37,7 +37,7 @@ func _on_death():
 func _place_markers():
 	_place_marker(marker1, 25)
 	_place_marker(marker2, 45)
-	_place_marker(marker3, 70)
+	_place_marker(marker3, 75)
 
 
 var original_scale: Vector2 #Original scale of the sprite1
@@ -73,9 +73,9 @@ func try_attack():
 			print("Not enough energy to heal")
 
 	elif Input.is_action_just_pressed("Ability_3"):
-		if energy_bar.has_enough(70):
+		if energy_bar.has_enough(75):
 			is_attacking = true
-			energy_bar.energy -= 70
+			energy_bar.energy -= 75
 			await ultimate()
 			is_attacking = false
 		else:

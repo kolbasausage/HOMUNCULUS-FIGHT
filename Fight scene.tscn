@@ -442,6 +442,7 @@ script = ExtResource("6_unus2")
 metadata/_edit_use_anchors_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="PlayerEnergyBar" unique_id=1626977990 node_paths=PackedStringArray("energy_bar")]
+visible = false
 position = Vector2(514.88477, 84.09076)
 scale = Vector2(16.433, 0.982)
 texture = ExtResource("21_d8cdl")
@@ -551,7 +552,7 @@ position = Vector2(205, -158)
 texture = ExtResource("93_wgdxf")
 script = ExtResource("94_1xjr1")
 energy_bar = NodePath("../../PlayerEnergyBar")
-cost = 70.0
+cost = 75.0
 marker = NodePath("../PlayerEnergyMarker3")
 
 [node name="EnemyEnergyBarCover" type="Sprite2D" parent="." unique_id=1750026012]
