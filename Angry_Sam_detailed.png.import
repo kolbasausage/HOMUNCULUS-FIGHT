@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5k4ui0pus54i"
-path="res://.godot/imported/Moonman_Idle0006.png-4c6d82773ba191d981c4fa18828e04ea.ctex"
+uid="uid://bsdofkbocun4n"
+path="res://.godot/imported/Angry_Sam_detailed.png-709baafbc53227d256279919faa2d143.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Moonman_Idle0006.png"
-dest_files=["res://.godot/imported/Moonman_Idle0006.png-4c6d82773ba191d981c4fa18828e04ea.ctex"]
+source_file="res://Angry_Sam_detailed.png"
+dest_files=["res://.godot/imported/Angry_Sam_detailed.png-709baafbc53227d256279919faa2d143.ctex"]
 
 [params]
 
