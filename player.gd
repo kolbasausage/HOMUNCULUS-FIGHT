@@ -47,7 +47,7 @@ func _physics_process(_delta):
 		return
 	try_attack()
 	if not get_parent().battle_busy and not is_attacking:
-		anim_player.play("moonman_idle")
+		anim_player.play("Idle_Franco")
 
 func try_attack():
 	if is_dead or is_attacking or get_parent().battle_busy:
@@ -56,7 +56,6 @@ func try_attack():
 	if Input.is_action_just_pressed("Ability_1"):
 		if energy_bar.has_enough(25):
 			is_attacking = true
-			anim_player.play("basicattack_moonman")
 			energy_bar.energy -= 25
 			await attack()
 			is_attacking = false
@@ -115,6 +114,12 @@ func squish():
 
 func _on_squish_finished():
 	scale = original_scale #Reset back function
+	
+func play_hurt():
+	is_attacking = true
+	anim_player.play("Hurt_Franco")
+	await get_tree().create_timer(0.5).timeout
+	is_attacking = false
 
 	
 func attack_move():

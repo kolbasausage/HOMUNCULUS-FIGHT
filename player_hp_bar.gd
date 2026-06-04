@@ -12,6 +12,21 @@ func take_damage(amount: float):
 	player_hp = max(player_hp, 0)
 	value = player_hp
 	print("HP: ", player_hp)
+	
+	# Play hurt animation
+	get_parent().get_node("Player").play_hurt()
+	
+	var label = Label.new()
+	label.text = str(amount)
+	label.global_position = Vector2(640, 600) + Vector2(30, -150)
+	label.add_theme_font_size_override("font_size", 48)
+	label.add_theme_color_override("font_color", Color.RED)
+	get_tree().root.add_child(label)  # add first
+
+	var tween = label.create_tween()  # THEN create tween
+	tween.tween_property(label, "position:y", label.position.y - 80, 1)  # 1 sec
+	tween.parallel().tween_property(label, "modulate:a", 0.0, 1)
+	tween.tween_callback(label.queue_free)
 	if player_hp <= 0:
 		die()
 
