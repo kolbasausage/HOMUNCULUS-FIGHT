@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://dmoek4f6kvnnc"]
+
+[ext_resource type="Script" uid="uid://c5b0aqnblxost" path="res://Franco.gd" id="1_m0kgn"]
+[ext_resource type="Texture2D" uid="uid://d1x5ut3gs0o2s" path="res://Franco_Hurt.png" id="2_8xavv"]
+[ext_resource type="Texture2D" uid="uid://cv5sf5iujqqdk" path="res://Idle_Franco0000.png" id="3_mmgbv"]
+[ext_resource type="Texture2D" uid="uid://dcfomy8wo2eor" path="res://Idle_Franco0001.png" id="4_0albu"]
+[ext_resource type="Texture2D" uid="uid://2ex6lfmo2bep" path="res://Idle_Franco0002.png" id="5_ww4sa"]
+[ext_resource type="Texture2D" uid="uid://c0tbsxdndxf55" path="res://Idle_Franco0003.png" id="6_gk5ur"]
+[ext_resource type="Texture2D" uid="uid://c47efpac6ssj7" path="res://Idle_Franco0004.png" id="7_34185"]
+[ext_resource type="Texture2D" uid="uid://d0kmvimbys1hg" path="res://Idle_Franco0005.png" id="8_5dht3"]
+[ext_resource type="Texture2D" uid="uid://d012u2qbi4c3u" path="res://Idle_Franco0006.png" id="9_lycup"]
+[ext_resource type="Texture2D" uid="uid://28fa1uu1yli1" path="res://universal_death_animation0000.png" id="10_xewih"]
+[ext_resource type="Texture2D" uid="uid://dqsa8ai4hku0q" path="res://universal_death_animation0001.png" id="11_7ayy1"]
+[ext_resource type="Texture2D" uid="uid://oh1slagegx7o" path="res://universal_death_animation0002.png" id="12_w30qb"]
+[ext_resource type="Texture2D" uid="uid://dwo21il8y8vmn" path="res://universal_death_animation0003.png" id="13_rdq1l"]
+[ext_resource type="Texture2D" uid="uid://bt0og6bn3rmpl" path="res://universal_death_animation0004.png" id="14_ykx7m"]
+[ext_resource type="Texture2D" uid="uid://b8uudfwydfew0" path="res://universal_death_animation0005.png" id="15_nu2nb"]
+[ext_resource type="Texture2D" uid="uid://de1gouuorga4p" path="res://universal_death_animation0006.png" id="16_63cbb"]
+[ext_resource type="Texture2D" uid="uid://bggafqcx1dydq" path="res://universal_death_animation0007.png" id="17_h3kqy"]
+[ext_resource type="Texture2D" uid="uid://cexev5gdt8ulv" path="res://universal_death_animation0008.png" id="18_nknr2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d8cdl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_8xavv")
+}],
+"loop": false,
+"name": &"Hurt_Franco",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_mmgbv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0albu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ww4sa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_gk5ur")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_34185")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_5dht3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_lycup")
+}],
+"loop": true,
+"name": &"Idle_Franco",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_xewih")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_7ayy1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_w30qb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_rdq1l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ykx7m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_nu2nb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_63cbb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_h3kqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_nknr2")
+}],
+"loop": false,
+"name": &"death_animation",
+"speed": 10.0
+}]
+
+[node name="Player" type="Sprite2D" unique_id=550805031]
+process_mode = 1
+script = ExtResource("1_m0kgn")
+
+[node name="PlayerAnimation" type="AnimatedSprite2D" parent="." unique_id=779298792]
+position = Vector2(-86, -40)
+sprite_frames = SubResource("SpriteFrames_d8cdl")
+animation = &"Idle_Franco"

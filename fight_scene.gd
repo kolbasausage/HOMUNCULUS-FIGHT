@@ -12,6 +12,15 @@ const ENEMY_POS = Vector2(1280, 600)
 @onready var player_energy_bar = $PlayerEnergyBar
 @onready var enemy_hp_bar = $EnemyHPBar
 @onready var enemy_energy_bar = $EnemyEnergyBar
+@onready var result_screen = $CanvasLayer/ResultScreen
+
+func player_wins():
+	get_tree().paused = true
+	result_screen.show_result("YOU WOOON!")
+
+func player_loses():
+	get_tree().paused = true
+	result_screen.show_result("YOU LOSE:(")
 
 func _ready() -> void:
 	_setup_positions()
@@ -19,9 +28,3 @@ func _ready() -> void:
 func _setup_positions():
 	player.position = PLAYER_POS
 	enemy.position = ENEMY_POS
-
-func player_wins():
-	get_tree().paused = true
-
-func player_loses():
-	get_tree().paused = true

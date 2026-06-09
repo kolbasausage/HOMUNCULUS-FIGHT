@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://d4lix7cusddl"]
+
+[ext_resource type="Script" uid="uid://du4dquj83ruwt" path="res://CharacterData.gd" id="1_3g4t0"]
+[ext_resource type="AudioStream" uid="uid://bemct0l16q21e" path="res://Franc_Hurt.wav" id="1_o5lwh"]
+
+[resource]
+script = ExtResource("1_3g4t0")
+character_name = "Franco"
+idle_anim = "Idle_Franco"
+hurt_anim = "Hurt_Franco"
+death_anim = "death_animation"
+hurt_sound = ExtResource("1_o5lwh")

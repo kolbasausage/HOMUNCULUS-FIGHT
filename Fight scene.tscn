@@ -1,50 +1,33 @@
 [gd_scene format=3 uid="uid://ctpp224yw2jvk"]
 
 [ext_resource type="Script" uid="uid://b1e4iwnakey5u" path="res://fight_scene.gd" id="1_63e0v"]
+[ext_resource type="Script" uid="uid://cwlsfsgbyaoq5" path="res://ResultScreen.gd" id="2_d3m25"]
 [ext_resource type="Texture2D" uid="uid://2r7v2ngbw26j" path="res://ghetto_loop0000.png" id="2_wijda"]
 [ext_resource type="Texture2D" uid="uid://c862ug21igjjw" path="res://ghetto_loop0001.png" id="3_51lnb"]
-[ext_resource type="Texture2D" uid="uid://28fa1uu1yli1" path="res://universal_death_animation0000.png" id="4_f4ne6"]
 [ext_resource type="Texture2D" uid="uid://gf2jliwlvao" path="res://ghetto_loop0002.png" id="4_n3x0i"]
 [ext_resource type="Script" uid="uid://cvjbhwqmlauty" path="res://player_hp_bar.gd" id="4_qdl6u"]
-[ext_resource type="Script" uid="uid://c5b0aqnblxost" path="res://player.gd" id="4_unus2"]
-[ext_resource type="Texture2D" uid="uid://dqsa8ai4hku0q" path="res://universal_death_animation0001.png" id="5_4vjqt"]
 [ext_resource type="Texture2D" uid="uid://cycj4kqdqh8mh" path="res://ghetto_loop0003.png" id="5_mally"]
 [ext_resource type="Texture2D" uid="uid://ytv5e51s4tlf" path="res://ghetto_loop0004.png" id="6_1rupc"]
-[ext_resource type="Texture2D" uid="uid://oh1slagegx7o" path="res://universal_death_animation0002.png" id="6_75x8t"]
 [ext_resource type="Script" uid="uid://3tu3a28y7ijm" path="res://energy.gd" id="6_unus2"]
 [ext_resource type="Script" uid="uid://cdmfc8024m7om" path="res://enemyenergy.gd" id="7_08trx"]
 [ext_resource type="Texture2D" uid="uid://df4x04clhspur" path="res://ghetto_loop0005.png" id="7_12vya"]
-[ext_resource type="Texture2D" uid="uid://dwo21il8y8vmn" path="res://universal_death_animation0003.png" id="7_dm0g6"]
-[ext_resource type="Script" uid="uid://cop8qenbcocsd" path="res://enemy.gd" id="7_x1xbu"]
-[ext_resource type="Texture2D" uid="uid://bt0og6bn3rmpl" path="res://universal_death_animation0004.png" id="8_6xq4t"]
 [ext_resource type="Texture2D" uid="uid://vxmfu7ygykow" path="res://Energy_flow.png" id="8_40dok"]
 [ext_resource type="Texture2D" uid="uid://bmnocvsmv22j" path="res://ghetto_loop0006.png" id="8_nvfd8"]
-[ext_resource type="Texture2D" uid="uid://b8uudfwydfew0" path="res://universal_death_animation0005.png" id="9_2niyv"]
 [ext_resource type="Texture2D" uid="uid://b3qu5whyoqnlh" path="res://ghetto_loop0007.png" id="9_i24dh"]
 [ext_resource type="Script" uid="uid://baymd8y8r4jp3" path="res://enemy_hp_bar.gd" id="9_qdl6u"]
-[ext_resource type="Texture2D" uid="uid://de1gouuorga4p" path="res://universal_death_animation0006.png" id="10_57qy3"]
 [ext_resource type="Texture2D" uid="uid://basqtwn2swywn" path="res://ghetto_loop0008.png" id="10_wgdxf"]
 [ext_resource type="Texture2D" uid="uid://bnobuuurpxs32" path="res://ghetto_loop0009.png" id="11_1xjr1"]
-[ext_resource type="Texture2D" uid="uid://bggafqcx1dydq" path="res://universal_death_animation0007.png" id="11_ojfgy"]
-[ext_resource type="Texture2D" uid="uid://cexev5gdt8ulv" path="res://universal_death_animation0008.png" id="12_cfn8m"]
 [ext_resource type="Texture2D" uid="uid://dw87m2d7w1f8c" path="res://ghetto_loop0010.png" id="12_ir50m"]
 [ext_resource type="Texture2D" uid="uid://buj5py22vanrh" path="res://ghetto_loop0011.png" id="13_kx45b"]
 [ext_resource type="Texture2D" uid="uid://digwpr8vrk4pc" path="res://new ui sketch transparent.png" id="14_0pkur"]
 [ext_resource type="Texture2D" uid="uid://32ghwer7t2qb" path="res://ghetto_loop0012.png" id="14_82miu"]
-[ext_resource type="Texture2D" uid="uid://3voh0ayb18q5" path="res://Angrysam_Idle0000.png" id="14_725xl"]
-[ext_resource type="Texture2D" uid="uid://dv5123n0ln833" path="res://Angrysam_Idle0001.png" id="15_d8cdl"]
 [ext_resource type="Texture2D" uid="uid://f1f5q7tkqw6t" path="res://ghetto_loop0013.png" id="15_tn2hb"]
 [ext_resource type="Texture2D" uid="uid://b701kn6qqlsxs" path="res://Energy_bar.png" id="15_vdtfd"]
 [ext_resource type="Texture2D" uid="uid://c5kcnraysjvq2" path="res://ghetto_loop0014.png" id="16_k7ndo"]
-[ext_resource type="Texture2D" uid="uid://cqfeuj083h1wr" path="res://Angrysam_Idle0002.png" id="16_purkf"]
 [ext_resource type="Texture2D" uid="uid://bysdl2blk647r" path="res://ghetto_loop0015.png" id="17_ly0sa"]
-[ext_resource type="Texture2D" uid="uid://c3y83ubqkr5b6" path="res://Angrysam_Idle0003.png" id="17_v54l5"]
 [ext_resource type="Texture2D" uid="uid://csntlncceknud" path="res://ghetto_loop0016.png" id="18_1qpdi"]
-[ext_resource type="Texture2D" uid="uid://ept1p3qjgxwr" path="res://Angrysam_Idle0004.png" id="18_fexem"]
-[ext_resource type="Texture2D" uid="uid://c74vexxfvmgfl" path="res://Angrysam_Idle0005.png" id="19_ctrha"]
 [ext_resource type="Texture2D" uid="uid://4w62ofe47gv2" path="res://ghetto_loop0017.png" id="19_f8gb8"]
 [ext_resource type="Texture2D" uid="uid://cjs76nxme803g" path="res://2411557aeedd50cd04de5f752dedd06a--blacker-than-black-a-color.jpg" id="19_purkf"]
-[ext_resource type="Texture2D" uid="uid://daltyhad23c8i" path="res://Angrysam_Idle0006.png" id="20_7nu8l"]
 [ext_resource type="Texture2D" uid="uid://ywlnadclt8iw" path="res://ghetto_loop0018.png" id="20_8mkw7"]
 [ext_resource type="Texture2D" uid="uid://dwdq6pp5iuhv5" path="res://Tongue_Phill.png" id="21_d8cdl"]
 [ext_resource type="Texture2D" uid="uid://snmr6erl71ul" path="res://ghetto_loop0019.png" id="21_e2ufj"]
@@ -77,14 +60,9 @@
 [ext_resource type="Texture2D" uid="uid://w0uvskc71pmo" path="res://ghetto_loop0041.png" id="43_jek7w"]
 [ext_resource type="Texture2D" uid="uid://c6t2oxw2qjnl7" path="res://ghetto_loop0042.png" id="44_x6bkw"]
 [ext_resource type="Script" uid="uid://t5r3rouvpv7s" path="res://animated_sprite_2d.gd" id="45_51lnb"]
-[ext_resource type="Texture2D" uid="uid://cv5sf5iujqqdk" path="res://Idle_Franco0000.png" id="47_1rupc"]
-[ext_resource type="Texture2D" uid="uid://d1x5ut3gs0o2s" path="res://Franco_Hurt.png" id="47_12vya"]
-[ext_resource type="Texture2D" uid="uid://dcfomy8wo2eor" path="res://Idle_Franco0001.png" id="48_12vya"]
-[ext_resource type="Texture2D" uid="uid://2ex6lfmo2bep" path="res://Idle_Franco0002.png" id="49_nvfd8"]
-[ext_resource type="Texture2D" uid="uid://c0tbsxdndxf55" path="res://Idle_Franco0003.png" id="50_i24dh"]
-[ext_resource type="Texture2D" uid="uid://c47efpac6ssj7" path="res://Idle_Franco0004.png" id="51_wgdxf"]
-[ext_resource type="Texture2D" uid="uid://d0kmvimbys1hg" path="res://Idle_Franco0005.png" id="52_1xjr1"]
-[ext_resource type="Texture2D" uid="uid://d012u2qbi4c3u" path="res://Idle_Franco0006.png" id="53_ir50m"]
+[ext_resource type="PackedScene" uid="uid://dmoek4f6kvnnc" path="res://Franco.tscn" id="46_8aq1r"]
+[ext_resource type="Resource" uid="uid://d4lix7cusddl" path="res://Franco.tres" id="47_hgta6"]
+[ext_resource type="PackedScene" uid="uid://012erwpleq2j" path="res://AngrySam.tscn" id="48_2rm62"]
 [ext_resource type="Texture2D" uid="uid://cgw3ab8xwja0k" path="res://moonman_basicattack_icon.png" id="89_mally"]
 [ext_resource type="Script" uid="uid://br70xfykpn7gw" path="res://moonman_basicattack_icon.gd" id="90_1rupc"]
 [ext_resource type="Texture2D" uid="uid://dhgtai20vxeri" path="res://moonman_heal_icon.png" id="91_nvfd8"]
@@ -229,136 +207,6 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_d8cdl"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("47_12vya")
-}],
-"loop": true,
-"name": &"Hurt_Franco",
-"speed": 1.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("47_1rupc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("48_12vya")
-}, {
-"duration": 1.0,
-"texture": ExtResource("49_nvfd8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("50_i24dh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("51_wgdxf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("52_1xjr1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("53_ir50m")
-}],
-"loop": true,
-"name": &"Idle_Franco",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("4_f4ne6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_4vjqt")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_75x8t")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_dm0g6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_6xq4t")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_2niyv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_57qy3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_ojfgy")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_cfn8m")
-}],
-"loop": false,
-"name": &"death_animation",
-"speed": 10.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_vp0h4"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("14_725xl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_d8cdl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_purkf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("17_v54l5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("18_fexem")
-}, {
-"duration": 1.0,
-"texture": ExtResource("19_ctrha")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_7nu8l")
-}],
-"loop": true,
-"name": &"angrysam_idle",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("4_f4ne6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_4vjqt")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_75x8t")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_dm0g6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_6xq4t")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_2niyv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_57qy3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_ojfgy")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_cfn8m")
-}],
-"loop": false,
-"name": &"death_animation",
-"speed": 10.0
-}]
-
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1rupc"]
 load_path = "res://.godot/imported/Energy_marker.png-fd416e5a66ec922a6d3a89271d52fb67.ctex"
 
@@ -380,6 +228,57 @@ load_path = "res://.godot/imported/Energy_marker.png-fd416e5a66ec922a6d3a89271d5
 [node name="Node2D" type="Node2D" unique_id=382972580]
 script = ExtResource("1_63e0v")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1764031915]
+process_mode = 3
+
+[node name="ResultScreen" type="Control" parent="CanvasLayer" unique_id=1370189444]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_d3m25")
+
+[node name="Panel" type="Panel" parent="CanvasLayer/ResultScreen" unique_id=488683140]
+process_mode = 3
+modulate = Color(0.8175213, 0.8175213, 0.81752115, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1880.0
+offset_bottom = 1040.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ResultLabel" type="Label" parent="CanvasLayer/ResultScreen/Panel" unique_id=1239122854]
+process_mode = 3
+layout_mode = 0
+offset_left = 760.0
+offset_top = 400.0
+offset_right = 1160.0
+offset_bottom = 500.0
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 1
+
+[node name="RestartButton" type="Button" parent="CanvasLayer/ResultScreen/Panel" unique_id=888683317]
+process_mode = 3
+layout_mode = 0
+offset_left = 760.0
+offset_top = 550.0
+offset_right = 1160.0
+offset_bottom = 630.0
+text = "Restart"
+
+[node name="MainMenuButton" type="Button" parent="CanvasLayer/ResultScreen/Panel" unique_id=95676242]
+process_mode = 3
+layout_mode = 0
+offset_left = 760.0
+offset_top = 650.0
+offset_right = 1160.0
+offset_bottom = 730.0
+text = "Go back to main menu"
+
 [node name="Background" type="Sprite2D" parent="." unique_id=181043682]
 position = Vector2(960, 540)
 
@@ -388,30 +287,14 @@ sprite_frames = SubResource("SpriteFrames_8qpxs")
 animation = &"ghetto_loop"
 script = ExtResource("45_51lnb")
 
-[node name="Player" type="Sprite2D" parent="." unique_id=175160999 node_paths=PackedStringArray("enemy_hp_bar")]
-process_mode = 1
+[node name="Player" parent="." unique_id=550805031 node_paths=PackedStringArray("enemy_hp_bar") instance=ExtResource("46_8aq1r")]
 position = Vector2(616, 616)
-script = ExtResource("4_unus2")
 enemy_hp_bar = NodePath("../EnemyHPBar")
+character_data = ExtResource("47_hgta6")
 
-[node name="PlayerAnimation" type="AnimatedSprite2D" parent="Player" unique_id=28280443]
-position = Vector2(-86, -40)
-sprite_frames = SubResource("SpriteFrames_d8cdl")
-animation = &"Idle_Franco"
-frame_progress = 0.5972482
-
-[node name="Enemy" type="Sprite2D" parent="." unique_id=1807806464 node_paths=PackedStringArray("player_hp_bar")]
-process_mode = 1
+[node name="Enemy" parent="." unique_id=344902941 node_paths=PackedStringArray("player_hp_bar") instance=ExtResource("48_2rm62")]
 position = Vector2(1336, 578)
-script = ExtResource("7_x1xbu")
 player_hp_bar = NodePath("../PlayerHPBar")
-
-[node name="EnemyAnimation" type="AnimatedSprite2D" parent="Enemy" unique_id=1252860953]
-position = Vector2(-38, -29)
-sprite_frames = SubResource("SpriteFrames_vp0h4")
-animation = &"angrysam_idle"
-frame_progress = 0.9943142
-flip_h = true
 
 [node name="PlayerEnergyBar" type="TextureProgressBar" parent="." unique_id=1277075371]
 custom_minimum_size = Vector2(151, 756)
@@ -566,3 +449,6 @@ top_level = true
 position = Vector2(136.1938, 597.00006)
 scale = Vector2(1.0766308, 1.0766308)
 texture = SubResource("CompressedTexture2D_1xjr1")
+
+[connection signal="pressed" from="CanvasLayer/ResultScreen/Panel/RestartButton" to="CanvasLayer/ResultScreen" method="_on_restart_pressed"]
+[connection signal="pressed" from="CanvasLayer/ResultScreen/Panel/MainMenuButton" to="CanvasLayer/ResultScreen" method="_on_main_menu_pressed"]

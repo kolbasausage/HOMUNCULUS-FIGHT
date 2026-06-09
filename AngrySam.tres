@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://cdjkr0cohgfd1"]
+
+[ext_resource type="Script" uid="uid://bo4uq2bkmmpjx" path="res://EnemyData.gd" id="1_tojvx"]
+[ext_resource type="AudioStream" uid="uid://dx4n87417bbto" path="res://AngrySam_Hurt.wav" id="1_y2oae"]
+
+[resource]
+script = ExtResource("1_tojvx")
+enemy_name = "Angry Sam"
+idle_anim = "angrysam_idle"
+death_anim = "death_animation"
+hurt_sound = ExtResource("1_y2oae")

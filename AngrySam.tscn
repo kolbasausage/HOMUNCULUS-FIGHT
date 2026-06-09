@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://012erwpleq2j"]
+
+[ext_resource type="Script" uid="uid://0jl1udas78ov" path="res://AngrySam.gd" id="1_13dcj"]
+[ext_resource type="Resource" uid="uid://cdjkr0cohgfd1" path="res://AngrySam.tres" id="2_umrni"]
+[ext_resource type="Texture2D" uid="uid://3voh0ayb18q5" path="res://Angrysam_Idle0000.png" id="3_tlcq7"]
+[ext_resource type="Texture2D" uid="uid://dv5123n0ln833" path="res://Angrysam_Idle0001.png" id="4_mnxdq"]
+[ext_resource type="Texture2D" uid="uid://cqfeuj083h1wr" path="res://Angrysam_Idle0002.png" id="5_xae0k"]
+[ext_resource type="Texture2D" uid="uid://c3y83ubqkr5b6" path="res://Angrysam_Idle0003.png" id="6_s8fob"]
+[ext_resource type="Texture2D" uid="uid://ept1p3qjgxwr" path="res://Angrysam_Idle0004.png" id="7_mdv82"]
+[ext_resource type="Texture2D" uid="uid://c74vexxfvmgfl" path="res://Angrysam_Idle0005.png" id="8_1ck16"]
+[ext_resource type="Texture2D" uid="uid://daltyhad23c8i" path="res://Angrysam_Idle0006.png" id="9_n730e"]
+[ext_resource type="Texture2D" uid="uid://28fa1uu1yli1" path="res://universal_death_animation0000.png" id="10_n3jdn"]
+[ext_resource type="Texture2D" uid="uid://dqsa8ai4hku0q" path="res://universal_death_animation0001.png" id="11_76c3r"]
+[ext_resource type="Texture2D" uid="uid://oh1slagegx7o" path="res://universal_death_animation0002.png" id="12_51kak"]
+[ext_resource type="Texture2D" uid="uid://dwo21il8y8vmn" path="res://universal_death_animation0003.png" id="13_clnhd"]
+[ext_resource type="Texture2D" uid="uid://bt0og6bn3rmpl" path="res://universal_death_animation0004.png" id="14_071hs"]
+[ext_resource type="Texture2D" uid="uid://b8uudfwydfew0" path="res://universal_death_animation0005.png" id="15_bic1u"]
+[ext_resource type="Texture2D" uid="uid://de1gouuorga4p" path="res://universal_death_animation0006.png" id="16_jphry"]
+[ext_resource type="Texture2D" uid="uid://bggafqcx1dydq" path="res://universal_death_animation0007.png" id="17_jhek7"]
+[ext_resource type="Texture2D" uid="uid://cexev5gdt8ulv" path="res://universal_death_animation0008.png" id="18_vf5ut"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vp0h4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_tlcq7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_mnxdq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_xae0k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_s8fob")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_mdv82")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_1ck16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_n730e")
+}],
+"loop": true,
+"name": &"angrysam_idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_n3jdn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_76c3r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_51kak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_clnhd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_071hs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_bic1u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_jphry")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_jhek7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_vf5ut")
+}],
+"loop": false,
+"name": &"death_animation",
+"speed": 10.0
+}]
+
+[node name="Enemy" type="Sprite2D" unique_id=344902941 node_paths=PackedStringArray("player_hp_bar")]
+process_mode = 1
+script = ExtResource("1_13dcj")
+player_hp_bar = NodePath("")
+enemy_data = ExtResource("2_umrni")
+
+[node name="EnemyAnimation" type="AnimatedSprite2D" parent="." unique_id=2136405411]
+position = Vector2(-38, -29)
+sprite_frames = SubResource("SpriteFrames_vp0h4")
+animation = &"angrysam_idle"
+frame_progress = 0.9943142
+flip_h = true

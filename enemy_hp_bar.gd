@@ -12,6 +12,8 @@ func take_damage(amount: float):
 	enemy_hp = max(enemy_hp, 0)
 	value = enemy_hp
 	
+	get_parent().get_node("Enemy").play_hurt() 
+	
 	var label = Label.new()
 	label.text = str(amount)
 	label.global_position = Vector2(1280, 600) + Vector2(-230, -150)
