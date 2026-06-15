@@ -61,7 +61,6 @@
 [ext_resource type="Texture2D" uid="uid://c6t2oxw2qjnl7" path="res://ghetto_loop0042.png" id="44_x6bkw"]
 [ext_resource type="Script" uid="uid://t5r3rouvpv7s" path="res://animated_sprite_2d.gd" id="45_51lnb"]
 [ext_resource type="PackedScene" uid="uid://dmoek4f6kvnnc" path="res://Franco.tscn" id="46_8aq1r"]
-[ext_resource type="Resource" uid="uid://d4lix7cusddl" path="res://Franco.tres" id="47_hgta6"]
 [ext_resource type="PackedScene" uid="uid://012erwpleq2j" path="res://AngrySam.tscn" id="48_2rm62"]
 [ext_resource type="Texture2D" uid="uid://cgw3ab8xwja0k" path="res://moonman_basicattack_icon.png" id="89_mally"]
 [ext_resource type="Script" uid="uid://br70xfykpn7gw" path="res://moonman_basicattack_icon.gd" id="90_1rupc"]
@@ -290,10 +289,9 @@ script = ExtResource("45_51lnb")
 [node name="Player" parent="." unique_id=550805031 node_paths=PackedStringArray("enemy_hp_bar") instance=ExtResource("46_8aq1r")]
 position = Vector2(616, 616)
 enemy_hp_bar = NodePath("../EnemyHPBar")
-character_data = ExtResource("47_hgta6")
 
 [node name="Enemy" parent="." unique_id=344902941 node_paths=PackedStringArray("player_hp_bar") instance=ExtResource("48_2rm62")]
-position = Vector2(782, 578)
+position = Vector2(1402, 611)
 player_hp_bar = NodePath("../PlayerHPBar")
 
 [node name="PlayerEnergyBar" type="TextureProgressBar" parent="." unique_id=1277075371]

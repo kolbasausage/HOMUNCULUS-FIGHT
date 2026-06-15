@@ -4,7 +4,7 @@ class_name BaseEnemy
 @onready var energy_bar = $"../EnemyEnergyBar"
 @export var player_hp_bar: TextureProgressBar
 @export var enemy_data: EnemyData
-@onready var anim_enemy = $EnemyAnimation
+@onready var anim_enemy = $AngrySamAnimation
 @onready var emarker1 = $"../EnemyEnergyBarCover/EnemyEnergyMarker1"
 @onready var emarker2 = $"../EnemyEnergyBarCover/EnemyEnergyMarker2"
 @onready var emarker3 = $"../EnemyEnergyBarCover/EnemyEnergyMarker3"

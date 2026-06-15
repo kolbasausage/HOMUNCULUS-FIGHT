@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c5b0aqnblxost" path="res://Franco.gd" id="1_m0kgn"]
 [ext_resource type="Texture2D" uid="uid://d1x5ut3gs0o2s" path="res://Franco_Hurt.png" id="2_8xavv"]
+[ext_resource type="Resource" uid="uid://d4lix7cusddl" path="res://Franco.tres" id="2_mmgbv"]
 [ext_resource type="Texture2D" uid="uid://cv5sf5iujqqdk" path="res://Idle_Franco0000.png" id="3_mmgbv"]
 [ext_resource type="Texture2D" uid="uid://dcfomy8wo2eor" path="res://Idle_Franco0001.png" id="4_0albu"]
 [ext_resource type="Texture2D" uid="uid://2ex6lfmo2bep" path="res://Idle_Franco0002.png" id="5_ww4sa"]
@@ -91,6 +92,7 @@ animations = [{
 [node name="Player" type="Sprite2D" unique_id=550805031]
 process_mode = 1
 script = ExtResource("1_m0kgn")
+character_data = ExtResource("2_mmgbv")
 
 [node name="PlayerAnimation" type="AnimatedSprite2D" parent="." unique_id=779298792]
 position = Vector2(-86, -40)

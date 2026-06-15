@@ -80,13 +80,12 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="Enemy" type="Sprite2D" unique_id=344902941 node_paths=PackedStringArray("player_hp_bar")]
+[node name="AngrySam" type="Sprite2D" unique_id=344902941]
 process_mode = 1
 script = ExtResource("1_13dcj")
-player_hp_bar = NodePath("")
 enemy_data = ExtResource("2_umrni")
 
-[node name="EnemyAnimation" type="AnimatedSprite2D" parent="." unique_id=2136405411]
+[node name="AngrySamAnimation" type="AnimatedSprite2D" parent="." unique_id=2136405411]
 position = Vector2(-38, -29)
 sprite_frames = SubResource("SpriteFrames_vp0h4")
 animation = &"angrysam_idle"

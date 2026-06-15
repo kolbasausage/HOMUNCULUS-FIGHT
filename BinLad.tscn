@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://bpq6k62fay0e3"]
+
+[ext_resource type="Script" uid="uid://c0dphf71xfwpp" path="res://BinLad.gd" id="1_1va81"]
+[ext_resource type="Resource" uid="uid://y2c2jfwcax8s" path="res://BinLad.tres" id="2_wpvm3"]
+[ext_resource type="Texture2D" uid="uid://28fa1uu1yli1" path="res://universal_death_animation0000.png" id="3_6kt2n"]
+[ext_resource type="Texture2D" uid="uid://dqsa8ai4hku0q" path="res://universal_death_animation0001.png" id="4_61dmi"]
+[ext_resource type="Texture2D" uid="uid://oh1slagegx7o" path="res://universal_death_animation0002.png" id="5_1fl6y"]
+[ext_resource type="Texture2D" uid="uid://dwo21il8y8vmn" path="res://universal_death_animation0003.png" id="6_7rvxp"]
+[ext_resource type="Texture2D" uid="uid://bt0og6bn3rmpl" path="res://universal_death_animation0004.png" id="7_hg4sb"]
+[ext_resource type="Texture2D" uid="uid://b8uudfwydfew0" path="res://universal_death_animation0005.png" id="8_snbrx"]
+[ext_resource type="Texture2D" uid="uid://de1gouuorga4p" path="res://universal_death_animation0006.png" id="9_cpbrq"]
+[ext_resource type="Texture2D" uid="uid://bggafqcx1dydq" path="res://universal_death_animation0007.png" id="10_25dne"]
+[ext_resource type="Texture2D" uid="uid://cexev5gdt8ulv" path="res://universal_death_animation0008.png" id="11_rp4r2"]
+[ext_resource type="Texture2D" uid="uid://bh6uq2dxr0nh2" path="res://Idle_BinLad0000.png" id="12_f42yv"]
+[ext_resource type="Texture2D" uid="uid://dasda5nnatcgb" path="res://Idle_BinLad0001.png" id="13_slkab"]
+[ext_resource type="Texture2D" uid="uid://bmuqhfonurqjf" path="res://Idle_BinLad0002.png" id="14_ouxoy"]
+[ext_resource type="Texture2D" uid="uid://wbyqx5vuc8t1" path="res://Idle_BinLad0003.png" id="15_mw32l"]
+[ext_resource type="Texture2D" uid="uid://bou7d0s6ucq5a" path="res://Idle_BinLad0004.png" id="16_3a2jr"]
+[ext_resource type="Texture2D" uid="uid://c6istgj00ui6p" path="res://Idle_BinLad0005.png" id="17_j07j0"]
+[ext_resource type="Texture2D" uid="uid://qbvsheufgjmc" path="res://Idle_BinLad0006.png" id="18_f5y14"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lnbl2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_6kt2n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_61dmi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_1fl6y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_7rvxp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_hg4sb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_snbrx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_cpbrq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_25dne")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_rp4r2")
+}],
+"loop": true,
+"name": &"Death_animation",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_f42yv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_slkab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ouxoy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_mw32l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_3a2jr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_j07j0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_f5y14")
+}],
+"loop": true,
+"name": &"Idle_BinLad",
+"speed": 10.0
+}]
+
+[node name="BinLad" type="Sprite2D" unique_id=849012480]
+script = ExtResource("1_1va81")
+character_data = ExtResource("2_wpvm3")
+
+[node name="BinLadAnimations" type="AnimatedSprite2D" parent="." unique_id=53858912]
+sprite_frames = SubResource("SpriteFrames_lnbl2")
+animation = &"Idle_BinLad"
+frame = 2
+frame_progress = 0.43346903
+flip_h = true
