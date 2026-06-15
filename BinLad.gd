@@ -1,13 +1,20 @@
 extends BaseEnemy
 
+
 func decide_attack():
-	var player_hp = get_parent().get_node("PlayerHPBar").player_hp
-	if player_hp <= 40 and energy_bar.has_enough(enemy_data.heavy_attack_cost):
-		heavy_attack()
+	if shield_hp <= 0 and energy_bar.has_enough(enemy_data.heavy_attack_cost):
+		activate_shield()
 		energy_bar.energy -= enemy_data.heavy_attack_cost
 	elif energy_bar.has_enough(enemy_data.attack_cost):
 		attack()
 		energy_bar.energy -= enemy_data.attack_cost
+
+func activate_shield():
+	is_attacking = true
+	shield_hp = 30.0
+	show_ability_icon(enemy_data.ability2_icon)
+	print("BinLad shields!")
+	is_attacking = false
 
 func attack():
 	is_attacking = true

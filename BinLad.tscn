@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bpq6k62fay0e3"]
 
 [ext_resource type="Script" uid="uid://c0dphf71xfwpp" path="res://BinLad.gd" id="1_1va81"]
+[ext_resource type="Resource" uid="uid://y2c2jfwcax8s" path="res://BinLad.tres" id="2_wpvm3"]
 [ext_resource type="Texture2D" uid="uid://28fa1uu1yli1" path="res://universal_death_animation0000.png" id="3_6kt2n"]
 [ext_resource type="Texture2D" uid="uid://dqsa8ai4hku0q" path="res://universal_death_animation0001.png" id="4_61dmi"]
 [ext_resource type="Texture2D" uid="uid://oh1slagegx7o" path="res://universal_death_animation0002.png" id="5_1fl6y"]
@@ -81,6 +82,7 @@ animations = [{
 
 [node name="BinLad" type="Sprite2D" unique_id=849012480]
 script = ExtResource("1_1va81")
+enemy_data = ExtResource("2_wpvm3")
 
 [node name="EnemyAnimation" type="AnimatedSprite2D" parent="." unique_id=53858912]
 sprite_frames = SubResource("SpriteFrames_lnbl2")

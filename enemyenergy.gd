@@ -1,5 +1,7 @@
 extends TextureProgressBar
 
+@export var ability1_icon: Texture2D
+@export var ability2_icon: Texture2D
 @export var energy_speed: float = 10
 var energy: float = 0.0
 

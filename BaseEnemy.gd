@@ -13,11 +13,10 @@ var mutation: MutationData = null
 
 func apply_mutation(m: MutationData):
 	mutation = m
-	# Apply HP multiplier
-	var hp_bar = $EnemyHPBar
+	var hp_bar = get_parent().get_node("EnemyHPBar")
 	hp_bar.max_value *= m.hp_multiplier
+	hp_bar.enemy_hp = hp_bar.max_value
 	hp_bar.value = hp_bar.max_value
-	# Apply energy regen multiplier
 	energy_bar.energy_speed *= m.energy_regen_multiplier
 
 var original_scale: Vector2
@@ -115,3 +114,27 @@ func attack_move():
 	position += Vector2(-300, 0)
 	await get_tree().create_timer(1).timeout
 	position = original_pos
+	
+var shield_hp = 0.0
+
+func take_hit(amount: float):
+	if shield_hp > 0:
+		var overflow = amount - shield_hp
+		shield_hp -= amount
+		shield_hp = max(shield_hp, 0)
+		print("Shield absorbs! Shield HP: ", shield_hp)
+		if overflow > 0:
+			get_parent().get_node("EnemyHPBar").take_damage(overflow)
+	else:
+		get_parent().get_node("EnemyHPBar").take_damage(amount)
+		
+func show_ability_icon(texture: Texture2D):
+	if texture == null:
+		return
+	var icon = Sprite2D.new()
+	icon.texture = texture
+	icon.global_position = global_position + Vector2(0, -150)
+	get_tree().root.add_child(icon)
+	var tween = icon.create_tween()
+	tween.tween_property(icon, "modulate:a", 0.0, 0.8)
+	tween.tween_callback(icon.queue_free)

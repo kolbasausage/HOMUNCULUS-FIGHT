@@ -1,6 +1,7 @@
 extends Resource
 class_name EnemyData
 
+@export var ability2_icon: Texture2D
 @export var enemy_name: String = ""
 @export var max_hp: float = 100
 

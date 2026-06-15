@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dinkku2hni1b2"
-path="res://.godot/imported/moonman_idle0002.png-64199c74ae83d9c491c071a36a39f033.ctex"
+uid="uid://dpr013wcpxex3"
+path="res://.godot/imported/ghetto street house.png-db0a1f6dccb7b1568f98f64f3ada1d26.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://moonman_idle0002.png"
-dest_files=["res://.godot/imported/moonman_idle0002.png-64199c74ae83d9c491c071a36a39f033.ctex"]
+source_file="res://ghetto street house.png"
+dest_files=["res://.godot/imported/ghetto street house.png-db0a1f6dccb7b1568f98f64f3ada1d26.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dinkku2hni1b2"
-path="res://.godot/imported/moonman_idle0002.png-64199c74ae83d9c491c071a36a39f033.ctex"
+uid="uid://cpexulov8iqx4"
+path="res://.godot/imported/heal cross.png-49fac55518f3aed91655cedfc3d4d716.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://moonman_idle0002.png"
-dest_files=["res://.godot/imported/moonman_idle0002.png-64199c74ae83d9c491c071a36a39f033.ctex"]
+source_file="res://heal cross.png"
+dest_files=["res://.godot/imported/heal cross.png-49fac55518f3aed91655cedfc3d4d716.ctex"]
 
 [params]
 

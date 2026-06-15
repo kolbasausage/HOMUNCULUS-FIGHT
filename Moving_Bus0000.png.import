@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dinkku2hni1b2"
-path="res://.godot/imported/moonman_idle0002.png-64199c74ae83d9c491c071a36a39f033.ctex"
+uid="uid://dgvwgef682wuk"
+path="res://.godot/imported/Moving_Bus0000.png-666e91d394812b5f81b07d525bde50a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://moonman_idle0002.png"
-dest_files=["res://.godot/imported/moonman_idle0002.png-64199c74ae83d9c491c071a36a39f033.ctex"]
+source_file="res://Moving_Bus0000.png"
+dest_files=["res://.godot/imported/Moving_Bus0000.png-666e91d394812b5f81b07d525bde50a3.ctex"]
 
 [params]
 

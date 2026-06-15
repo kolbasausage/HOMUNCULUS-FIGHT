@@ -18,6 +18,11 @@ var is_dead = false
 var is_attacking = false
 var original_scale: Vector2
 
+var infected = false
+var infection_timer = 0.0
+var infection_damage = 5.0  # per second
+
+
 func _place_marker(marker, cost):
 	var ratio = float(cost) / 100.0
 	marker.global_position.x = BAR_CENTER_X
@@ -57,6 +62,12 @@ func _physics_process(_delta):
 	try_attack()
 	if not get_parent().battle_busy and not is_attacking and anim_player.animation != character_data.hurt_anim:
 		anim_player.play(character_data.idle_anim)
+		
+	if infected:
+		infection_timer -= _delta
+		$"../PlayerHPBar".take_damage(infection_damage * _delta)
+		if infection_timer <= 0:
+			infected = false
 
 func try_attack():
 	if is_dead or is_attacking or get_parent().battle_busy:
@@ -133,3 +144,14 @@ func attack_move():
 	position += Vector2(300, 0)
 	await get_tree().create_timer(0.2).timeout
 	position = original_pos
+	
+func show_icon(texture: Texture2D, pos: Vector2):
+	if texture == null:
+		return
+	var icon = Sprite2D.new()
+	icon.texture = texture
+	icon.global_position = pos
+	get_tree().root.add_child(icon)
+	var tween = icon.create_tween()
+	tween.tween_property(icon, "modulate:a", 0.0, 1)
+	tween.tween_callback(icon.queue_free)

@@ -1,8 +1,12 @@
 [gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://y2c2jfwcax8s"]
 
 [ext_resource type="Script" uid="uid://bo4uq2bkmmpjx" path="res://EnemyData.gd" id="1_obl6a"]
+[ext_resource type="Texture2D" uid="uid://bgru4i6yvdx2g" path="res://shield.png" id="1_r5nub"]
 
 [resource]
 script = ExtResource("1_obl6a")
-attack_damage = 30.0
+ability2_icon = ExtResource("1_r5nub")
+attack_damage = 25.0
+attack_cost = 30.0
+attack_cooldown = 3.0
 metadata/_custom_type_script = "uid://du4dquj83ruwt"
