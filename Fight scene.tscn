@@ -293,7 +293,7 @@ enemy_hp_bar = NodePath("../EnemyHPBar")
 character_data = ExtResource("47_hgta6")
 
 [node name="Enemy" parent="." unique_id=344902941 node_paths=PackedStringArray("player_hp_bar") instance=ExtResource("48_2rm62")]
-position = Vector2(1336, 578)
+position = Vector2(782, 578)
 player_hp_bar = NodePath("../PlayerHPBar")
 
 [node name="PlayerEnergyBar" type="TextureProgressBar" parent="." unique_id=1277075371]
