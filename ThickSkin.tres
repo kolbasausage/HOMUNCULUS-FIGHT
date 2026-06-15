@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MutationData" format=3 uid="uid://bxkux7tg64x2b"]
+
+[ext_resource type="Script" uid="uid://u4barkvj3v6x" path="res://MutationData.gd" id="1_ok8aq"]
+
+[resource]
+script = ExtResource("1_ok8aq")
+mutation_name = "Thick Skin"
+description = "You feel heavier, but slower."
+hp_multiplier = 2.0
+energy_regen_multiplier = 0.5
+metadata/_custom_type_script = "uid://u4barkvj3v6x"

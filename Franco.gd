@@ -5,7 +5,11 @@ func ability_1():
 		play_attack_sound()
 		anim_player.play(character_data.attack_anim)
 		energy_bar.energy -= character_data.basic_attack_cost
-		enemy_hp_bar.take_damage(character_data.basic_attack_damage)
+		var damage = character_data.basic_attack_damage
+		if mutation:
+			damage *= mutation.damage_multiplier
+		enemy_hp_bar.take_damage(damage)
+		on_hit()
 		squish()
 		await attack_move()
 	else:

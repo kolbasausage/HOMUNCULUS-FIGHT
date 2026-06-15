@@ -24,6 +24,9 @@ func player_loses():
 
 func _ready() -> void:
 	_setup_positions()
+	# Test mutation - remove this later when we have the mutation screen
+	var caffeine = load("res://Caffeine.tres")
+	player.apply_mutation(caffeine)
 
 func _setup_positions():
 	player.position = PLAYER_POS

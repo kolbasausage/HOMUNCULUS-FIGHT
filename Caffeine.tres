@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MutationData" format=3 uid="uid://coebh7kwb2dt5"]
+
+[ext_resource type="Script" uid="uid://u4barkvj3v6x" path="res://MutationData.gd" id="1_ebk5x"]
+
+[resource]
+script = ExtResource("1_ebk5x")
+mutation_name = "Caffeine"
+description = "Your heart is beating faster, you are closer to death."
+hp_multiplier = 0.8
+energy_regen_multiplier = 1.5
+metadata/_custom_type_script = "uid://u4barkvj3v6x"

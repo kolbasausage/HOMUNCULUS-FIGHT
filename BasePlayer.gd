@@ -1,6 +1,7 @@
 extends Sprite2D
 class_name BasePlayer
 
+
 @onready var energy_bar = $"../PlayerEnergyBar"
 @export var enemy_hp_bar: TextureProgressBar
 @export var character_data: CharacterData
@@ -9,6 +10,7 @@ class_name BasePlayer
 @onready var marker2 = $"../PlayerEnergyBarCover/PlayerEnergyMarker2"
 @onready var marker3 = $"../PlayerEnergyBarCover/PlayerEnergyMarker3"
 
+var mutation: MutationData = null
 var BAR_TOP_Y = 80.0
 var BAR_BOTTOM_Y = 751.0
 var BAR_CENTER_X = 135.0
@@ -31,9 +33,27 @@ func _place_markers():
 	_place_marker(marker2, character_data.heal_cost)
 	_place_marker(marker3, character_data.ultimate_cost)
 
+func apply_mutation(m: MutationData):
+	mutation = m
+	var hp_bar = $"../PlayerHPBar"
+	hp_bar.max_value *= m.hp_multiplier
+	hp_bar.player_hp = hp_bar.max_value
+	hp_bar.value = hp_bar.max_value
+	energy_bar.energy_speed *= m.energy_regen_multiplier
+
+func on_hit():
+	if mutation and mutation.vampiric_heal > 0:
+		$"../PlayerHPBar".heal(mutation.vampiric_heal)
+
 func _physics_process(_delta):
 	if is_dead:
 		return
+	# HP regen/drain from mutation
+	if mutation:
+		if mutation.hp_regen > 0:
+			$"../PlayerHPBar".heal(mutation.hp_regen * _delta)
+		if mutation.hp_drain > 0:
+			$"../PlayerHPBar".take_damage(mutation.hp_drain * _delta)
 	try_attack()
 	if not get_parent().battle_busy and not is_attacking and anim_player.animation != character_data.hurt_anim:
 		anim_player.play(character_data.idle_anim)
@@ -72,11 +92,9 @@ func ability_3():
 func _on_death():
 	is_dead = true
 	is_attacking = true
-	print("death started")
 	if character_data.death_anim != "":
 		anim_player.play(character_data.death_anim)
 	await get_tree().create_timer(2.0).timeout
-	print("death finished")
 	get_parent().player_loses()
 
 func play_attack_sound():
@@ -98,7 +116,6 @@ func play_hurt():
 		audio.play()
 		audio.finished.connect(audio.queue_free)
 	get_tree().create_timer(0.5).timeout.connect(func():
-		print("hurt timer fired")
 		if not is_instance_valid(self) or is_dead:
 			return
 		is_attacking = false
