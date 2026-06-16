@@ -10,7 +10,7 @@ func show_result(text: String):
 func _on_restart_pressed():
 	print("restart pressed")
 	get_tree().paused = false
-	get_tree().reload_current_scene()
+	get_tree().change_scene_to_file("res://Fight_scene.tscn")
 
 func _on_main_menu_pressed():
 	get_tree().paused = false

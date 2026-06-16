@@ -287,7 +287,7 @@ offset_left = 760.0
 offset_top = 650.0
 offset_right = 1160.0
 offset_bottom = 730.0
-text = "Go back to bus"
+text = "Fight Bin Lad again"
 
 [node name="PathMapButton" type="Button" parent="CanvasLayer/ResultScreen/Panel" unique_id=431043875]
 layout_mode = 0
