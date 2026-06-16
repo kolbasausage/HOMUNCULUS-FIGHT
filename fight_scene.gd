@@ -22,9 +22,14 @@ func player_loses():
 	get_tree().paused = true
 	result_screen.show_result("YOU LOSE:(")
 
-func _ready() -> void:
+func _ready():
 	_setup_positions()
-
+	player_hp_bar.player_hp = player.character_data.max_hp
+	player_hp_bar.max_value = player.character_data.max_hp
+	player_hp_bar.value = player.character_data.max_hp
+	enemy_hp_bar.enemy_hp = enemy.enemy_data.max_hp
+	enemy_hp_bar.max_value = enemy.enemy_data.max_hp
+	enemy_hp_bar.value = enemy.enemy_data.max_hp
 
 func _setup_positions():
 	player.position = PLAYER_POS

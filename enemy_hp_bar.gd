@@ -8,6 +8,7 @@ func _ready() -> void:
 	value = enemy_hp
 
 func take_damage(amount: float):
+	print("Enemy HP bar take_damage: ", amount, " current hp: ", enemy_hp)
 	enemy_hp -= amount
 	enemy_hp = max(enemy_hp, 0)
 	value = enemy_hp
@@ -37,4 +38,5 @@ func die():
 	if is_dead:
 		return
 	is_dead = true
+	print("die() called, finding enemy: ", get_parent().get_node("Enemy"))
 	get_parent().get_node("Enemy")._on_death()

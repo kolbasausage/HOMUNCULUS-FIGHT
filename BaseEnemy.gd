@@ -44,12 +44,13 @@ func _ready():
 	$"../EnemyHPBar".enemy_died.connect(_on_death)
 
 func _on_death():
+	print("_on_death called!")
 	is_dead = true
 	is_attacking = true
 	anim_enemy.play(enemy_data.death_anim)
 	await anim_enemy.animation_finished
 	get_parent().player_wins()
-
+	
 func _physics_process(_delta):
 	if is_dead:
 		return

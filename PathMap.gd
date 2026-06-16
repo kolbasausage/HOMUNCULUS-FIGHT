@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var bus = $Bus
 @onready var prompt_label = $CanvasLayer/PromptLabel
+@onready var movement_label = $CanvasLayer/MovementLabel
 
 var bus_speed = 400.0
 var stop_positions = [900, 1800]
@@ -9,6 +10,7 @@ var proximity = 100.0
 var current_stop_index = -1
 
 func _ready():
+	movement_label.visible = true
 	$Bus/Camera2D/Sprite2D/AnimatedSprite2D.play("Moving_Bushes")
 	$Bus/AnimatedSprite2D.play("Idle_Bus")
 	_animate_building($GhettoStreetHouse)
@@ -27,9 +29,11 @@ func _process(delta):
 	if Input.is_action_pressed("ui_right"):
 		bus.position.x += bus_speed * delta
 		$Bus/AnimatedSprite2D.play("Moving_Bus")
+		movement_label.visible = false  
 	elif Input.is_action_pressed("ui_left"):
 		bus.position.x -= bus_speed * delta
 		$Bus/AnimatedSprite2D.play("Moving_Bus")
+		movement_label.visible = false
 	else:
 		$Bus/AnimatedSprite2D.play("Idle_Bus")
 
@@ -40,6 +44,9 @@ func _process(delta):
 			near_stop = true
 			current_stop_index = i
 			if Input.is_action_just_pressed("ui_accept"):
-				get_tree().change_scene_to_file("res://Fight_scene.tscn")
+				if i == 0:
+					get_tree().change_scene_to_file("res://Fight_scene.tscn")
+				elif i == 1:
+					get_tree().change_scene_to_file("res://BinLad_scene.tscn")
 
 	prompt_label.visible = near_stop

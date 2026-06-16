@@ -6,7 +6,11 @@
 [resource]
 script = ExtResource("1_obl6a")
 ability2_icon = ExtResource("1_r5nub")
+enemy_name = "BinLad"
+max_hp = 130.0
 attack_damage = 25.0
 attack_cost = 30.0
 attack_cooldown = 3.0
+idle_anim = "Idle_BinLad"
+death_anim = "Death_animation"
 metadata/_custom_type_script = "uid://du4dquj83ruwt"

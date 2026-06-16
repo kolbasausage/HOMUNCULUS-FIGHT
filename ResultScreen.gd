@@ -15,3 +15,7 @@ func _on_restart_pressed():
 func _on_main_menu_pressed():
 	get_tree().paused = false
 	get_tree().change_scene_to_file("res://BinLad_scene.tscn")
+
+func _on_path_map_pressed():
+	get_tree().paused = false
+	get_tree().change_scene_to_file("res://PathMap.tscn")

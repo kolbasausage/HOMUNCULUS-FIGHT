@@ -6,6 +6,9 @@
 [resource]
 script = ExtResource("1_tojvx")
 enemy_name = "Angry Sam"
+max_hp = 150.0
+attack_cost = 35.0
+heavy_attack_cost = 60.0
 idle_anim = "angrysam_idle"
 death_anim = "death_animation"
 hurt_sound = ExtResource("1_y2oae")

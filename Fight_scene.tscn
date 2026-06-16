@@ -281,6 +281,14 @@ offset_right = 1160.0
 offset_bottom = 730.0
 text = "NEXT LEVEL"
 
+[node name="PathMapButton" type="Button" parent="CanvasLayer/ResultScreen/Panel" unique_id=1941748164]
+layout_mode = 0
+offset_left = 760.0
+offset_top = 784.0
+offset_right = 1160.0
+offset_bottom = 864.0
+text = "Back to bus"
+
 [node name="Background" type="Sprite2D" parent="." unique_id=181043682]
 position = Vector2(960, 540)
 
@@ -468,3 +476,4 @@ texture = SubResource("CompressedTexture2D_1xjr1")
 
 [connection signal="pressed" from="CanvasLayer/ResultScreen/Panel/RestartButton" to="CanvasLayer/ResultScreen" method="_on_restart_pressed"]
 [connection signal="pressed" from="CanvasLayer/ResultScreen/Panel/MainMenuButton" to="CanvasLayer/ResultScreen" method="_on_main_menu_pressed"]
+[connection signal="pressed" from="CanvasLayer/ResultScreen/Panel/PathMapButton" to="CanvasLayer/ResultScreen" method="_on_path_map_pressed"]

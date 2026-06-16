@@ -49,7 +49,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("11_rp4r2")
 }],
-"loop": true,
+"loop": false,
 "name": &"Death_animation",
 "speed": 5.0
 }, {
@@ -86,7 +86,5 @@ enemy_data = ExtResource("2_wpvm3")
 
 [node name="EnemyAnimation" type="AnimatedSprite2D" parent="." unique_id=53858912]
 sprite_frames = SubResource("SpriteFrames_lnbl2")
-animation = &"Idle_BinLad"
-frame = 2
-frame_progress = 0.43346903
+animation = &"Death_animation"
 flip_h = true

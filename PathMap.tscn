@@ -126,3 +126,11 @@ theme_override_font_sizes/font_size = 29
 text = "Press SPACE to enter!"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="MovementLabel" type="Label" parent="CanvasLayer" unique_id=1916633294]
+offset_left = 760.0
+offset_top = 200.0
+offset_right = 1013.0
+offset_bottom = 299.99963
+theme_override_font_sizes/font_size = 23
+text = "Move with <- and -> arrows"
