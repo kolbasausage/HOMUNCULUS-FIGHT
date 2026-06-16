@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dc7m388bj45xj" path="res://Background test FARM.png" id="1_b07fi"]
 [ext_resource type="Script" uid="uid://cinywwqkhq00d" path="res://Start.gd" id="2_x6lt7"]
+[ext_resource type="Texture2D" uid="uid://c713fo3702wjs" path="res://Blood background.png" id="3_x2ps0"]
 
 [node name="Control" type="Control" unique_id=627884223]
 layout_mode = 3
@@ -12,10 +13,12 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="BackgroundTestFarm" type="Sprite2D" parent="." unique_id=1175096765]
+visible = false
 position = Vector2(960, 540)
 texture = ExtResource("1_b07fi")
 
 [node name="Button" type="Button" parent="." unique_id=1218096621]
+top_level = true
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -28,8 +31,20 @@ offset_right = 236.5
 offset_bottom = 58.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_font_sizes/font_size = 156
 action_mode = 0
 text = "PLAY"
 script = ExtResource("2_x6lt7")
+
+[node name="BloodBackground" type="Sprite2D" parent="." unique_id=674243474]
+position = Vector2(404.5, 536.5)
+scale = Vector2(2.1386719, 2.1386719)
+texture = ExtResource("3_x2ps0")
+
+[node name="BloodBackground2" type="Sprite2D" parent="." unique_id=814648613]
+position = Vector2(1489, 536.5)
+scale = Vector2(2.1386719, 2.1386719)
+texture = ExtResource("3_x2ps0")
+flip_h = true
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

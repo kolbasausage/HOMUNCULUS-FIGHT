@@ -45,6 +45,7 @@
 [ext_resource type="Texture2D" uid="uid://7a5gdf5rivyb" path="res://ghetto_loop0040.png" id="43_0cva7"]
 [ext_resource type="Texture2D" uid="uid://w0uvskc71pmo" path="res://ghetto_loop0041.png" id="44_uvnd6"]
 [ext_resource type="Texture2D" uid="uid://c6t2oxw2qjnl7" path="res://ghetto_loop0042.png" id="45_osldk"]
+[ext_resource type="Script" uid="uid://cmojrgs58f8k3" path="res://animated_sprite_2d.gd" id="46_qjmly"]
 [ext_resource type="PackedScene" uid="uid://dmoek4f6kvnnc" path="res://Franco.tscn" id="46_t02vf"]
 [ext_resource type="PackedScene" uid="uid://012erwpleq2j" path="res://AngrySam.tscn" id="47_nxxer"]
 [ext_resource type="Texture2D" uid="uid://cjs76nxme803g" path="res://2411557aeedd50cd04de5f752dedd06a--blacker-than-black-a-color.jpg" id="48_phexc"]
@@ -208,8 +209,6 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="GDScript" id="GDScript_5ki62"]
-
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1rupc"]
 load_path = "res://.godot/imported/Energy_marker.png-fd416e5a66ec922a6d3a89271d52fb67.ctex"
 
@@ -288,14 +287,14 @@ position = Vector2(960, 540)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Background" unique_id=511713236]
 sprite_frames = SubResource("SpriteFrames_8qpxs")
 animation = &"ghetto_loop"
-script = SubResource("GDScript_5ki62")
+script = ExtResource("46_qjmly")
 
 [node name="Player" parent="." unique_id=550805031 node_paths=PackedStringArray("enemy_hp_bar") instance=ExtResource("46_t02vf")]
 position = Vector2(616, 616)
 enemy_hp_bar = NodePath("../EnemyHPBar")
 
 [node name="Enemy" parent="." unique_id=344902941 node_paths=PackedStringArray("player_hp_bar") instance=ExtResource("47_nxxer")]
-position = Vector2(1402, 611)
+position = Vector2(1414, 611)
 player_hp_bar = NodePath("../PlayerHPBar")
 
 [node name="PlayerEnergyBar" type="TextureProgressBar" parent="." unique_id=1277075371]

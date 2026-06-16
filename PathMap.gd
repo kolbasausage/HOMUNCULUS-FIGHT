@@ -9,6 +9,7 @@ var proximity = 100.0
 var current_stop_index = -1
 
 func _ready():
+	$Bus/Camera2D/Sprite2D/AnimatedSprite2D.play("Moving_Bushes")
 	$Bus/AnimatedSprite2D.play("Idle_Bus")
 	_animate_building($GhettoStreetHouse)
 	_animate_building($GhettoStreetHouse2)
