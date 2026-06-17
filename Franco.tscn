@@ -95,6 +95,5 @@ script = ExtResource("1_m0kgn")
 character_data = ExtResource("2_mmgbv")
 
 [node name="PlayerAnimation" type="AnimatedSprite2D" parent="." unique_id=779298792]
-position = Vector2(-86, -40)
 sprite_frames = SubResource("SpriteFrames_d8cdl")
 animation = &"Idle_Franco"

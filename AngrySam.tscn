@@ -86,7 +86,6 @@ script = ExtResource("1_13dcj")
 enemy_data = ExtResource("2_umrni")
 
 [node name="EnemyAnimation" type="AnimatedSprite2D" parent="." unique_id=2136405411]
-position = Vector2(-38, -29)
 sprite_frames = SubResource("SpriteFrames_vp0h4")
 animation = &"angrysam_idle"
 frame_progress = 0.9943142

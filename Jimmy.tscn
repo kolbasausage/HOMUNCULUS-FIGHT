@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://dlrejyj4f0gun"]
+
+[ext_resource type="Script" uid="uid://dgy8bnqk26o5m" path="res://Jimmy.gd" id="1_st2vc"]
+[ext_resource type="Resource" uid="uid://ckcrgkcgxuc7t" path="res://Jimmy.tres" id="2_qa8dg"]
+[ext_resource type="Texture2D" uid="uid://upn2v27w2tlq" path="res://Idle_Jimmy0000.png" id="3_b6qxi"]
+[ext_resource type="Texture2D" uid="uid://bpgyx4mb48iw4" path="res://Idle_Jimmy0001.png" id="4_uer23"]
+[ext_resource type="Texture2D" uid="uid://quqm0kphu0e5" path="res://Idle_Jimmy0002.png" id="5_rq4p6"]
+[ext_resource type="Texture2D" uid="uid://c861bjsd2nbat" path="res://Idle_Jimmy0003.png" id="6_ns0hl"]
+[ext_resource type="Texture2D" uid="uid://cnbikhpia8ibn" path="res://Idle_Jimmy0004.png" id="7_tuq2c"]
+[ext_resource type="Texture2D" uid="uid://cmwj2e8ltg8mp" path="res://Idle_Jimmy0005.png" id="8_acwmc"]
+[ext_resource type="Texture2D" uid="uid://0h4a11wplrpe" path="res://Idle_Jimmy0006.png" id="9_dlgma"]
+[ext_resource type="Texture2D" uid="uid://28fa1uu1yli1" path="res://universal_death_animation0000.png" id="10_prpxb"]
+[ext_resource type="Texture2D" uid="uid://dqsa8ai4hku0q" path="res://universal_death_animation0001.png" id="11_mut32"]
+[ext_resource type="Texture2D" uid="uid://oh1slagegx7o" path="res://universal_death_animation0002.png" id="12_b685k"]
+[ext_resource type="Texture2D" uid="uid://dwo21il8y8vmn" path="res://universal_death_animation0003.png" id="13_k40ln"]
+[ext_resource type="Texture2D" uid="uid://bt0og6bn3rmpl" path="res://universal_death_animation0004.png" id="14_55c22"]
+[ext_resource type="Texture2D" uid="uid://b8uudfwydfew0" path="res://universal_death_animation0005.png" id="15_ambll"]
+[ext_resource type="Texture2D" uid="uid://de1gouuorga4p" path="res://universal_death_animation0006.png" id="16_254hc"]
+[ext_resource type="Texture2D" uid="uid://bggafqcx1dydq" path="res://universal_death_animation0007.png" id="17_vekrd"]
+[ext_resource type="Texture2D" uid="uid://cexev5gdt8ulv" path="res://universal_death_animation0008.png" id="18_worhc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pknka"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_b6qxi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_uer23")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_rq4p6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ns0hl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_tuq2c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_acwmc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_dlgma")
+}],
+"loop": true,
+"name": &"Idle_Jimmy",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_prpxb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_mut32")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_b685k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_k40ln")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_55c22")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ambll")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_254hc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_vekrd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_worhc")
+}],
+"loop": false,
+"name": &"death_animation",
+"speed": 10.0
+}]
+
+[node name="Player" type="Sprite2D" unique_id=1213359912]
+script = ExtResource("1_st2vc")
+character_data = ExtResource("2_qa8dg")
+
+[node name="PlayerAnimation" type="AnimatedSprite2D" parent="." unique_id=1544257866]
+sprite_frames = SubResource("SpriteFrames_pknka")
+animation = &"death_animation"

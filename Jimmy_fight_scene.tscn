@@ -1,0 +1,478 @@
+[gd_scene format=3 uid="uid://dytsqkdidr4nr"]
+
+[ext_resource type="Script" uid="uid://b1e4iwnakey5u" path="res://fight_scene.gd" id="1_0ed2g"]
+[ext_resource type="Script" uid="uid://cwlsfsgbyaoq5" path="res://ResultScreen.gd" id="2_1rae4"]
+[ext_resource type="Texture2D" uid="uid://2r7v2ngbw26j" path="res://ghetto_loop0000.png" id="3_cow2u"]
+[ext_resource type="Texture2D" uid="uid://c862ug21igjjw" path="res://ghetto_loop0001.png" id="4_n6x77"]
+[ext_resource type="Texture2D" uid="uid://gf2jliwlvao" path="res://ghetto_loop0002.png" id="5_oq4bh"]
+[ext_resource type="Texture2D" uid="uid://cycj4kqdqh8mh" path="res://ghetto_loop0003.png" id="6_2hbhs"]
+[ext_resource type="Texture2D" uid="uid://ytv5e51s4tlf" path="res://ghetto_loop0004.png" id="7_2f3tk"]
+[ext_resource type="Texture2D" uid="uid://df4x04clhspur" path="res://ghetto_loop0005.png" id="8_t2m03"]
+[ext_resource type="Texture2D" uid="uid://bmnocvsmv22j" path="res://ghetto_loop0006.png" id="9_25bbe"]
+[ext_resource type="Texture2D" uid="uid://b3qu5whyoqnlh" path="res://ghetto_loop0007.png" id="10_0o7k0"]
+[ext_resource type="Texture2D" uid="uid://basqtwn2swywn" path="res://ghetto_loop0008.png" id="11_15hbd"]
+[ext_resource type="Texture2D" uid="uid://bnobuuurpxs32" path="res://ghetto_loop0009.png" id="12_rheb5"]
+[ext_resource type="Texture2D" uid="uid://dw87m2d7w1f8c" path="res://ghetto_loop0010.png" id="13_y3j3x"]
+[ext_resource type="Texture2D" uid="uid://buj5py22vanrh" path="res://ghetto_loop0011.png" id="14_y0tb8"]
+[ext_resource type="Texture2D" uid="uid://32ghwer7t2qb" path="res://ghetto_loop0012.png" id="15_e4ovj"]
+[ext_resource type="Texture2D" uid="uid://f1f5q7tkqw6t" path="res://ghetto_loop0013.png" id="16_o1mfu"]
+[ext_resource type="Texture2D" uid="uid://c5kcnraysjvq2" path="res://ghetto_loop0014.png" id="17_npaa5"]
+[ext_resource type="Texture2D" uid="uid://bysdl2blk647r" path="res://ghetto_loop0015.png" id="18_fi6f7"]
+[ext_resource type="Texture2D" uid="uid://csntlncceknud" path="res://ghetto_loop0016.png" id="19_hhepr"]
+[ext_resource type="Texture2D" uid="uid://4w62ofe47gv2" path="res://ghetto_loop0017.png" id="20_1gxok"]
+[ext_resource type="Texture2D" uid="uid://ywlnadclt8iw" path="res://ghetto_loop0018.png" id="21_11hb4"]
+[ext_resource type="Texture2D" uid="uid://snmr6erl71ul" path="res://ghetto_loop0019.png" id="22_1aopy"]
+[ext_resource type="Texture2D" uid="uid://deqawc5lvoeig" path="res://ghetto_loop0020.png" id="23_gsylw"]
+[ext_resource type="Texture2D" uid="uid://bna556aihh1cq" path="res://ghetto_loop0021.png" id="24_focdr"]
+[ext_resource type="Texture2D" uid="uid://bg06hkg4itqto" path="res://ghetto_loop0022.png" id="25_ep7qt"]
+[ext_resource type="Texture2D" uid="uid://bfe6c5b2lwsmk" path="res://ghetto_loop0023.png" id="26_pvm4r"]
+[ext_resource type="Texture2D" uid="uid://ca5xhlyt1446g" path="res://ghetto_loop0024.png" id="27_nnl8e"]
+[ext_resource type="Texture2D" uid="uid://loqodohpdt3s" path="res://ghetto_loop0025.png" id="28_m1eg4"]
+[ext_resource type="Texture2D" uid="uid://df63q3o6gltx1" path="res://ghetto_loop0026.png" id="29_k16rg"]
+[ext_resource type="Texture2D" uid="uid://b2egtbi7ux04m" path="res://ghetto_loop0027.png" id="30_8vivx"]
+[ext_resource type="Texture2D" uid="uid://bpjvpdtjcka2x" path="res://ghetto_loop0028.png" id="31_6oguo"]
+[ext_resource type="Texture2D" uid="uid://camdy1jxec2xt" path="res://ghetto_loop0029.png" id="32_cdldu"]
+[ext_resource type="Texture2D" uid="uid://eimpbymmxthw" path="res://ghetto_loop0030.png" id="33_7qu70"]
+[ext_resource type="Texture2D" uid="uid://b3tg22levvs6v" path="res://ghetto_loop0031.png" id="34_osld6"]
+[ext_resource type="Texture2D" uid="uid://ff38tyx1ou3a" path="res://ghetto_loop0032.png" id="35_0t6xa"]
+[ext_resource type="Texture2D" uid="uid://culqyqst3j6y" path="res://ghetto_loop0033.png" id="36_ir3o5"]
+[ext_resource type="Texture2D" uid="uid://6cgcjp23eaes" path="res://ghetto_loop0034.png" id="37_8lesw"]
+[ext_resource type="Texture2D" uid="uid://bsw4xqxlb3d8o" path="res://ghetto_loop0035.png" id="38_ehovs"]
+[ext_resource type="Texture2D" uid="uid://dqdru3xcs6ea5" path="res://ghetto_loop0036.png" id="39_2cdei"]
+[ext_resource type="Texture2D" uid="uid://chqrtb6a4r2jx" path="res://ghetto_loop0037.png" id="40_4m7gj"]
+[ext_resource type="Texture2D" uid="uid://chqh7qfdgcagb" path="res://ghetto_loop0038.png" id="41_jhkrm"]
+[ext_resource type="Texture2D" uid="uid://cg45u7s7fb7i2" path="res://ghetto_loop0039.png" id="42_pihrd"]
+[ext_resource type="Texture2D" uid="uid://7a5gdf5rivyb" path="res://ghetto_loop0040.png" id="43_61iae"]
+[ext_resource type="Texture2D" uid="uid://w0uvskc71pmo" path="res://ghetto_loop0041.png" id="44_71jik"]
+[ext_resource type="Texture2D" uid="uid://c6t2oxw2qjnl7" path="res://ghetto_loop0042.png" id="45_tvj8n"]
+[ext_resource type="Script" uid="uid://cmojrgs58f8k3" path="res://animated_sprite_2d.gd" id="46_jt6jt"]
+[ext_resource type="PackedScene" uid="uid://dlrejyj4f0gun" path="res://Jimmy.tscn" id="47_0ed2g"]
+[ext_resource type="PackedScene" uid="uid://012erwpleq2j" path="res://AngrySam.tscn" id="48_u7lp2"]
+[ext_resource type="Texture2D" uid="uid://cjs76nxme803g" path="res://2411557aeedd50cd04de5f752dedd06a--blacker-than-black-a-color.jpg" id="49_34fx4"]
+[ext_resource type="Texture2D" uid="uid://vxmfu7ygykow" path="res://Energy_flow.png" id="50_cfus5"]
+[ext_resource type="Script" uid="uid://3tu3a28y7ijm" path="res://energy.gd" id="51_3xq4y"]
+[ext_resource type="Texture2D" uid="uid://dwdq6pp5iuhv5" path="res://Tongue_Phill.png" id="52_k4t1i"]
+[ext_resource type="Script" uid="uid://od7dxny5ldun" path="res://sprite_2d.gd" id="53_07med"]
+[ext_resource type="Texture2D" uid="uid://c713fo3702wjs" path="res://Blood background.png" id="54_gaub8"]
+[ext_resource type="Script" uid="uid://cvjbhwqmlauty" path="res://player_hp_bar.gd" id="55_1hu0w"]
+[ext_resource type="Texture2D" uid="uid://bcr3lofjhew1w" path="res://Heart.png" id="56_kkutw"]
+[ext_resource type="Script" uid="uid://bw5b5bxso3ab0" path="res://player_heart.gd" id="57_ju0hm"]
+[ext_resource type="Script" uid="uid://cdmfc8024m7om" path="res://enemyenergy.gd" id="58_tv3po"]
+[ext_resource type="Script" uid="uid://baymd8y8r4jp3" path="res://enemy_hp_bar.gd" id="59_rgg8t"]
+[ext_resource type="Script" uid="uid://dfw8yfjwljqra" path="res://enemy_heart.gd" id="60_6nxho"]
+[ext_resource type="Texture2D" uid="uid://digwpr8vrk4pc" path="res://new ui sketch transparent.png" id="61_pw365"]
+[ext_resource type="Texture2D" uid="uid://b701kn6qqlsxs" path="res://Energy_bar.png" id="62_3lo7k"]
+[ext_resource type="Texture2D" uid="uid://cgw3ab8xwja0k" path="res://moonman_basicattack_icon.png" id="63_scvpf"]
+[ext_resource type="Script" uid="uid://br70xfykpn7gw" path="res://moonman_basicattack_icon.gd" id="64_qfq8v"]
+[ext_resource type="Texture2D" uid="uid://crgu5adp1a6jv" path="res://Keyboard key 1.png" id="65_u1dmb"]
+[ext_resource type="Texture2D" uid="uid://dhgtai20vxeri" path="res://moonman_heal_icon.png" id="66_qfvgs"]
+[ext_resource type="Script" uid="uid://ckb6bebsllqr3" path="res://moonman_heal_icon.gd" id="67_54im1"]
+[ext_resource type="Texture2D" uid="uid://dv47ovks5iprt" path="res://Keyboard key 2.png" id="68_18ej8"]
+[ext_resource type="Texture2D" uid="uid://euusiash1owt" path="res://moonman_ultimate_icon.png" id="69_44kyp"]
+[ext_resource type="Script" uid="uid://cuij3h7nm4yq4" path="res://moonman_ultimate_icon.gd" id="70_bm38q"]
+[ext_resource type="Texture2D" uid="uid://ceyhp7exwi4ty" path="res://Keyboard key 3.png" id="71_uftee"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8qpxs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_cow2u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_n6x77")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_oq4bh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2hbhs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_2f3tk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_t2m03")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_25bbe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_0o7k0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_15hbd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_rheb5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_y3j3x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_y0tb8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_e4ovj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_o1mfu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_npaa5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_fi6f7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_hhepr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_1gxok")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_11hb4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_1aopy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_gsylw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_focdr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_ep7qt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_pvm4r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_nnl8e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_m1eg4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_k16rg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_8vivx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_6oguo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_cdldu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_7qu70")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_osld6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_0t6xa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_ir3o5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_8lesw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_ehovs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_2cdei")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_4m7gj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_jhkrm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_pihrd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_61iae")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_71jik")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_tvj8n")
+}],
+"loop": true,
+"name": &"ghetto_loop",
+"speed": 10.0
+}]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1rupc"]
+load_path = "res://.godot/imported/Energy_marker.png-fd416e5a66ec922a6d3a89271d52fb67.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_12vya"]
+load_path = "res://.godot/imported/Energy_marker.png-fd416e5a66ec922a6d3a89271d52fb67.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nvfd8"]
+load_path = "res://.godot/imported/Energy_marker.png-fd416e5a66ec922a6d3a89271d52fb67.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_i24dh"]
+load_path = "res://.godot/imported/Energy_marker.png-fd416e5a66ec922a6d3a89271d52fb67.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wgdxf"]
+load_path = "res://.godot/imported/Energy_marker.png-fd416e5a66ec922a6d3a89271d52fb67.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1xjr1"]
+load_path = "res://.godot/imported/Energy_marker.png-fd416e5a66ec922a6d3a89271d52fb67.ctex"
+
+[node name="Node2D" type="Node2D" unique_id=382972580]
+script = ExtResource("1_0ed2g")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1764031915]
+process_mode = 3
+
+[node name="ResultScreen" type="Control" parent="CanvasLayer" unique_id=1370189444]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_1rae4")
+
+[node name="Panel" type="Panel" parent="CanvasLayer/ResultScreen" unique_id=488683140]
+process_mode = 3
+modulate = Color(0.8175213, 0.8175213, 0.81752115, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1880.0
+offset_bottom = 1040.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ResultLabel" type="Label" parent="CanvasLayer/ResultScreen/Panel" unique_id=1239122854]
+process_mode = 3
+layout_mode = 0
+offset_left = 760.0
+offset_top = 400.0
+offset_right = 1160.0
+offset_bottom = 500.0
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 1
+
+[node name="RestartButton" type="Button" parent="CanvasLayer/ResultScreen/Panel" unique_id=888683317]
+process_mode = 3
+layout_mode = 0
+offset_left = 760.0
+offset_top = 550.0
+offset_right = 1160.0
+offset_bottom = 630.0
+text = "Restart"
+
+[node name="MainMenuButton" type="Button" parent="CanvasLayer/ResultScreen/Panel" unique_id=95676242]
+process_mode = 3
+layout_mode = 0
+offset_left = 760.0
+offset_top = 650.0
+offset_right = 1160.0
+offset_bottom = 730.0
+text = "NEXT LEVEL"
+
+[node name="PathMapButton" type="Button" parent="CanvasLayer/ResultScreen/Panel" unique_id=1941748164]
+layout_mode = 0
+offset_left = 760.0
+offset_top = 784.0
+offset_right = 1160.0
+offset_bottom = 864.0
+text = "Back to bus"
+
+[node name="Background" type="Sprite2D" parent="." unique_id=181043682]
+position = Vector2(960, 540)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Background" unique_id=511713236]
+sprite_frames = SubResource("SpriteFrames_8qpxs")
+animation = &"ghetto_loop"
+script = ExtResource("46_jt6jt")
+
+[node name="Player" parent="." unique_id=1213359912 node_paths=PackedStringArray("enemy_hp_bar") instance=ExtResource("47_0ed2g")]
+enemy_hp_bar = NodePath("../EnemyHPBar")
+
+[node name="Enemy" parent="." unique_id=344902941 node_paths=PackedStringArray("player_hp_bar") instance=ExtResource("48_u7lp2")]
+position = Vector2(1414, 611)
+player_hp_bar = NodePath("../PlayerHPBar")
+
+[node name="PlayerEnergyBar" type="TextureProgressBar" parent="." unique_id=1277075371]
+custom_minimum_size = Vector2(151, 756)
+offset_left = 166.99998
+offset_top = 104.0
+offset_right = 1225.0
+offset_bottom = 860.0
+rotation = -3.1415927
+scale = Vector2(0.07198495, -0.85516465)
+size_flags_horizontal = 4
+value = 100.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_under = ExtResource("49_34fx4")
+texture_progress = ExtResource("50_cfus5")
+tint_progress = Color(1, 0.29411727, 0.14686409, 1)
+script = ExtResource("51_3xq4y")
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="PlayerEnergyBar" unique_id=1626977990 node_paths=PackedStringArray("energy_bar")]
+visible = false
+position = Vector2(514.88477, 84.09076)
+scale = Vector2(16.433, 0.982)
+texture = ExtResource("52_k4t1i")
+script = ExtResource("53_07med")
+energy_bar = NodePath("..")
+
+[node name="PlayerHPBar" type="TextureProgressBar" parent="." unique_id=1988750124]
+offset_left = 63.0
+offset_top = 832.0
+offset_right = 1121.0
+offset_bottom = 1472.0
+scale = Vector2(0.182, 0.302)
+fill_mode = 3
+nine_patch_stretch = true
+texture_under = ExtResource("54_gaub8")
+texture_progress = ExtResource("54_gaub8")
+tint_under = Color(0.33850017, 0, 0.04767386, 1)
+script = ExtResource("55_1hu0w")
+metadata/_edit_use_anchors_ = true
+
+[node name="PlayerHeart" type="Sprite2D" parent="PlayerHPBar" unique_id=1167588955 node_paths=PackedStringArray("hp_bar")]
+position = Vector2(532.9671, 317.8807)
+scale = Vector2(2.747253, 1.6556294)
+texture = ExtResource("56_kkutw")
+script = ExtResource("57_ju0hm")
+hp_bar = NodePath("..")
+
+[node name="EnemyEnergyBar" type="TextureProgressBar" parent="." unique_id=2025529345]
+offset_left = 1752.0
+offset_top = 104.0
+offset_right = 2810.0
+offset_bottom = 860.0
+rotation = -3.1415927
+scale = Vector2(-0.072314866, -0.85968196)
+value = 100.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_progress = ExtResource("50_cfus5")
+script = ExtResource("58_tv3po")
+metadata/_edit_use_anchors_ = true
+
+[node name="EnemyHPBar" type="TextureProgressBar" parent="." unique_id=1269053381]
+offset_left = 1664.0
+offset_top = 832.0
+offset_right = 2722.0
+offset_bottom = 1472.0001
+scale = Vector2(0.18157175, 0.30044073)
+fill_mode = 3
+nine_patch_stretch = true
+texture_under = ExtResource("54_gaub8")
+texture_progress = ExtResource("54_gaub8")
+tint_under = Color(0.3372549, 0, 0.047058824, 1)
+script = ExtResource("59_rgg8t")
+
+[node name="EnemyHeart" type="Sprite2D" parent="EnemyHPBar" unique_id=1217218032 node_paths=PackedStringArray("hp_bar")]
+position = Vector2(528.7167, 319.53067)
+scale = Vector2(2.7537324, 1.6642218)
+texture = ExtResource("56_kkutw")
+script = ExtResource("60_6nxho")
+hp_bar = NodePath("..")
+
+[node name="NewUiSketchTransparent" type="Sprite2D" parent="." unique_id=1753305588]
+visible = false
+position = Vector2(576.54565, 325.82797)
+scale = Vector2(0.60119426, 0.6050542)
+texture = ExtResource("61_pw365")
+
+[node name="PlayerEnergyBarCover" type="Sprite2D" parent="." unique_id=1321383681]
+position = Vector2(128, 424)
+texture = ExtResource("62_3lo7k")
+
+[node name="PlayerEnergyMarker1" type="Sprite2D" parent="PlayerEnergyBarCover" unique_id=1496199191]
+top_level = true
+position = Vector2(136.1938, 597.00006)
+scale = Vector2(1.0766308, 1.0766308)
+texture = SubResource("CompressedTexture2D_1rupc")
+
+[node name="MoonmanBasicattackIcon" type="Sprite2D" parent="PlayerEnergyBarCover" unique_id=2137667812 node_paths=PackedStringArray("energy_bar", "marker")]
+position = Vector2(199, 172)
+texture = ExtResource("63_scvpf")
+script = ExtResource("64_qfq8v")
+energy_bar = NodePath("../../PlayerEnergyBar")
+marker = NodePath("../PlayerEnergyMarker1")
+
+[node name="KeyboardKey1" type="Sprite2D" parent="PlayerEnergyBarCover/MoonmanBasicattackIcon" unique_id=301226590]
+position = Vector2(53, 57)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("65_u1dmb")
+
+[node name="PlayerEnergyMarker2" type="Sprite2D" parent="PlayerEnergyBarCover" unique_id=1116364653]
+top_level = true
+position = Vector2(136.1938, 597.00006)
+scale = Vector2(1.0766308, 1.0766308)
+texture = SubResource("CompressedTexture2D_12vya")
+
+[node name="MoonmanHealIcon" type="Sprite2D" parent="PlayerEnergyBarCover" unique_id=869940375 node_paths=PackedStringArray("energy_bar", "marker")]
+position = Vector2(203, 12)
+texture = ExtResource("66_qfvgs")
+script = ExtResource("67_54im1")
+energy_bar = NodePath("../../PlayerEnergyBar")
+cost = 45.0
+marker = NodePath("../PlayerEnergyMarker2")
+
+[node name="KeyboardKey2" type="Sprite2D" parent="PlayerEnergyBarCover/MoonmanHealIcon" unique_id=791631382]
+position = Vector2(51, 47.000015)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("68_18ej8")
+
+[node name="PlayerEnergyMarker3" type="Sprite2D" parent="PlayerEnergyBarCover" unique_id=636979958]
+top_level = true
+position = Vector2(136.1938, 597.00006)
+scale = Vector2(1.0766308, 1.0766308)
+texture = SubResource("CompressedTexture2D_nvfd8")
+
+[node name="MoonmanUltimateIcon" type="Sprite2D" parent="PlayerEnergyBarCover" unique_id=715746360 node_paths=PackedStringArray("energy_bar", "marker")]
+position = Vector2(205, -158)
+texture = ExtResource("69_44kyp")
+script = ExtResource("70_bm38q")
+energy_bar = NodePath("../../PlayerEnergyBar")
+cost = 75.0
+marker = NodePath("../PlayerEnergyMarker3")
+
+[node name="KeyboardKey3" type="Sprite2D" parent="PlayerEnergyBarCover/MoonmanUltimateIcon" unique_id=976078700]
+position = Vector2(51.000004, 47)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("71_uftee")
+
+[node name="EnemyEnergyBarCover" type="Sprite2D" parent="." unique_id=1750026012]
+position = Vector2(1792, 424)
+texture = ExtResource("62_3lo7k")
+
+[node name="EnemyEnergyMarker1" type="Sprite2D" parent="EnemyEnergyBarCover" unique_id=1934027546]
+top_level = true
+position = Vector2(136.1938, 597.00006)
+scale = Vector2(1.0766308, 1.0766308)
+texture = SubResource("CompressedTexture2D_i24dh")
+
+[node name="EnemyEnergyMarker2" type="Sprite2D" parent="EnemyEnergyBarCover" unique_id=2050967510]
+top_level = true
+position = Vector2(136.1938, 597.00006)
+scale = Vector2(1.0766308, 1.0766308)
+texture = SubResource("CompressedTexture2D_wgdxf")
+
+[node name="EnemyEnergyMarker3" type="Sprite2D" parent="EnemyEnergyBarCover" unique_id=390852910]
+top_level = true
+position = Vector2(136.1938, 597.00006)
+scale = Vector2(1.0766308, 1.0766308)
+texture = SubResource("CompressedTexture2D_1xjr1")
+
+[connection signal="pressed" from="CanvasLayer/ResultScreen/Panel/RestartButton" to="CanvasLayer/ResultScreen" method="_on_restart_pressed"]
+[connection signal="pressed" from="CanvasLayer/ResultScreen/Panel/MainMenuButton" to="CanvasLayer/ResultScreen" method="_on_main_menu_pressed"]
+[connection signal="pressed" from="CanvasLayer/ResultScreen/Panel/PathMapButton" to="CanvasLayer/ResultScreen" method="_on_path_map_pressed"]
