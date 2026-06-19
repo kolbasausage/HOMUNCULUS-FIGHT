@@ -86,4 +86,4 @@ character_data = ExtResource("2_qa8dg")
 
 [node name="PlayerAnimation" type="AnimatedSprite2D" parent="." unique_id=1544257866]
 sprite_frames = SubResource("SpriteFrames_pknka")
-animation = &"death_animation"
+animation = &"Idle_Jimmy"

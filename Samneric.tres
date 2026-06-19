@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://pvns1dhbd1a2"]
+
+[ext_resource type="Script" uid="uid://bo4uq2bkmmpjx" path="res://EnemyData.gd" id="1_8lwhv"]
+
+[resource]
+script = ExtResource("1_8lwhv")
+enemy_name = "Samneric"
+max_hp = 250.0
+attack_damage = 35.0
+attack_cost = 50.0
+heavy_attack_damage = 50.0
+heavy_attack_cost = 90.0
+attack_cooldown = 5.0
+idle_anim = "Idle_Samneric"
+death_anim = "death_animation"
+attack_anim = "Attack_Samneric"
+metadata/_custom_type_script = "uid://du4dquj83ruwt"
