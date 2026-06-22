@@ -6,9 +6,9 @@ func decide_attack():
 	var hp_percent = enemy_hp / max_hp
 	
 	# Shield chance increases as HP gets lower
-	var shield_chance = 0.3  # 30% base chance
+	var shield_chance = 0.4  # 40% base chance
 	if hp_percent < 0.5:
-		shield_chance = 0.6  # 60% when below half HP
+		shield_chance = 0.7  # 70% when below half HP
 	if hp_percent < 0.25:
 		shield_chance = 0.9  # 90% when nearly dead
 	

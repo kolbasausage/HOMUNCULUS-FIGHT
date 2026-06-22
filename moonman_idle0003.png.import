@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bdyo4cyyqwsyk"
-path="res://.godot/imported/Moonman_Idle0003.png-c09dab03a2c1134865096ed19fab41ef.ctex"
+path="res://.godot/imported/moonman_idle0003.png-0be34f4f4db6db685921ee07210e0cef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Moonman_Idle0003.png"
-dest_files=["res://.godot/imported/Moonman_Idle0003.png-c09dab03a2c1134865096ed19fab41ef.ctex"]
+source_file="res://moonman_idle0003.png"
+dest_files=["res://.godot/imported/moonman_idle0003.png-0be34f4f4db6db685921ee07210e0cef.ctex"]
 
 [params]
 
