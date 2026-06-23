@@ -6,13 +6,17 @@ extends Node2D
 
 var bus_speed = 400.0
 var stop_positions = [900, 1800]
+var stop_names = ["⚔️ Angry Sam", "⚔️ BinLad"]
+var stop_scenes = ["res://Fight_scene.tscn", "res://BinLad_scene.tscn"]
 var proximity = 100.0
 var current_stop_index = -1
+var levels_unlocked = 1
 
 func _ready():
-	movement_label.visible = true
-	$Bus/Camera2D/Sprite2D/AnimatedSprite2D.play("Moving_Bushes")
+	levels_unlocked = GameState.levels_unlocked
+	bus.position.x = GameState.bus_position_x
 	$Bus/AnimatedSprite2D.play("Idle_Bus")
+	movement_label.visible = true
 	_animate_building($GhettoStreetHouse)
 	_animate_building($GhettoStreetHouse2)
 
@@ -29,7 +33,7 @@ func _process(delta):
 	if Input.is_action_pressed("ui_right"):
 		bus.position.x += bus_speed * delta
 		$Bus/AnimatedSprite2D.play("Moving_Bus")
-		movement_label.visible = false  
+		movement_label.visible = false
 	elif Input.is_action_pressed("ui_left"):
 		bus.position.x -= bus_speed * delta
 		$Bus/AnimatedSprite2D.play("Moving_Bus")
@@ -37,16 +41,19 @@ func _process(delta):
 	else:
 		$Bus/AnimatedSprite2D.play("Idle_Bus")
 
-	# Check if near a stop
+	bus.position.x = clamp(bus.position.x, 100, 7580)
+
 	var near_stop = false
 	for i in range(stop_positions.size()):
 		if abs(bus.position.x - stop_positions[i]) < proximity:
 			near_stop = true
 			current_stop_index = i
-			if Input.is_action_just_pressed("ui_accept"):
-				if i == 0:
-					get_tree().change_scene_to_file("res://Fight_scene.tscn")
-				elif i == 1:
-					get_tree().change_scene_to_file("res://BinLad_scene.tscn")
+			if i < levels_unlocked:
+				prompt_label.text = "Press SPACE to enter - " + stop_names[i]
+				if Input.is_action_just_pressed("ui_accept"):
+					GameState.bus_position_x = bus.position.x
+					get_tree().change_scene_to_file(stop_scenes[i])
+			else:
+				prompt_label.text = "🚧 Road works - Beat previous level first!"
 
 	prompt_label.visible = near_stop

@@ -15,13 +15,14 @@ const ENEMY_POS = Vector2(1280, 600)
 @onready var result_screen = $CanvasLayer/ResultScreen
 
 func player_wins():
+	GameState.levels_unlocked += 1
 	get_tree().paused = true
-	result_screen.show_result("YOU WOOON!")
+	result_screen.show_result("YOU WIN!", true)
 
 func player_loses():
 	get_tree().paused = true
-	result_screen.show_result("YOU LOSE:(")
-
+	result_screen.show_result("YOU LOSE!", false)
+	
 func _ready():
 	_setup_positions()
 	player_hp_bar.player_hp = player.character_data.max_hp

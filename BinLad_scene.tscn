@@ -310,7 +310,6 @@ position = Vector2(616, 616)
 enemy_hp_bar = NodePath("../EnemyHPBar")
 
 [node name="Enemy" parent="." unique_id=849012480 node_paths=PackedStringArray("player_hp_bar") instance=ExtResource("47_xa5sl")]
-position = Vector2(1377, 616)
 player_hp_bar = NodePath("../PlayerHPBar")
 
 [node name="PlayerEnergyBar" type="TextureProgressBar" parent="." unique_id=1277075371]
@@ -410,12 +409,13 @@ position = Vector2(136.1938, 597.00006)
 scale = Vector2(1.0766308, 1.0766308)
 texture = SubResource("CompressedTexture2D_1rupc")
 
-[node name="MoonmanBasicattackIcon" type="Sprite2D" parent="PlayerEnergyBarCover" unique_id=2137667812 node_paths=PackedStringArray("energy_bar", "marker")]
+[node name="MoonmanBasicattackIcon" type="Sprite2D" parent="PlayerEnergyBarCover" unique_id=2137667812 node_paths=PackedStringArray("energy_bar", "marker", "player")]
 position = Vector2(199, 172)
 texture = ExtResource("62_52mwf")
 script = ExtResource("63_dlx7u")
 energy_bar = NodePath("../../PlayerEnergyBar")
 marker = NodePath("../PlayerEnergyMarker1")
+player = NodePath("../../Player")
 
 [node name="KeyboardKey1" type="Sprite2D" parent="PlayerEnergyBarCover/MoonmanBasicattackIcon" unique_id=301226590]
 position = Vector2(53, 57)
@@ -428,13 +428,14 @@ position = Vector2(136.1938, 597.00006)
 scale = Vector2(1.0766308, 1.0766308)
 texture = SubResource("CompressedTexture2D_12vya")
 
-[node name="MoonmanHealIcon" type="Sprite2D" parent="PlayerEnergyBarCover" unique_id=869940375 node_paths=PackedStringArray("energy_bar", "marker")]
+[node name="MoonmanHealIcon" type="Sprite2D" parent="PlayerEnergyBarCover" unique_id=869940375 node_paths=PackedStringArray("energy_bar", "marker", "player")]
 position = Vector2(203, 12)
 texture = ExtResource("65_r2dpa")
 script = ExtResource("66_0j4ef")
 energy_bar = NodePath("../../PlayerEnergyBar")
 cost = 45.0
 marker = NodePath("../PlayerEnergyMarker2")
+player = NodePath("../../Player")
 
 [node name="KeyboardKey2" type="Sprite2D" parent="PlayerEnergyBarCover/MoonmanHealIcon" unique_id=791631382]
 position = Vector2(51, 47.000015)
@@ -447,13 +448,14 @@ position = Vector2(136.1938, 597.00006)
 scale = Vector2(1.0766308, 1.0766308)
 texture = SubResource("CompressedTexture2D_nvfd8")
 
-[node name="MoonmanUltimateIcon" type="Sprite2D" parent="PlayerEnergyBarCover" unique_id=715746360 node_paths=PackedStringArray("energy_bar", "marker")]
+[node name="MoonmanUltimateIcon" type="Sprite2D" parent="PlayerEnergyBarCover" unique_id=715746360 node_paths=PackedStringArray("energy_bar", "marker", "player")]
 position = Vector2(205, -158)
 texture = ExtResource("68_3mrjl")
 script = ExtResource("69_u41jb")
 energy_bar = NodePath("../../PlayerEnergyBar")
 cost = 75.0
 marker = NodePath("../PlayerEnergyMarker3")
+player = NodePath("../../Player")
 
 [node name="KeyboardKey3" type="Sprite2D" parent="PlayerEnergyBarCover/MoonmanUltimateIcon" unique_id=976078700]
 position = Vector2(51.000004, 47)
@@ -466,19 +468,19 @@ texture = ExtResource("61_ue4jo")
 
 [node name="EnemyEnergyMarker1" type="Sprite2D" parent="EnemyEnergyBarCover" unique_id=1934027546]
 top_level = true
-position = Vector2(136.1938, 597.00006)
+position = Vector2(2159.1938, 622.84106)
 scale = Vector2(1.0766308, 1.0766308)
 texture = SubResource("CompressedTexture2D_i24dh")
 
 [node name="EnemyEnergyMarker2" type="Sprite2D" parent="EnemyEnergyBarCover" unique_id=2050967510]
 top_level = true
-position = Vector2(136.1938, 597.00006)
+position = Vector2(2138.1938, 621.84106)
 scale = Vector2(1.0766308, 1.0766308)
 texture = SubResource("CompressedTexture2D_wgdxf")
 
 [node name="EnemyEnergyMarker3" type="Sprite2D" parent="EnemyEnergyBarCover" unique_id=390852910]
 top_level = true
-position = Vector2(136.1938, 597.00006)
+position = Vector2(2138.1938, 621.84106)
 scale = Vector2(1.0766308, 1.0766308)
 texture = SubResource("CompressedTexture2D_1xjr1")
 

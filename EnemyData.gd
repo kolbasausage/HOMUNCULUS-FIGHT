@@ -1,11 +1,13 @@
 extends Resource
 class_name EnemyData
 
+@export var ability_costs: Array[float] = []
 @export var ability2_icon: Texture2D
 @export var enemy_name: String = ""
 @export var max_hp: float = 100
 
 # Attack values
+@export var shield_cost: float = 30.0
 @export var attack_damage: float = 20
 @export var attack_cost: float = 25
 @export var heavy_attack_damage: float = 40

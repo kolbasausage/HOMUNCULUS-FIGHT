@@ -3,10 +3,10 @@ extends Control
 func _ready():
 	hide()
 
-func show_result(text: String):
+func show_result(text: String, won: bool):
 	show()
 	$Panel/ResultLabel.text = text
-
+	
 func _on_restart_pressed():
 	print("restart pressed")
 	get_tree().paused = false

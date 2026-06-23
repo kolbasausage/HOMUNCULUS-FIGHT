@@ -9,6 +9,24 @@ class_name BaseEnemy
 @onready var emarker2 = $"../EnemyEnergyBarCover/EnemyEnergyMarker2"
 @onready var emarker3 = $"../EnemyEnergyBarCover/EnemyEnergyMarker3"
 
+var home_position: Vector2
+
+func _ready():
+	randomize()
+	original_scale = scale
+	_place_emarkers()
+	random_attack_loop()
+	$"../EnemyHPBar".enemy_died.connect(_on_death)
+	call_deferred("_store_home")
+
+func _store_home():
+	home_position = position
+
+func attack_move():
+	position += Vector2(-300, 0)
+	await get_tree().create_timer(1).timeout
+	position = home_position
+
 var mutation: MutationData = null
 
 func apply_mutation(m: MutationData):
@@ -32,16 +50,12 @@ func _place_emarker(marker, cost):
 	marker.global_position.y = EBAR_BOTTOM_Y - ((EBAR_BOTTOM_Y - EBAR_TOP_Y) * ratio)
 
 func _place_emarkers():
-	_place_emarker(emarker1, enemy_data.attack_cost)
-	_place_emarker(emarker2, enemy_data.heavy_attack_cost)
-	emarker3.hide()
-
-func _ready():
-	randomize()
-	original_scale = scale
-	_place_emarkers()
-	random_attack_loop()
-	$"../EnemyHPBar".enemy_died.connect(_on_death)
+	var markers = [emarker1, emarker2, emarker3]
+	for i in range(markers.size()):
+		if i < enemy_data.ability_costs.size():
+			_place_emarker(markers[i], enemy_data.ability_costs[i])
+		else:
+			markers[i].hide()
 
 func _on_death():
 	print("_on_death called!")
@@ -96,12 +110,23 @@ func play_hurt():
 		add_child(audio)
 		audio.play()
 		audio.finished.connect(audio.queue_free)
+	# Flash red
+	var tween = create_tween()
+	tween.tween_property(self, "modulate", Color.RED, 0.05)
+	tween.tween_property(self, "modulate", Color.WHITE, 0.05)
+	tween.tween_property(self, "modulate", Color.RED, 0.05)
+	tween.tween_property(self, "modulate", Color.WHITE, 0.05)
+	# Shake
+	var original_pos = position
+	tween.tween_property(self, "position", original_pos + Vector2(10, 0), 0.05)
+	tween.tween_property(self, "position", original_pos + Vector2(-10, 0), 0.05)
+	tween.tween_property(self, "position", original_pos + Vector2(10, 0), 0.05)
+	tween.tween_property(self, "position", original_pos, 0.05)
 	get_tree().create_timer(0.5).timeout.connect(func():
 		if not is_instance_valid(self) or is_dead:
 			return
 		is_attacking = false
 		anim_enemy.play(enemy_data.idle_anim))
-
 
 func squish():
 	scale = original_scale * Vector2(1.2, 0.8)
@@ -110,11 +135,6 @@ func squish():
 func _on_squish_finished():
 	scale = original_scale
 
-func attack_move():
-	var original_pos = position
-	position += Vector2(-300, 0)
-	await get_tree().create_timer(1).timeout
-	position = original_pos
 	
 var shield_hp = 0.0
 
@@ -128,6 +148,8 @@ func take_hit(amount: float):
 			get_parent().get_node("EnemyHPBar").take_damage(overflow)
 	else:
 		get_parent().get_node("EnemyHPBar").take_damage(amount)
+		
+
 		
 func show_ability_icon(texture: Texture2D):
 	if texture == null:

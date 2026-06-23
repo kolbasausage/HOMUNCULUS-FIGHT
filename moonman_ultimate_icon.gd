@@ -1,8 +1,8 @@
 extends Sprite2D
-
 @export var energy_bar: TextureProgressBar
 @export var cost: float = 25.0
-@export var marker: Sprite2D  # drag the corresponding marker in Inspector
+@export var marker: Sprite2D
+@export var player: BasePlayer  # ← add this line
 
 var small_scale: Vector2
 var big_scale: Vector2
@@ -16,14 +16,15 @@ func _ready():
 var can_attack = false
 
 func _process(_delta):
-	if energy_bar == null:
+	if energy_bar == null or player == null:
 		return
+	
+	# Always read cost from character_data
+	cost = player.character_data.ultimate_cost  # change per icon
 	
 	global_position = marker.global_position + Vector2(185, 0)
 	
 	var has_energy = energy_bar.has_enough(cost)
-	
-	# Trigger pop animation when energy threshold is first reached
 	if has_energy and not can_attack:
 		can_attack = true
 		_pop()

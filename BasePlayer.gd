@@ -123,15 +123,28 @@ func play_hurt():
 	if character_data.hurt_sound != null:
 		var audio = AudioStreamPlayer.new()
 		audio.stream = character_data.hurt_sound
+		audio.volume_db = character_data.hurt_sound_volume
 		add_child(audio)
 		audio.play()
 		audio.finished.connect(audio.queue_free)
+	# Flash red
+	var tween = create_tween()
+	tween.tween_property(self, "modulate", Color.RED, 0.05)
+	tween.tween_property(self, "modulate", Color.WHITE, 0.05)
+	tween.tween_property(self, "modulate", Color.RED, 0.05)
+	tween.tween_property(self, "modulate", Color.WHITE, 0.05)
+	# Shake
+	var original_pos = position
+	tween.tween_property(self, "position", original_pos + Vector2(10, 0), 0.05)
+	tween.tween_property(self, "position", original_pos + Vector2(-10, 0), 0.05)
+	tween.tween_property(self, "position", original_pos + Vector2(10, 0), 0.05)
+	tween.tween_property(self, "position", original_pos, 0.05)
 	get_tree().create_timer(0.5).timeout.connect(func():
 		if not is_instance_valid(self) or is_dead:
 			return
 		is_attacking = false
 		anim_player.play(character_data.idle_anim))
-
+		
 func squish():
 	scale = original_scale * Vector2(1.2, 0.8)
 	get_tree().create_timer(0.3).timeout.connect(_on_squish_finished)
