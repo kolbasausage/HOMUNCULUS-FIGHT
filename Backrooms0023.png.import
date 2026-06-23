@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5k4ui0pus54i"
-path="res://.godot/imported/Moonman_Idle0006.png-4c6d82773ba191d981c4fa18828e04ea.ctex"
+uid="uid://dbnk5jn7sklcs"
+path="res://.godot/imported/Backrooms0023.png-19171a17adb97bca3af637931fc735d7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Moonman_Idle0006.png"
-dest_files=["res://.godot/imported/Moonman_Idle0006.png-4c6d82773ba191d981c4fa18828e04ea.ctex"]
+source_file="res://Backrooms0023.png"
+dest_files=["res://.godot/imported/Backrooms0023.png-19171a17adb97bca3af637931fc735d7.ctex"]
 
 [params]
 
