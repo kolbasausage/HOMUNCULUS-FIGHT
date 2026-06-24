@@ -73,8 +73,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="GDScript" id="GDScript_5ki62"]
-
 [sub_resource type="FontVariation" id="FontVariation_qkd0e"]
 variation_embolden = 0.85
 
@@ -96,7 +94,6 @@ top_level = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Bus/Camera2D/Sprite2D" unique_id=1272425949]
 sprite_frames = SubResource("SpriteFrames_npeic")
 animation = &"Moving_Bushes"
-script = SubResource("GDScript_5ki62")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=242457116]
 position = Vector2(2853, 0)

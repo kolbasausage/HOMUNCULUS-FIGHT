@@ -45,7 +45,7 @@
 [ext_resource type="Texture2D" uid="uid://7a5gdf5rivyb" path="res://ghetto_loop0040.png" id="43_jvijx"]
 [ext_resource type="Texture2D" uid="uid://w0uvskc71pmo" path="res://ghetto_loop0041.png" id="44_r7jrn"]
 [ext_resource type="Texture2D" uid="uid://c6t2oxw2qjnl7" path="res://ghetto_loop0042.png" id="45_ijh1i"]
-[ext_resource type="PackedScene" uid="uid://dmoek4f6kvnnc" path="res://Franco.tscn" id="46_l4sm0"]
+[ext_resource type="PackedScene" uid="uid://dlrejyj4f0gun" path="res://Jimmy.tscn" id="46_jy0b0"]
 [ext_resource type="PackedScene" uid="uid://bpq6k62fay0e3" path="res://BinLad.tscn" id="47_xa5sl"]
 [ext_resource type="Texture2D" uid="uid://cjs76nxme803g" path="res://2411557aeedd50cd04de5f752dedd06a--blacker-than-black-a-color.jpg" id="48_tgcdw"]
 [ext_resource type="Texture2D" uid="uid://vxmfu7ygykow" path="res://Energy_flow.png" id="49_hqgxi"]
@@ -305,8 +305,8 @@ sprite_frames = SubResource("SpriteFrames_8qpxs")
 animation = &"ghetto_loop"
 script = SubResource("GDScript_5ki62")
 
-[node name="Player" parent="." unique_id=550805031 node_paths=PackedStringArray("enemy_hp_bar") instance=ExtResource("46_l4sm0")]
-position = Vector2(616, 616)
+[node name="Player" parent="." unique_id=1213359912 node_paths=PackedStringArray("enemy_hp_bar") instance=ExtResource("46_jy0b0")]
+position = Vector2(0, 0)
 enemy_hp_bar = NodePath("../EnemyHPBar")
 
 [node name="Enemy" parent="." unique_id=849012480 node_paths=PackedStringArray("player_hp_bar") instance=ExtResource("47_xa5sl")]

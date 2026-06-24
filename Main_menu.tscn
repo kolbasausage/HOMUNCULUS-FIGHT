@@ -1,8 +1,96 @@
 [gd_scene format=3 uid="uid://lrkqy0hf4tim"]
 
-[ext_resource type="Texture2D" uid="uid://dc7m388bj45xj" path="res://Background test FARM.png" id="1_b07fi"]
+[ext_resource type="Texture2D" uid="uid://cifn46y3rag4c" path="res://play_button.png" id="2_8kasr"]
 [ext_resource type="Script" uid="uid://cinywwqkhq00d" path="res://Start.gd" id="2_x6lt7"]
-[ext_resource type="Texture2D" uid="uid://c713fo3702wjs" path="res://Blood background.png" id="3_x2ps0"]
+[ext_resource type="Texture2D" uid="uid://1psivmongbeg" path="res://main_menu0000.png" id="4_vvwtf"]
+[ext_resource type="Texture2D" uid="uid://gtyvkh4iyidl" path="res://main_menu0001.png" id="5_7hqmf"]
+[ext_resource type="Texture2D" uid="uid://bdr6ol62ojsaf" path="res://main_menu0002.png" id="6_ggy4t"]
+[ext_resource type="Texture2D" uid="uid://buvv7lc5nmoq" path="res://main_menu0003.png" id="7_d7d7b"]
+[ext_resource type="Texture2D" uid="uid://dm0nuwki0bks2" path="res://main_menu0004.png" id="8_7n6ii"]
+[ext_resource type="Texture2D" uid="uid://cspnmusttd3au" path="res://main_menu0005.png" id="9_5ea28"]
+[ext_resource type="Texture2D" uid="uid://dgcau1s3nsrjw" path="res://main_menu0006.png" id="10_b63ry"]
+[ext_resource type="Texture2D" uid="uid://cuwyl3ajrw2ev" path="res://main_menu0007.png" id="11_lrwxr"]
+[ext_resource type="Texture2D" uid="uid://bh3jwg17eaiqy" path="res://main_menu0008.png" id="12_k7pqu"]
+[ext_resource type="Texture2D" uid="uid://cu6v0p24kxtv" path="res://main_menu0009.png" id="13_c0rs7"]
+[ext_resource type="Texture2D" uid="uid://wi6bug6ioud6" path="res://main_menu0010.png" id="14_stm78"]
+[ext_resource type="Texture2D" uid="uid://cuvrhad6l626l" path="res://main_menu0011.png" id="15_ggldr"]
+[ext_resource type="Texture2D" uid="uid://bmgr0ida8vk0v" path="res://main_menu0012.png" id="16_1g5nb"]
+[ext_resource type="Texture2D" uid="uid://y8hq3n0okeh5" path="res://main_menu0013.png" id="17_uwg66"]
+[ext_resource type="Texture2D" uid="uid://djo8gt1bjl7k5" path="res://main_menu0014.png" id="18_fiq7k"]
+[ext_resource type="Texture2D" uid="uid://4nviwodksiny" path="res://main_menu0015.png" id="19_kyspu"]
+[ext_resource type="Texture2D" uid="uid://dkykcq2lwxt43" path="res://main_menu0016.png" id="20_1vo8u"]
+[ext_resource type="Texture2D" uid="uid://dwlnuhar2v3kr" path="res://main_menu0017.png" id="21_8ivb1"]
+[ext_resource type="Texture2D" uid="uid://dgb1lu0w4gxc5" path="res://main_menu0018.png" id="22_1wvq0"]
+[ext_resource type="Script" uid="uid://b3i8usjhlace2" path="res://background.gd" id="23_8kasr"]
+[ext_resource type="Texture2D" uid="uid://cpr56u5b01qaq" path="res://main_menu0019.png" id="23_ap2bu"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lxhqp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_vvwtf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7hqmf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ggy4t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_d7d7b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_7n6ii")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_5ea28")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_b63ry")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_lrwxr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_k7pqu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_c0rs7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_stm78")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ggldr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_1g5nb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_uwg66")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_fiq7k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_kyspu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_1vo8u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_8ivb1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_1wvq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_ap2bu")
+}],
+"loop": true,
+"name": &"Background",
+"speed": 10.0
+}]
 
 [node name="Control" type="Control" unique_id=627884223]
 layout_mode = 3
@@ -11,11 +99,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="BackgroundTestFarm" type="Sprite2D" parent="." unique_id=1175096765]
-visible = false
-position = Vector2(960, 540)
-texture = ExtResource("1_b07fi")
 
 [node name="Button" type="Button" parent="." unique_id=1218096621]
 top_level = true
@@ -33,18 +116,14 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 156
 action_mode = 0
-text = "PLAY"
+icon = ExtResource("2_8kasr")
 script = ExtResource("2_x6lt7")
 
-[node name="BloodBackground" type="Sprite2D" parent="." unique_id=674243474]
-position = Vector2(404.5, 536.5)
-scale = Vector2(2.1386719, 2.1386719)
-texture = ExtResource("3_x2ps0")
-
-[node name="BloodBackground2" type="Sprite2D" parent="." unique_id=814648613]
-position = Vector2(1489, 536.5)
-scale = Vector2(2.1386719, 2.1386719)
-texture = ExtResource("3_x2ps0")
-flip_h = true
+[node name="Background" type="AnimatedSprite2D" parent="." unique_id=537076774]
+position = Vector2(960, 540)
+sprite_frames = SubResource("SpriteFrames_lxhqp")
+animation = &"Background"
+frame_progress = 0.6593506
+script = ExtResource("23_8kasr")
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

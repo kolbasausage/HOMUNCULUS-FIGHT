@@ -15,6 +15,7 @@ var levels_unlocked = 1
 func _ready():
 	levels_unlocked = GameState.levels_unlocked
 	bus.position.x = GameState.bus_position_x
+	$Bus/Camera2D/Sprite2D/AnimatedSprite2D.play("Moving_Bushes")
 	$Bus/AnimatedSprite2D.play("Idle_Bus")
 	movement_label.visible = true
 	_animate_building($GhettoStreetHouse)

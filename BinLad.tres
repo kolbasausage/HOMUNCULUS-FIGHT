@@ -5,13 +5,15 @@
 
 [resource]
 script = ExtResource("1_obl6a")
-ability_costs = Array[float]([30.0, 40.0, 50.0])
+ability_costs = Array[float]([30.0, 45.0, 80.0])
 ability2_icon = ExtResource("1_r5nub")
 enemy_name = "BinLad"
 max_hp = 130.0
-shield_cost = 40.0
-attack_damage = 25.0
+shield_cost = 45.0
+attack_damage = 15.0
 attack_cost = 30.0
+heavy_attack_damage = 50.0
+heavy_attack_cost = 80.0
 attack_cooldown = 3.0
 idle_anim = "Idle_BinLad"
 death_anim = "Death_animation"

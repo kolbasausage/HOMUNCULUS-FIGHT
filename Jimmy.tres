@@ -5,9 +5,7 @@
 [resource]
 script = ExtResource("1_nw0rh")
 character_name = "Jimmy"
-basic_attack_cost = 15.0
-basic_attack_damage = 10.0
-heal_amount = 100.0
+basic_attack_cost = 20.0
 idle_anim = "Idle_Jimmy"
 death_anim = "death_animation"
 metadata/_custom_type_script = "uid://du4dquj83ruwt"

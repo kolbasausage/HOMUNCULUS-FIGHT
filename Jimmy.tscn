@@ -81,6 +81,7 @@ animations = [{
 }]
 
 [node name="Player" type="Sprite2D" unique_id=1213359912]
+position = Vector2(0, 1)
 script = ExtResource("1_st2vc")
 character_data = ExtResource("2_qa8dg")
 
