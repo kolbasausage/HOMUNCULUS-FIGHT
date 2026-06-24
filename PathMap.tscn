@@ -112,6 +112,11 @@ position = Vector2(1800, -95)
 texture = ExtResource("9_qkd0e")
 offset = Vector2(0, -150)
 
+[node name="GhettoStreetHouse3" type="Sprite2D" parent="." unique_id=1195669502]
+position = Vector2(2700, -95)
+texture = ExtResource("9_qkd0e")
+offset = Vector2(0, -150)
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1215609575]
 
 [node name="PromptLabel" type="Label" parent="CanvasLayer" unique_id=420904169]

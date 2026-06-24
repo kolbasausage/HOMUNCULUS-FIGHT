@@ -5,9 +5,9 @@ extends Node2D
 @onready var movement_label = $CanvasLayer/MovementLabel
 
 var bus_speed = 400.0
-var stop_positions = [900, 1800]
-var stop_names = ["⚔️ Angry Sam", "⚔️ BinLad"]
-var stop_scenes = ["res://Fight_scene.tscn", "res://BinLad_scene.tscn"]
+var stop_positions = [900, 1800, 2700]
+var stop_names = ["⚔️ Angry Sam", "⚔️ BinLad", "⚔️ Samneric"]
+var stop_scenes = ["res://Fight_scene.tscn", "res://BinLad_scene.tscn", "res://Samneric_scene.tscn"]
 var proximity = 100.0
 var current_stop_index = -1
 var levels_unlocked = 1
@@ -19,6 +19,7 @@ func _ready():
 	movement_label.visible = true
 	_animate_building($GhettoStreetHouse)
 	_animate_building($GhettoStreetHouse2)
+	_animate_building($GhettoStreetHouse3)
 
 func _animate_building(building):
 	var original_pos = building.position
@@ -52,7 +53,8 @@ func _process(delta):
 				prompt_label.text = "Press SPACE to enter - " + stop_names[i]
 				if Input.is_action_just_pressed("ui_accept"):
 					GameState.bus_position_x = bus.position.x
-					get_tree().change_scene_to_file(stop_scenes[i])
+					GameState.next_fight_scene = stop_scenes[i]
+					get_tree().change_scene_to_file("res://MutationReveal.tscn")
 			else:
 				prompt_label.text = "🚧 Road works - Beat previous level first!"
 
