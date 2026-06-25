@@ -20,6 +20,7 @@ func take_damage(amount: float):
 	label.global_position = Vector2(1280, 600) + Vector2(-230, -150)
 	label.add_theme_font_size_override("font_size", 48)
 	label.add_theme_color_override("font_color", Color.RED)
+	label.add_theme_font_override("font", preload("res://Super Pandora.ttf"))
 	get_tree().root.add_child(label)  # add first
 
 	var tween = label.create_tween()  # THEN create tween

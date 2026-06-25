@@ -96,6 +96,7 @@ animation = &"Moving_Bus"
 top_level = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Bus/Camera2D/Sprite2D" unique_id=1272425949]
+position = Vector2(2871, 0)
 sprite_frames = SubResource("SpriteFrames_npeic")
 animation = &"Moving_Bushes"
 

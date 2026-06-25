@@ -57,7 +57,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"background",
-"speed": 1.0
+"speed": 2.0
 }]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8d6g8"]
@@ -194,7 +194,7 @@ frame_progress = 0.7504297
 [node name="Medkit" type="AnimatedSprite2D" parent="." unique_id=1076037174]
 position = Vector2(960, 540)
 sprite_frames = SubResource("SpriteFrames_8d6g8")
-animation = &"chest_closed"
+animation = &"chest_opened"
 
 [node name="FrontLight" type="Sprite2D" parent="." unique_id=1856181314]
 position = Vector2(960, 540)

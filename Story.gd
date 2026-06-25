@@ -22,7 +22,7 @@ func _ready():
 	skip_label.modulate.a = 0.0
 
 	audio.stream = load("res://story.wav")
-	audio.play()
+	audio.play(0.3)
 
 	await get_tree().create_timer(1.0).timeout
 	start_typing()

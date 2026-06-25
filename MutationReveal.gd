@@ -38,7 +38,7 @@ func _on_fall_finished():
 	medkit.play("chest_closed")
 
 func _input(event):
-	if event is InputEventMouseButton and event.pressed:
+	if event.is_pressed():
 		if not opened and medkit.animation == "chest_closed":
 			medkit.animation_finished.disconnect(_on_fall_finished)
 			sfx_open.play()
