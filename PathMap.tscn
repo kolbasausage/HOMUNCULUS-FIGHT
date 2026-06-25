@@ -77,7 +77,6 @@ animations = [{
 variation_embolden = 0.85
 
 [node name="PathMap" type="Node2D" unique_id=1182685003]
-position = Vector2(1, 0)
 script = ExtResource("1_nvycx")
 
 [node name="Bus" type="Sprite2D" parent="." unique_id=1969374254]

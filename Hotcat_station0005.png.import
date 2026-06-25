@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5k4ui0pus54i"
-path="res://.godot/imported/Moonman_Idle0006.png-4c6d82773ba191d981c4fa18828e04ea.ctex"
+uid="uid://batw2jvg2qpfs"
+path="res://.godot/imported/Hotcat_station0005.png-c07d5bb4fca1e0b00d959f070feb7232.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Moonman_Idle0006.png"
-dest_files=["res://.godot/imported/Moonman_Idle0006.png-4c6d82773ba191d981c4fa18828e04ea.ctex"]
+source_file="res://Hotcat_station0005.png"
+dest_files=["res://.godot/imported/Hotcat_station0005.png-c07d5bb4fca1e0b00d959f070feb7232.ctex"]
 
 [params]
 
