@@ -125,6 +125,7 @@ texture = ExtResource("9_qkd0e")
 offset = Vector2(0, -150)
 
 [node name="GhettoStreetHouse4" type="Sprite2D" parent="." unique_id=1423693908]
+visible = false
 position = Vector2(3700, -95)
 texture = ExtResource("9_qkd0e")
 offset = Vector2(0, -150)

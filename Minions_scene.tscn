@@ -298,7 +298,8 @@ script = SubResource("GDScript_5ki62")
 [node name="Player" parent="." unique_id=1213359912 node_paths=PackedStringArray("enemy_hp_bar") instance=ExtResource("47_ckbl2")]
 enemy_hp_bar = NodePath("../EnemyHPBar")
 
-[node name="Enemy" parent="." unique_id=1723246231 instance=ExtResource("48_s54dc")]
+[node name="Enemy" parent="." unique_id=1723246231 node_paths=PackedStringArray("player_hp_bar") instance=ExtResource("48_s54dc")]
+player_hp_bar = NodePath("../PlayerHPBar")
 
 [node name="PlayerEnergyBar" type="TextureProgressBar" parent="." unique_id=1277075371]
 custom_minimum_size = Vector2(151, 756)

@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://bggafqcx1dydq" path="res://universal_death_animation0007.png" id="17_uaw6d"]
 [ext_resource type="Texture2D" uid="uid://cexev5gdt8ulv" path="res://universal_death_animation0008.png" id="18_r5row"]
 [ext_resource type="Texture2D" uid="uid://bgru4i6yvdx2g" path="res://shield.png" id="19_3n0tb"]
+[ext_resource type="Script" uid="uid://chhpnglbutdxa" path="res://Minions.gd" id="19_ebcr6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dqyhx"]
 animations = [{
@@ -87,8 +88,9 @@ enemy_data = ExtResource("2_dkc25")
 
 [node name="EnemyAnimation" type="AnimatedSprite2D" parent="." unique_id=1167835933]
 sprite_frames = SubResource("SpriteFrames_dqyhx")
-animation = &"death_animation"
+animation = &"Idle_Minions"
 flip_h = true
+script = ExtResource("19_ebcr6")
 
 [node name="ShieldIcon" type="Sprite2D" parent="." unique_id=809974392]
 visible = false

@@ -22,7 +22,7 @@ func decide_attack():
 			energy_bar.energy -= enemy_data.shield_cost
 			return
 
-	# Kill shot
+	# Kill shot      x
 	if player_hp <= enemy_data.attack_damage and energy_bar.has_enough(enemy_data.attack_cost):
 		attack()
 		energy_bar.energy -= enemy_data.attack_cost

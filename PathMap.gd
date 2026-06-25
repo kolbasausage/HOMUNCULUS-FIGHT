@@ -5,9 +5,9 @@ extends Node2D
 @onready var movement_label = $CanvasLayer/MovementLabel
 @onready var streets = $Streets
 var bus_speed = 400.0
-var stop_positions = [900, 1800, 2700, 3700]
-var stop_names = ["⚔️ Angry Sam", "⚔️ BinLad", "⚔️ Samneric", "⚔️ Minions"]
-var stop_scenes = ["res://Fight_scene.tscn", "res://BinLad_scene.tscn", "res://Samneric_scene.tscn", "res://Minions_scene.tscn"]
+var stop_positions = [900, 1800, 2700]
+var stop_names = ["⚔️ Angry Sam", "⚔️ BinLad", "⚔️ Samneric"]
+var stop_scenes = ["res://Fight_scene.tscn", "res://BinLad_scene.tscn", "res://Samneric_scene.tscn"]
 var proximity = 100.0
 var current_stop_index = -1
 var levels_unlocked = 1
@@ -22,7 +22,7 @@ func _ready():
 	_animate_building($GhettoStreetHouse)
 	_animate_building($GhettoStreetHouse2)
 	_animate_building($GhettoStreetHouse3)
-	_animate_building($GhettoStreetHouse4)
+
 
 func _animate_building(building):
 	var original_pos = building.position
