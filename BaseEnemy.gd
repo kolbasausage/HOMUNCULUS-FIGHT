@@ -10,6 +10,10 @@ class_name BaseEnemy
 @onready var emarker3 = $"../EnemyEnergyBarCover/EnemyEnergyMarker3"
 
 var home_position: Vector2
+var is_stunned = false
+var stun_timer = 0.0
+var stun_icon = null
+
 
 func _ready():
 	randomize()
@@ -24,7 +28,7 @@ func _store_home():
 
 func attack_move():
 	position += Vector2(-300, 0)
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(0.2).timeout
 	position = home_position
 
 var mutation: MutationData = null
@@ -58,18 +62,32 @@ func _place_emarkers():
 			markers[i].hide()
 
 func _on_death():
-	print("_on_death called!")
 	is_dead = true
 	is_attacking = true
+
+	var s = AudioStreamPlayer.new()
+	s.stream = preload("res://death animation.wav")   # ← your sound here
+	add_child(s)
+	s.play(0.6)
+
 	anim_enemy.play(enemy_data.death_anim)
 	await anim_enemy.animation_finished
 	get_parent().player_wins()
 	
-func _physics_process(_delta):
+func _physics_process(delta):
 	if is_dead:
+		return
+
+	if is_stunned:
+		stun_timer -= delta
+		if stun_timer <= 0:
+			is_stunned = false
+			is_attacking = false
+			anim_enemy.play(enemy_data.idle_anim)
 		return
 	if not is_attacking:
 		anim_enemy.play(enemy_data.idle_anim)
+
 
 func random_attack_loop() -> void:
 	while true:
@@ -77,7 +95,25 @@ func random_attack_loop() -> void:
 		await get_tree().create_timer(wait_time, false).timeout
 		if get_tree().paused or is_dead:
 			return
+		print("loop tick, is_stunned: ", is_stunned)
+		if is_stunned:
+			continue
 		try_attack()
+
+func show_stun_icon():
+	var icon = Sprite2D.new()
+	icon.texture = preload("res://stun_icon.png")
+	icon.position = Vector2(1370, 280)
+	icon.scale = Vector2(0.7, 0.7)
+	get_tree().root.add_child(icon)
+
+	stun_icon = icon
+
+	await get_tree().create_timer(4).timeout
+
+	if icon:
+		icon.queue_free()
+
 
 func try_attack():
 	if get_parent().get_node("PlayerHPBar").is_dead:
@@ -87,46 +123,47 @@ func try_attack():
 	if get_parent().battle_busy or is_attacking:
 		return
 	decide_attack()
+	if is_stunned:
+		return
+
 
 func decide_attack():
 	pass
 
-func play_attack_sound():
-	if enemy_data.attack_sound != null:
-		var audio = AudioStreamPlayer.new()
-		audio.stream = enemy_data.attack_sound
-		audio.volume_db = enemy_data.attack_sound_volume
-		add_child(audio)
-		audio.play()
-		audio.finished.connect(audio.queue_free)
 
 func play_hurt():
 	is_attacking = true
 	anim_enemy.play(enemy_data.hurt_anim)
-	if enemy_data.hurt_sound != null:
-		var audio = AudioStreamPlayer.new()
-		audio.stream = enemy_data.hurt_sound
-		audio.volume_db = enemy_data.hurt_sound_volume
-		add_child(audio)
-		audio.play()
-		audio.finished.connect(audio.queue_free)
-	# Flash red
+
+	SFX.play_enemy_hurt()
+
 	var tween = create_tween()
 	tween.tween_property(self, "modulate", Color.RED, 0.05)
 	tween.tween_property(self, "modulate", Color.WHITE, 0.05)
 	tween.tween_property(self, "modulate", Color.RED, 0.05)
 	tween.tween_property(self, "modulate", Color.WHITE, 0.05)
-	# Shake
+
 	var original_pos = position
 	tween.tween_property(self, "position", original_pos + Vector2(10, 0), 0.05)
 	tween.tween_property(self, "position", original_pos + Vector2(-10, 0), 0.05)
 	tween.tween_property(self, "position", original_pos + Vector2(10, 0), 0.05)
 	tween.tween_property(self, "position", original_pos, 0.05)
+
 	get_tree().create_timer(0.5).timeout.connect(func():
 		if not is_instance_valid(self) or is_dead:
 			return
 		is_attacking = false
 		anim_enemy.play(enemy_data.idle_anim))
+		
+func apply_stun(duration):
+	print("STUN APPLIED, duration: ", duration, " is_stunned: ", is_stunned)
+	if is_dead:
+		return
+	is_stunned = true
+	stun_timer = duration
+	is_attacking = true
+	show_stun_icon()
+
 
 func squish():
 	scale = original_scale * Vector2(1.2, 0.8)

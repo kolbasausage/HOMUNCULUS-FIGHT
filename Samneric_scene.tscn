@@ -34,6 +34,7 @@
 [ext_resource type="Texture2D" uid="uid://byn5xsvl46is1" path="res://Backrooms0029.png" id="32_uyepd"]
 [ext_resource type="Script" uid="uid://dwfgh0d6nra1l" path="res://Backrooms.gd" id="33_5w0ad"]
 [ext_resource type="PackedScene" uid="uid://ppipr0sxi64a" path="res://Samneric.tscn" id="34_dd7uu"]
+[ext_resource type="AudioStream" uid="uid://81f7yum0sh1s" path="res://Im gonna rip your head.wav" id="35_tvwhr"]
 [ext_resource type="PackedScene" uid="uid://dlrejyj4f0gun" path="res://Jimmy.tscn" id="35_wya7v"]
 [ext_resource type="Texture2D" uid="uid://cjs76nxme803g" path="res://2411557aeedd50cd04de5f752dedd06a--blacker-than-black-a-color.jpg" id="36_jogxx"]
 [ext_resource type="Texture2D" uid="uid://vxmfu7ygykow" path="res://Energy_flow.png" id="37_5rh2g"]
@@ -49,15 +50,20 @@
 [ext_resource type="Script" uid="uid://dfw8yfjwljqra" path="res://enemy_heart.gd" id="47_kbsnj"]
 [ext_resource type="Texture2D" uid="uid://digwpr8vrk4pc" path="res://new ui sketch transparent.png" id="48_30jx5"]
 [ext_resource type="Texture2D" uid="uid://b701kn6qqlsxs" path="res://Energy_bar.png" id="49_wk3im"]
-[ext_resource type="Texture2D" uid="uid://cgw3ab8xwja0k" path="res://moonman_basicattack_icon.png" id="50_q4n2n"]
+[ext_resource type="Texture2D" uid="uid://cuuvfsaqrd380" path="res://Jimmy_basic.png" id="50_ihwqe"]
 [ext_resource type="Script" uid="uid://br70xfykpn7gw" path="res://moonman_basicattack_icon.gd" id="51_os6o7"]
 [ext_resource type="Texture2D" uid="uid://crgu5adp1a6jv" path="res://Keyboard key 1.png" id="52_th65m"]
 [ext_resource type="Texture2D" uid="uid://dhgtai20vxeri" path="res://moonman_heal_icon.png" id="53_o71aj"]
 [ext_resource type="Script" uid="uid://ckb6bebsllqr3" path="res://moonman_heal_icon.gd" id="54_2f3q4"]
 [ext_resource type="Texture2D" uid="uid://dv47ovks5iprt" path="res://Keyboard key 2.png" id="55_gqthr"]
-[ext_resource type="Texture2D" uid="uid://euusiash1owt" path="res://moonman_ultimate_icon.png" id="56_letdw"]
+[ext_resource type="Texture2D" uid="uid://cvk2cw880xvif" path="res://jimmy_ultimate.png" id="56_wvbku"]
 [ext_resource type="Script" uid="uid://cuij3h7nm4yq4" path="res://moonman_ultimate_icon.gd" id="57_fmwjs"]
 [ext_resource type="Texture2D" uid="uid://ceyhp7exwi4ty" path="res://Keyboard key 3.png" id="58_ims4d"]
+[ext_resource type="AudioStream" uid="uid://bx6vgay8u61o7" path="res://backrooms.wav" id="59_ihwqe"]
+[ext_resource type="Texture2D" uid="uid://bum8vflnyspep" path="res://Unknown Icon.png" id="59_rtm5b"]
+[ext_resource type="Script" uid="uid://1asbr4hradhj" path="res://unknown_icon.gd" id="60_tvwhr"]
+[ext_resource type="Script" uid="uid://ciec17ygvjr3r" path="res://unknown_icon_2.gd" id="61_y05je"]
+[ext_resource type="Script" uid="uid://r1kp0guxxkqw" path="res://unknown_icon_3.gd" id="62_g6j1b"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8qpxs"]
 animations = [{
@@ -178,10 +184,10 @@ load_path = "res://.godot/imported/Energy_marker.png-fd416e5a66ec922a6d3a89271d5
 [node name="Node2D" type="Node2D" unique_id=382972580]
 script = ExtResource("1_63wtv")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1764031915]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=46476638]
 process_mode = 3
 
-[node name="ResultScreen" type="Control" parent="CanvasLayer" unique_id=1370189444]
+[node name="ResultScreen" type="Control" parent="CanvasLayer" unique_id=1018985363]
 process_mode = 3
 layout_mode = 3
 anchors_preset = 0
@@ -189,7 +195,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_ihwqe")
 
-[node name="Panel" type="Panel" parent="CanvasLayer/ResultScreen" unique_id=488683140]
+[node name="Panel" type="Panel" parent="CanvasLayer/ResultScreen" unique_id=95049150]
 process_mode = 3
 modulate = Color(0.8175213, 0.8175213, 0.81752115, 1)
 layout_mode = 1
@@ -201,7 +207,7 @@ offset_bottom = 1040.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ResultLabel" type="Label" parent="CanvasLayer/ResultScreen/Panel" unique_id=1239122854]
+[node name="ResultLabel" type="Label" parent="CanvasLayer/ResultScreen/Panel" unique_id=329399976]
 process_mode = 3
 layout_mode = 0
 offset_left = 760.0
@@ -211,30 +217,12 @@ offset_bottom = 500.0
 theme_override_font_sizes/font_size = 64
 horizontal_alignment = 1
 
-[node name="RestartButton" type="Button" parent="CanvasLayer/ResultScreen/Panel" unique_id=888683317]
-process_mode = 3
+[node name="PathMapButton" type="Button" parent="CanvasLayer/ResultScreen/Panel" unique_id=1911510226]
 layout_mode = 0
 offset_left = 760.0
-offset_top = 550.0
+offset_top = 539.0
 offset_right = 1160.0
-offset_bottom = 630.0
-text = "Restart"
-
-[node name="MainMenuButton" type="Button" parent="CanvasLayer/ResultScreen/Panel" unique_id=95676242]
-process_mode = 3
-layout_mode = 0
-offset_left = 760.0
-offset_top = 650.0
-offset_right = 1160.0
-offset_bottom = 730.0
-text = "NEXT LEVEL"
-
-[node name="PathMapButton" type="Button" parent="CanvasLayer/ResultScreen/Panel" unique_id=1941748164]
-layout_mode = 0
-offset_left = 760.0
-offset_top = 784.0
-offset_right = 1160.0
-offset_bottom = 864.0
+offset_bottom = 619.0
 text = "Back to bus"
 
 [node name="Background" type="Sprite2D" parent="." unique_id=181043682]
@@ -247,6 +235,12 @@ script = ExtResource("33_5w0ad")
 
 [node name="Enemy" parent="." unique_id=1700647408 node_paths=PackedStringArray("player_hp_bar") instance=ExtResource("34_dd7uu")]
 player_hp_bar = NodePath("../PlayerHPBar")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Enemy" unique_id=599009499]
+position = Vector2(0, -2)
+stream = ExtResource("35_tvwhr")
+volume_db = 5.0
+autoplay = true
 
 [node name="Player" parent="." unique_id=1213359912 node_paths=PackedStringArray("enemy_hp_bar") instance=ExtResource("35_wya7v")]
 enemy_hp_bar = NodePath("../EnemyHPBar")
@@ -298,6 +292,9 @@ texture = ExtResource("43_cr6lr")
 script = ExtResource("44_lcraw")
 hp_bar = NodePath("..")
 
+[node name="PlayerMutationIcon" type="Sprite2D" parent="." unique_id=1087010930]
+position = Vector2(410, 926)
+
 [node name="EnemyEnergyBar" type="TextureProgressBar" parent="." unique_id=2025529345]
 offset_left = 1752.0
 offset_top = 104.0
@@ -311,6 +308,9 @@ nine_patch_stretch = true
 texture_progress = ExtResource("37_5rh2g")
 script = ExtResource("45_jsu3b")
 metadata/_edit_use_anchors_ = true
+
+[node name="EnemyMutationIcon" type="Sprite2D" parent="." unique_id=1221686619]
+position = Vector2(1500, 924)
 
 [node name="EnemyHPBar" type="TextureProgressBar" parent="." unique_id=1269053381]
 offset_left = 1664.0
@@ -350,7 +350,7 @@ texture = SubResource("CompressedTexture2D_1rupc")
 
 [node name="MoonmanBasicattackIcon" type="Sprite2D" parent="PlayerEnergyBarCover" unique_id=2137667812 node_paths=PackedStringArray("energy_bar", "marker", "player")]
 position = Vector2(199, 172)
-texture = ExtResource("50_q4n2n")
+texture = ExtResource("50_ihwqe")
 script = ExtResource("51_os6o7")
 energy_bar = NodePath("../../PlayerEnergyBar")
 marker = NodePath("../PlayerEnergyMarker1")
@@ -389,7 +389,7 @@ texture = SubResource("CompressedTexture2D_nvfd8")
 
 [node name="MoonmanUltimateIcon" type="Sprite2D" parent="PlayerEnergyBarCover" unique_id=715746360 node_paths=PackedStringArray("energy_bar", "marker", "player")]
 position = Vector2(205, -158)
-texture = ExtResource("56_letdw")
+texture = ExtResource("56_wvbku")
 script = ExtResource("57_fmwjs")
 energy_bar = NodePath("../../PlayerEnergyBar")
 cost = 75.0
@@ -423,6 +423,37 @@ position = Vector2(136.1938, 597.00006)
 scale = Vector2(1.0766308, 1.0766308)
 texture = SubResource("CompressedTexture2D_1xjr1")
 
-[connection signal="pressed" from="CanvasLayer/ResultScreen/Panel/RestartButton" to="CanvasLayer/ResultScreen" method="_on_restart_pressed"]
-[connection signal="pressed" from="CanvasLayer/ResultScreen/Panel/MainMenuButton" to="CanvasLayer/ResultScreen" method="_on_main_menu_pressed"]
+[node name="UnknownIcon" type="Sprite2D" parent="EnemyEnergyBarCover" unique_id=1299253339 node_paths=PackedStringArray("energy_bar", "marker", "enemy")]
+position = Vector2(-187, 230)
+texture = ExtResource("59_rtm5b")
+script = ExtResource("60_tvwhr")
+energy_bar = NodePath("../../EnemyEnergyBar")
+cost = 30.0
+marker = NodePath("../EnemyEnergyMarker1")
+enemy = NodePath("../../Enemy")
+
+[node name="UnknownIcon2" type="Sprite2D" parent="EnemyEnergyBarCover" unique_id=768719306 node_paths=PackedStringArray("energy_bar", "marker", "enemy")]
+position = Vector2(-187, 230)
+texture = ExtResource("59_rtm5b")
+script = ExtResource("61_y05je")
+energy_bar = NodePath("../../EnemyEnergyBar")
+cost = 50.0
+marker = NodePath("../EnemyEnergyMarker2")
+enemy = NodePath("../../Enemy")
+
+[node name="UnknownIcon3" type="Sprite2D" parent="EnemyEnergyBarCover" unique_id=956167847 node_paths=PackedStringArray("energy_bar", "marker", "enemy")]
+position = Vector2(-187, 230)
+texture = ExtResource("59_rtm5b")
+script = ExtResource("62_g6j1b")
+energy_bar = NodePath("../../EnemyEnergyBar")
+cost = 90.0
+marker = NodePath("../EnemyEnergyMarker3")
+enemy = NodePath("../../Enemy")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=502230319]
+position = Vector2(0, 1)
+stream = ExtResource("59_ihwqe")
+volume_db = 10.0
+autoplay = true
+
 [connection signal="pressed" from="CanvasLayer/ResultScreen/Panel/PathMapButton" to="CanvasLayer/ResultScreen" method="_on_path_map_pressed"]

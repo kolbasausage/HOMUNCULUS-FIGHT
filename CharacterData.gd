@@ -21,10 +21,3 @@ class_name CharacterData
 @export var hurt_anim: String = ""
 @export var death_anim: String = ""
 @export var attack_anim: String = ""
-
-# Sounds
-@export var hurt_sound: AudioStream
-@export var hurt_sound_volume: float = 0.0
-
-@export var attack_sound: AudioStream
-@export var attack_sound_volume: float = 0.0

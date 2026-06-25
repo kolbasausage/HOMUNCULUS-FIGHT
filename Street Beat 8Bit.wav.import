@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bmeledhxx7fwv"
+path="res://.godot/imported/Street Beat 8Bit.wav-78aa0eb884c0039bb6c447867577bcc0.sample"
+
+[deps]
+
+source_file="res://Street Beat 8Bit.wav"
+dest_files=["res://.godot/imported/Street Beat 8Bit.wav-78aa0eb884c0039bb6c447867577bcc0.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=true
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

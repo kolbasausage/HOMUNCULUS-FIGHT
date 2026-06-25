@@ -11,6 +11,9 @@ const ENEMY_POS = Vector2(1280, 600)
 @onready var enemy_hp_bar = $EnemyHPBar
 @onready var enemy_energy_bar = $EnemyEnergyBar
 @onready var result_screen = $CanvasLayer/ResultScreen
+@onready var player_mutation_icon = $PlayerMutationIcon
+@onready var enemy_mutation_icon = $EnemyMutationIcon
+
 
 var all_mutations = [
 	preload("res://Caffeine.tres"),
@@ -26,16 +29,18 @@ func _ready():
 	enemy_hp_bar.enemy_hp = enemy.enemy_data.max_hp
 	enemy_hp_bar.max_value = enemy.enemy_data.max_hp
 	enemy_hp_bar.value = enemy.enemy_data.max_hp
-	# Apply player mutation from chest
-		# Apply player mutation from chest
+
 	if GameState.current_mutation:
 		player.apply_mutation(GameState.current_mutation)
-		print("Player mutation: ", GameState.current_mutation.mutation_name)
-	
-	# Apply random mutation to enemy
+		player_mutation_icon.texture = GameState.current_mutation.mutation_icon
+	else:
+		player_mutation_icon.visible = false
+
+# Apply random mutation to enemy
 	randomize()
 	var random_mutation = all_mutations[randi() % all_mutations.size()]
 	enemy.apply_mutation(random_mutation)
+	enemy_mutation_icon.texture = random_mutation.mutation_icon
 	print("Enemy mutation: ", random_mutation.mutation_name)
 	
 

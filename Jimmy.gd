@@ -2,7 +2,6 @@ extends BasePlayer
 
 func ability_1():
 	if energy_bar.has_enough(character_data.basic_attack_cost):
-		play_attack_sound()
 		anim_player.play(character_data.attack_anim)
 		energy_bar.energy -= character_data.basic_attack_cost
 		var damage = character_data.basic_attack_damage
@@ -29,10 +28,17 @@ func ability_3():
 	if energy_bar.has_enough(character_data.ultimate_cost):
 		energy_bar.energy -= character_data.ultimate_cost
 		anim_player.play(character_data.attack_anim)
+
 		var damage = character_data.ultimate_damage
 		if mutation:
 			damage *= mutation.damage_multiplier
-		get_parent().get_node("Enemy").take_hit(damage)
+
+		var enemy = get_parent().get_node("Enemy")
+		print("ULTIMATE HIT ENEMY =", enemy)
+
+		enemy.apply_stun(4)
+		enemy.take_hit(damage)
+
 		squish()
 		await attack_move()
 	else:

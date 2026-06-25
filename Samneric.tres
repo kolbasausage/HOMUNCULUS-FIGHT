@@ -4,9 +4,9 @@
 
 [resource]
 script = ExtResource("1_8lwhv")
-ability_costs = Array[float]([50.0, 30.0, 90.0])
+ability_costs = Array[float]([30.0, 50.0, 90.0])
 enemy_name = "Samneric"
-max_hp = 250.0
+max_hp = 200.0
 attack_damage = 35.0
 attack_cost = 50.0
 heavy_attack_damage = 50.0

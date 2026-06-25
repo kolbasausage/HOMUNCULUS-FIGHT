@@ -1,0 +1,126 @@
+[gd_scene format=3 uid="uid://b4avukcxsp3i0"]
+
+[ext_resource type="Script" uid="uid://bosq8w1ntwyhm" path="res://Story.gd" id="1_g00xm"]
+[ext_resource type="AudioStream" uid="uid://580vk3mxewb0" path="res://story.wav" id="2_8v2sw"]
+[ext_resource type="FontFile" uid="uid://bh4lvs1oudup5" path="res://Super Pandora.ttf" id="2_k83q4"]
+
+[sub_resource type="Animation" id="Animation_k83q4"]
+resource_name = "Fade Out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FadeRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_c4eo0"]
+resource_name = "Fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FadeRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_w4u4o"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FadeRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_upr73"]
+_data = {
+&"Fade Out": SubResource("Animation_k83q4"),
+&"Fade_in": SubResource("Animation_c4eo0"),
+&"RESET": SubResource("Animation_w4u4o")
+}
+
+[node name="StoryScreen" type="Control" unique_id=127876074]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g00xm")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=646761844]
+layout_mode = 0
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 1942.0
+offset_bottom = 1108.0
+color = Color(0, 0, 0, 1)
+
+[node name="StoryLabel" type="Label" parent="." unique_id=532348736]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 160.0
+offset_right = -155.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_k83q4")
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="SkipLabel" type="Label" parent="." unique_id=738320145]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 448.0
+offset_bottom = 448.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(0, -20)
+theme_override_colors/font_color = Color(0.18359044, 0.18359044, 0.18359044, 1)
+theme_override_fonts/font = ExtResource("2_k83q4")
+text = "click anywhere to skip"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1142164187]
+stream = ExtResource("2_8v2sw")
+
+[node name="Timer" type="Timer" parent="." unique_id=1411395536]
+
+[node name="FadeRect" type="ColorRect" parent="." unique_id=612176646]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -7.0
+offset_top = -15.0
+offset_right = 37.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1478175355]
+libraries/ = SubResource("AnimationLibrary_upr73")

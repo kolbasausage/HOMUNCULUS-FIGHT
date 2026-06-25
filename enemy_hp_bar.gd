@@ -30,6 +30,11 @@ func take_damage(amount: float):
 	if enemy_hp <= 0:
 		die()
 
+func heal(amount: float):
+	enemy_hp += amount
+	enemy_hp = clamp(enemy_hp, 0, max_value)
+	value = enemy_hp
+
 signal enemy_died
 
 var is_dead = false

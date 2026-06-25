@@ -2,7 +2,6 @@ extends BasePlayer
 
 func ability_1():
 	if energy_bar.has_enough(character_data.basic_attack_cost):
-		play_attack_sound()
 		anim_player.play(character_data.attack_anim)
 		energy_bar.energy -= character_data.basic_attack_cost
 		var damage = character_data.basic_attack_damage

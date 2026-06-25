@@ -31,7 +31,6 @@ func activate_shield():
 
 func attack():
 	is_attacking = true
-	play_attack_sound()
 	anim_enemy.play("Attack_Samneric")
 	print("Enemy attacks!")
 	player_hp_bar.take_damage(enemy_data.attack_damage)
@@ -41,7 +40,6 @@ func attack():
 
 func heavy_attack():
 	is_attacking = true
-	play_attack_sound()
 	print("Enemy HEAVY ATTACK!")
 	player_hp_bar.take_damage(enemy_data.heavy_attack_damage)
 	squish()

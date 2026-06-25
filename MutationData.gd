@@ -3,6 +3,8 @@ class_name MutationData
 
 @export var mutation_name: String = ""
 @export var description: String = ""
+@export var mutation_icon: Texture2D
+
 
 # Stat modifiers (multipliers, so 1.5 = +50%, 0.7 = -30%)
 @export var hp_multiplier: float = 1.0

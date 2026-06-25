@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://xponitsl25o5"]
+
+[ext_resource type="Script" uid="uid://brkvrdd46mymj" path="res://SFX.gd" id="1_wo455"]
+[ext_resource type="AudioStream" uid="uid://dr84k1t4dx32a" path="res://damage 2.wav" id="2_6bbal"]
+[ext_resource type="AudioStream" uid="uid://daxciocgp6vtx" path="res://Hurt.wav" id="3_nugwk"]
+
+[node name="SFX" type="Node" unique_id=2098895639]
+script = ExtResource("1_wo455")
+enemy_hurt_sound = ExtResource("2_6bbal")
+player_hurt_sound = ExtResource("3_nugwk")

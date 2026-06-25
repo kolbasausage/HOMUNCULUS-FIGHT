@@ -2,8 +2,6 @@ extends BaseEnemy
 
 func decide_attack():
 	var player_hp = get_parent().get_node("PlayerHPBar").player_hp
-	
-	# Go for the kill
 	if player_hp <= 20 and energy_bar.has_enough(enemy_data.attack_cost):
 		attack()
 		energy_bar.energy -= enemy_data.attack_cost
@@ -12,8 +10,6 @@ func decide_attack():
 		heavy_attack()
 		energy_bar.energy -= enemy_data.heavy_attack_cost
 		return
-	
-	# Otherwise attack randomly
 	var roll = randi() % 2
 	if roll == 0 and energy_bar.has_enough(enemy_data.attack_cost):
 		attack()
@@ -24,7 +20,6 @@ func decide_attack():
 
 func attack():
 	is_attacking = true
-	play_attack_sound()
 	player_hp_bar.take_damage(enemy_data.attack_damage)
 	squish()
 	await attack_move()
@@ -32,7 +27,6 @@ func attack():
 
 func heavy_attack():
 	is_attacking = true
-	play_attack_sound()
 	player_hp_bar.take_damage(enemy_data.heavy_attack_damage)
 	squish()
 	await attack_move()

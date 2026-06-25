@@ -37,8 +37,14 @@
 [ext_resource type="Texture2D" uid="uid://fnpd2ic6bnta" path="res://chest_opened0009.png" id="35_8uhy4"]
 [ext_resource type="Texture2D" uid="uid://u8wtugx5abqx" path="res://front_light.png" id="36_mrr7s"]
 [ext_resource type="Texture2D" uid="uid://ck1ayqw4i5ilf" path="res://caffeine.png" id="37_80acq"]
-[ext_resource type="Texture2D" uid="uid://sm5umoc37xb" path="res://hyperkeratosis.png" id="38_3t8a8"]
-[ext_resource type="Texture2D" uid="uid://djwncxp83nbg8" path="res://vampirism.png" id="39_r651m"]
+[ext_resource type="Texture2D" uid="uid://dpqi20aj4h58a" path="res://hyperkeratosis.png" id="38_3t8a8"]
+[ext_resource type="Texture2D" uid="uid://dm588fu4sjnsd" path="res://vampirism.png" id="39_r651m"]
+[ext_resource type="AudioStream" uid="uid://chbbmrhyu0h1v" path="res://Medkit drop.wav" id="40_m481a"]
+[ext_resource type="AudioStream" uid="uid://j38lv2d3vqit" path="res://Chest opening.wav" id="41_safp2"]
+[ext_resource type="AudioStream" uid="uid://hsmyu4ni33ac" path="res://Chest closed.wav" id="42_jchji"]
+[ext_resource type="AudioStream" uid="uid://byqlyvvc5d72" path="res://Is this really owrth ur health.wav" id="43_smh54"]
+[ext_resource type="AudioStream" uid="uid://rhxaw15yixk5" path="res://You are a dracula man.wav" id="44_ntsiq"]
+[ext_resource type="AudioStream" uid="uid://b1mdalyhvrnrh" path="res://You feel heavy.wav" id="45_pin03"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2plns"]
 animations = [{
@@ -211,3 +217,23 @@ visible = false
 position = Vector2(960, 540)
 rotation = -1.5707964
 texture = ExtResource("39_r651m")
+
+[node name="SFX_ChestFall" type="AudioStreamPlayer" parent="." unique_id=62944276]
+stream = ExtResource("40_m481a")
+
+[node name="SFX_ChestOpen" type="AudioStreamPlayer" parent="." unique_id=696318058]
+stream = ExtResource("41_safp2")
+volume_db = -3.0
+
+[node name="SFX_ChestClose" type="AudioStreamPlayer" parent="." unique_id=141189177]
+stream = ExtResource("42_jchji")
+volume_db = -3.0
+
+[node name="SFX_CaffeineReveal" type="AudioStreamPlayer" parent="." unique_id=1952013349]
+stream = ExtResource("43_smh54")
+
+[node name="SFX_VampirismReveal" type="AudioStreamPlayer" parent="." unique_id=2081223720]
+stream = ExtResource("44_ntsiq")
+
+[node name="SFX_HyperkeratosisReveal" type="AudioStreamPlayer" parent="." unique_id=1992201820]
+stream = ExtResource("45_pin03")

@@ -23,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://dgb1lu0w4gxc5" path="res://main_menu0018.png" id="22_1wvq0"]
 [ext_resource type="Script" uid="uid://b3i8usjhlace2" path="res://background.gd" id="23_8kasr"]
 [ext_resource type="Texture2D" uid="uid://cpr56u5b01qaq" path="res://main_menu0019.png" id="23_ap2bu"]
+[ext_resource type="AudioStream" uid="uid://dkf1o6tj2bbjt" path="res://Beatbox.wav" id="24_vvwtf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lxhqp"]
 animations = [{
@@ -125,5 +126,9 @@ sprite_frames = SubResource("SpriteFrames_lxhqp")
 animation = &"Background"
 frame_progress = 0.6593506
 script = ExtResource("23_8kasr")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=991863697]
+stream = ExtResource("24_vvwtf")
+autoplay = true
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

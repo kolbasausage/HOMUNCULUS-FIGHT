@@ -3,7 +3,7 @@ extends Node2D
 @onready var bus = $Bus
 @onready var prompt_label = $CanvasLayer/PromptLabel
 @onready var movement_label = $CanvasLayer/MovementLabel
-
+@onready var streets = $Streets
 var bus_speed = 400.0
 var stop_positions = [900, 1800, 2700]
 var stop_names = ["⚔️ Angry Sam", "⚔️ BinLad", "⚔️ Samneric"]
@@ -13,6 +13,7 @@ var current_stop_index = -1
 var levels_unlocked = 1
 
 func _ready():
+	streets.play()
 	levels_unlocked = GameState.levels_unlocked
 	bus.position.x = GameState.bus_position_x
 	$Bus/Camera2D/Sprite2D/AnimatedSprite2D.play("Moving_Bushes")

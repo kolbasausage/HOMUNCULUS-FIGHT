@@ -15,6 +15,9 @@
 [ext_resource type="Texture2D" uid="uid://dcl4fomasj67t" path="res://BushesFront0003.png" id="11_i0cj8"]
 [ext_resource type="Texture2D" uid="uid://by3n2vy0lbgij" path="res://BushesFront0004.png" id="12_g1rhc"]
 [ext_resource type="Texture2D" uid="uid://5cawdb4ixjik" path="res://BushesFront0005.png" id="13_cirwc"]
+[ext_resource type="AudioStream" uid="uid://b4vegq5l72kk" path="res://bus engine.wav" id="14_wrtjv"]
+[ext_resource type="FontFile" uid="uid://bh4lvs1oudup5" path="res://Super Pandora.ttf" id="16_de744"]
+[ext_resource type="AudioStream" uid="uid://c2bhnwb6g1t" path="res://birds singing.wav" id="18_rhxw0"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_de744"]
 animations = [{
@@ -74,7 +77,8 @@ animations = [{
 }]
 
 [sub_resource type="FontVariation" id="FontVariation_qkd0e"]
-variation_embolden = 0.85
+base_font = ExtResource("16_de744")
+variation_embolden = -0.65
 
 [node name="PathMap" type="Node2D" unique_id=1182685003]
 script = ExtResource("1_nvycx")
@@ -94,6 +98,11 @@ top_level = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Bus/Camera2D/Sprite2D" unique_id=1272425949]
 sprite_frames = SubResource("SpriteFrames_npeic")
 animation = &"Moving_Bushes"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Bus/Camera2D" unique_id=988584450]
+stream = ExtResource("14_wrtjv")
+volume_db = -10.0
+autoplay = true
 
 [node name="Background" type="Sprite2D" parent="." unique_id=242457116]
 position = Vector2(2853, 0)
@@ -116,23 +125,30 @@ offset = Vector2(0, -150)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1215609575]
 
-[node name="PromptLabel" type="Label" parent="CanvasLayer" unique_id=420904169]
-top_level = true
-offset_left = 760.0
-offset_top = 900.0
-offset_right = 1066.0
-offset_bottom = 940.0
-theme_override_colors/font_color = Color(0.9438657, 0.8590338, 0.94023407, 1)
-theme_override_fonts/font = SubResource("FontVariation_qkd0e")
-theme_override_font_sizes/font_size = 29
-text = "Press SPACE to enter!"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="MovementLabel" type="Label" parent="CanvasLayer" unique_id=1916633294]
 offset_left = 760.0
 offset_top = 200.0
 offset_right = 1013.0
 offset_bottom = 299.99963
+theme_override_fonts/font = ExtResource("16_de744")
 theme_override_font_sizes/font_size = 23
 text = "Move with <- and -> arrows"
+
+[node name="PromptLabel" type="Label" parent="CanvasLayer" unique_id=420904169]
+top_level = true
+offset_left = 760.0
+offset_top = 837.0
+offset_right = 1066.0
+offset_bottom = 877.0
+theme_override_colors/font_color = Color(0.9438657, 0.8590338, 0.94023407, 1)
+theme_override_fonts/font = SubResource("FontVariation_qkd0e")
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=967676111]
+
+[node name="Streets" type="AudioStreamPlayer" parent="." unique_id=1365535928]
+stream = ExtResource("18_rhxw0")
+volume_db = -20.0
+autoplay = true

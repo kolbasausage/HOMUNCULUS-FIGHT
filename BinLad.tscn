@@ -82,13 +82,14 @@ animations = [{
 }]
 
 [node name="BinLad" type="Sprite2D" unique_id=849012480]
+position = Vector2(0, 1)
 script = ExtResource("1_1va81")
 enemy_data = ExtResource("2_wpvm3")
 
 [node name="EnemyAnimation" type="AnimatedSprite2D" parent="." unique_id=53858912]
 position = Vector2(0, 1)
 sprite_frames = SubResource("SpriteFrames_lnbl2")
-animation = &"Death_animation"
+animation = &"Idle_BinLad"
 flip_h = true
 
 [node name="ShieldIcon" type="Sprite2D" parent="." unique_id=1358241800]

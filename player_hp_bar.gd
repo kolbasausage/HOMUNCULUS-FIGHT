@@ -13,8 +13,14 @@ func take_damage(amount: float):
 	value = player_hp
 	print("HP: ", player_hp)
 	
-	# Play hurt animation
 	get_parent().get_node("Player").play_hurt()
+	
+	# Enemy vampiric heal
+	var enemy = get_parent().get_node("Enemy")
+	if enemy.mutation and enemy.mutation.vampiric_heal > 0:
+		get_parent().get_node("EnemyHPBar").heal(enemy.mutation.vampiric_heal)
+	
+	# rest of your code...
 	
 	var label = Label.new()
 	label.text = str(amount)
@@ -29,10 +35,7 @@ func take_damage(amount: float):
 	tween.tween_callback(label.queue_free)
 	if player_hp <= 0:
 		die()
-	
-	var enemy = get_parent().get_node("Enemy")
-	if enemy.mutation and enemy.mutation.vampiric_heal > 0:
-		heal(enemy.mutation.vampiric_heal)
+
 
 func heal(amount):
 	player_hp += amount
@@ -48,6 +51,7 @@ signal player_died
 var is_dead = false
 
 func die():
+	
 	if is_dead:
 		return
 	is_dead = true
