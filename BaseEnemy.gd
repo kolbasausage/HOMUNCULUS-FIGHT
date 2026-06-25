@@ -143,11 +143,15 @@ func take_hit(amount: float):
 		var overflow = amount - shield_hp
 		shield_hp -= amount
 		shield_hp = max(shield_hp, 0)
-		print("Shield absorbs! Shield HP: ", shield_hp)
 		if overflow > 0:
 			get_parent().get_node("EnemyHPBar").take_damage(overflow)
 	else:
 		get_parent().get_node("EnemyHPBar").take_damage(amount)
+	
+	# Vampiric heal when player hits enemy
+	var player = get_parent().get_node("Player")
+	if player.mutation and player.mutation.vampiric_heal > 0:
+		get_parent().get_node("PlayerHPBar").heal(player.mutation.vampiric_heal)
 		
 
 		

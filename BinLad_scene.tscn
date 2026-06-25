@@ -306,7 +306,6 @@ animation = &"ghetto_loop"
 script = SubResource("GDScript_5ki62")
 
 [node name="Player" parent="." unique_id=1213359912 node_paths=PackedStringArray("enemy_hp_bar") instance=ExtResource("46_jy0b0")]
-position = Vector2(0, 0)
 enemy_hp_bar = NodePath("../EnemyHPBar")
 
 [node name="Enemy" parent="." unique_id=849012480 node_paths=PackedStringArray("player_hp_bar") instance=ExtResource("47_xa5sl")]
@@ -449,7 +448,7 @@ scale = Vector2(1.0766308, 1.0766308)
 texture = SubResource("CompressedTexture2D_nvfd8")
 
 [node name="MoonmanUltimateIcon" type="Sprite2D" parent="PlayerEnergyBarCover" unique_id=715746360 node_paths=PackedStringArray("energy_bar", "marker", "player")]
-position = Vector2(205, -158)
+position = Vector2(-128, -423)
 texture = ExtResource("68_3mrjl")
 script = ExtResource("69_u41jb")
 energy_bar = NodePath("../../PlayerEnergyBar")

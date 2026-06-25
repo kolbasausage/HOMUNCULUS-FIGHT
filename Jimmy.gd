@@ -19,7 +19,8 @@ func ability_2():
 	if energy_bar.has_enough(character_data.heal_cost):
 		show_icon(preload("res://heal cross.png"), global_position + Vector2(0, 0))
 		energy_bar.energy -= character_data.heal_cost
-		$"../PlayerHPBar".heal(character_data.heal_amount)
+		var heal_amount = get_parent().get_node("PlayerHPBar").max_value * (character_data.heal_amount / 100.0)
+		$"../PlayerHPBar".heal(heal_amount)
 		squish()
 	else:
 		print("Not enough energy to heal")

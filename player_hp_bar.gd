@@ -29,6 +29,10 @@ func take_damage(amount: float):
 	tween.tween_callback(label.queue_free)
 	if player_hp <= 0:
 		die()
+	
+	var enemy = get_parent().get_node("Enemy")
+	if enemy.mutation and enemy.mutation.vampiric_heal > 0:
+		heal(enemy.mutation.vampiric_heal)
 
 func heal(amount):
 	player_hp += amount

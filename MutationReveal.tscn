@@ -36,6 +36,9 @@
 [ext_resource type="Texture2D" uid="uid://btf08ueqbangu" path="res://chest_opened0008.png" id="34_jtpbp"]
 [ext_resource type="Texture2D" uid="uid://fnpd2ic6bnta" path="res://chest_opened0009.png" id="35_8uhy4"]
 [ext_resource type="Texture2D" uid="uid://u8wtugx5abqx" path="res://front_light.png" id="36_mrr7s"]
+[ext_resource type="Texture2D" uid="uid://ck1ayqw4i5ilf" path="res://caffeine.png" id="37_80acq"]
+[ext_resource type="Texture2D" uid="uid://sm5umoc37xb" path="res://hyperkeratosis.png" id="38_3t8a8"]
+[ext_resource type="Texture2D" uid="uid://djwncxp83nbg8" path="res://vampirism.png" id="39_r651m"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2plns"]
 animations = [{
@@ -190,3 +193,21 @@ animation = &"chest_closed"
 [node name="FrontLight" type="Sprite2D" parent="." unique_id=1856181314]
 position = Vector2(960, 540)
 texture = ExtResource("36_mrr7s")
+
+[node name="CaffeineSyringe" type="Sprite2D" parent="." unique_id=700655707]
+visible = false
+position = Vector2(960, 540)
+rotation = -1.5707964
+texture = ExtResource("37_80acq")
+
+[node name="HyperkeratosisSyringe" type="Sprite2D" parent="." unique_id=2098923219]
+visible = false
+position = Vector2(960, 540)
+rotation = -1.5707964
+texture = ExtResource("38_3t8a8")
+
+[node name="VampirismSyringe" type="Sprite2D" parent="." unique_id=470677006]
+visible = false
+position = Vector2(960, 540)
+rotation = -1.5707964
+texture = ExtResource("39_r651m")

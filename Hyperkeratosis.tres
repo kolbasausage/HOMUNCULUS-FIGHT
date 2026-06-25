@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MutationData" format=3 uid="uid://bxkux7tg64x2b"]
+
+[ext_resource type="Script" uid="uid://u4barkvj3v6x" path="res://MutationData.gd" id="1_njwq2"]
+
+[resource]
+script = ExtResource("1_njwq2")
+mutation_name = "Hyperkeratosis"
+description = "You feel heavier, but slower."
+hp_multiplier = 1.5
+energy_regen_multiplier = 0.7
+metadata/_custom_type_script = "uid://u4barkvj3v6x"

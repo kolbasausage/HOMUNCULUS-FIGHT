@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MutationData" format=3 uid="uid://cs5lv6nepk8w3"]
+
+[ext_resource type="Script" uid="uid://u4barkvj3v6x" path="res://MutationData.gd" id="1_ly2hi"]
+
+[resource]
+script = ExtResource("1_ly2hi")
+mutation_name = "Vampirism"
+description = "Steal some blood!"
+hp_multiplier = 0.8
+vampiric_heal = 10.0
+metadata/_custom_type_script = "uid://u4barkvj3v6x"
