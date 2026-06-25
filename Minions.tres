@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://b2a186nd2lp5t"]
+
+[ext_resource type="Script" uid="uid://bo4uq2bkmmpjx" path="res://EnemyData.gd" id="1_875ja"]
+[ext_resource type="Texture2D" uid="uid://bgru4i6yvdx2g" path="res://shield.png" id="1_e7mwo"]
+
+[resource]
+script = ExtResource("1_875ja")
+ability_costs = Array[float]([20.0, 50.0, 70.0])
+ability2_icon = ExtResource("1_e7mwo")
+enemy_name = "Minions"
+shield_cost = 50.0
+attack_damage = 15.0
+attack_cost = 20.0
+heavy_attack_damage = 50.0
+heavy_attack_cost = 70.0
+idle_anim = "Idle_Minions"
+death_anim = "death_animation"
+metadata/_custom_type_script = "uid://du4dquj83ruwt"

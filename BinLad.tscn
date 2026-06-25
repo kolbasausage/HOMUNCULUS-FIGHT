@@ -82,7 +82,6 @@ animations = [{
 }]
 
 [node name="BinLad" type="Sprite2D" unique_id=849012480]
-position = Vector2(0, 1)
 script = ExtResource("1_1va81")
 enemy_data = ExtResource("2_wpvm3")
 

@@ -124,16 +124,21 @@ position = Vector2(2700, -95)
 texture = ExtResource("9_qkd0e")
 offset = Vector2(0, -150)
 
+[node name="GhettoStreetHouse4" type="Sprite2D" parent="." unique_id=1423693908]
+position = Vector2(3700, -95)
+texture = ExtResource("9_qkd0e")
+offset = Vector2(0, -150)
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1215609575]
 
 [node name="MovementLabel" type="Label" parent="CanvasLayer" unique_id=1916633294]
-offset_left = 760.0
+offset_left = 824.0
 offset_top = 200.0
-offset_right = 1013.0
+offset_right = 1096.0
 offset_bottom = 299.99963
 theme_override_fonts/font = ExtResource("16_de744")
 theme_override_font_sizes/font_size = 23
-text = "Move with <- and -> arrows"
+text = "Move with A and D keys!"
 
 [node name="PromptLabel" type="Label" parent="CanvasLayer" unique_id=420904169]
 top_level = true

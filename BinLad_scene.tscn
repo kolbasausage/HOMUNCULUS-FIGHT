@@ -466,18 +466,21 @@ top_level = true
 position = Vector2(2159.1938, 622.84106)
 scale = Vector2(1.0766308, 1.0766308)
 texture = SubResource("CompressedTexture2D_i24dh")
+flip_h = true
 
 [node name="EnemyEnergyMarker2" type="Sprite2D" parent="EnemyEnergyBarCover" unique_id=2050967510]
 top_level = true
 position = Vector2(2138.1938, 621.84106)
 scale = Vector2(1.0766308, 1.0766308)
 texture = SubResource("CompressedTexture2D_wgdxf")
+flip_h = true
 
 [node name="EnemyEnergyMarker3" type="Sprite2D" parent="EnemyEnergyBarCover" unique_id=390852910]
 top_level = true
 position = Vector2(2138.1938, 621.84106)
 scale = Vector2(1.0766308, 1.0766308)
 texture = SubResource("CompressedTexture2D_1xjr1")
+flip_h = true
 
 [node name="UnknownIcon" type="Sprite2D" parent="EnemyEnergyBarCover" unique_id=231051913 node_paths=PackedStringArray("energy_bar", "marker", "enemy")]
 position = Vector2(-187, 230)

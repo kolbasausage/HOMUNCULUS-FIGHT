@@ -1,0 +1,518 @@
+[gd_scene format=3 uid="uid://coohk8s76km53"]
+
+[ext_resource type="Script" uid="uid://b1e4iwnakey5u" path="res://fight_scene.gd" id="1_lvkj8"]
+[ext_resource type="Script" uid="uid://cwlsfsgbyaoq5" path="res://ResultScreen.gd" id="2_murmr"]
+[ext_resource type="FontFile" uid="uid://bh4lvs1oudup5" path="res://Super Pandora.ttf" id="3_xqtho"]
+[ext_resource type="Texture2D" uid="uid://2r7v2ngbw26j" path="res://ghetto_loop0000.png" id="4_6fc3j"]
+[ext_resource type="Texture2D" uid="uid://c862ug21igjjw" path="res://ghetto_loop0001.png" id="5_r7n4w"]
+[ext_resource type="Texture2D" uid="uid://gf2jliwlvao" path="res://ghetto_loop0002.png" id="6_ptq24"]
+[ext_resource type="Texture2D" uid="uid://cycj4kqdqh8mh" path="res://ghetto_loop0003.png" id="7_1wb0h"]
+[ext_resource type="Texture2D" uid="uid://ytv5e51s4tlf" path="res://ghetto_loop0004.png" id="8_st4rg"]
+[ext_resource type="Texture2D" uid="uid://df4x04clhspur" path="res://ghetto_loop0005.png" id="9_ljnon"]
+[ext_resource type="Texture2D" uid="uid://bmnocvsmv22j" path="res://ghetto_loop0006.png" id="10_ydi3d"]
+[ext_resource type="Texture2D" uid="uid://b3qu5whyoqnlh" path="res://ghetto_loop0007.png" id="11_uqrxe"]
+[ext_resource type="Texture2D" uid="uid://basqtwn2swywn" path="res://ghetto_loop0008.png" id="12_n7g5b"]
+[ext_resource type="Texture2D" uid="uid://bnobuuurpxs32" path="res://ghetto_loop0009.png" id="13_2h0ej"]
+[ext_resource type="Texture2D" uid="uid://dw87m2d7w1f8c" path="res://ghetto_loop0010.png" id="14_7m0dl"]
+[ext_resource type="Texture2D" uid="uid://buj5py22vanrh" path="res://ghetto_loop0011.png" id="15_r4o2h"]
+[ext_resource type="Texture2D" uid="uid://32ghwer7t2qb" path="res://ghetto_loop0012.png" id="16_sex6o"]
+[ext_resource type="Texture2D" uid="uid://f1f5q7tkqw6t" path="res://ghetto_loop0013.png" id="17_6rh3r"]
+[ext_resource type="Texture2D" uid="uid://c5kcnraysjvq2" path="res://ghetto_loop0014.png" id="18_p4eb7"]
+[ext_resource type="Texture2D" uid="uid://bysdl2blk647r" path="res://ghetto_loop0015.png" id="19_jv4rp"]
+[ext_resource type="Texture2D" uid="uid://csntlncceknud" path="res://ghetto_loop0016.png" id="20_8rk4n"]
+[ext_resource type="Texture2D" uid="uid://4w62ofe47gv2" path="res://ghetto_loop0017.png" id="21_5x5kh"]
+[ext_resource type="Texture2D" uid="uid://ywlnadclt8iw" path="res://ghetto_loop0018.png" id="22_2ly3p"]
+[ext_resource type="Texture2D" uid="uid://snmr6erl71ul" path="res://ghetto_loop0019.png" id="23_h8l8h"]
+[ext_resource type="Texture2D" uid="uid://deqawc5lvoeig" path="res://ghetto_loop0020.png" id="24_vf4fu"]
+[ext_resource type="Texture2D" uid="uid://bna556aihh1cq" path="res://ghetto_loop0021.png" id="25_r6bo0"]
+[ext_resource type="Texture2D" uid="uid://bg06hkg4itqto" path="res://ghetto_loop0022.png" id="26_t2moh"]
+[ext_resource type="Texture2D" uid="uid://bfe6c5b2lwsmk" path="res://ghetto_loop0023.png" id="27_nt0tv"]
+[ext_resource type="Texture2D" uid="uid://ca5xhlyt1446g" path="res://ghetto_loop0024.png" id="28_v5mio"]
+[ext_resource type="Texture2D" uid="uid://loqodohpdt3s" path="res://ghetto_loop0025.png" id="29_2f7j5"]
+[ext_resource type="Texture2D" uid="uid://df63q3o6gltx1" path="res://ghetto_loop0026.png" id="30_jqw7b"]
+[ext_resource type="Texture2D" uid="uid://b2egtbi7ux04m" path="res://ghetto_loop0027.png" id="31_cmpmi"]
+[ext_resource type="Texture2D" uid="uid://bpjvpdtjcka2x" path="res://ghetto_loop0028.png" id="32_cow8q"]
+[ext_resource type="Texture2D" uid="uid://camdy1jxec2xt" path="res://ghetto_loop0029.png" id="33_hstgo"]
+[ext_resource type="Texture2D" uid="uid://eimpbymmxthw" path="res://ghetto_loop0030.png" id="34_sguxy"]
+[ext_resource type="Texture2D" uid="uid://b3tg22levvs6v" path="res://ghetto_loop0031.png" id="35_a0ud7"]
+[ext_resource type="Texture2D" uid="uid://ff38tyx1ou3a" path="res://ghetto_loop0032.png" id="36_pdt8n"]
+[ext_resource type="Texture2D" uid="uid://culqyqst3j6y" path="res://ghetto_loop0033.png" id="37_deos2"]
+[ext_resource type="Texture2D" uid="uid://6cgcjp23eaes" path="res://ghetto_loop0034.png" id="38_d16nx"]
+[ext_resource type="Texture2D" uid="uid://bsw4xqxlb3d8o" path="res://ghetto_loop0035.png" id="39_bq1e2"]
+[ext_resource type="Texture2D" uid="uid://dqdru3xcs6ea5" path="res://ghetto_loop0036.png" id="40_qy5ns"]
+[ext_resource type="Texture2D" uid="uid://chqrtb6a4r2jx" path="res://ghetto_loop0037.png" id="41_7fokf"]
+[ext_resource type="Texture2D" uid="uid://chqh7qfdgcagb" path="res://ghetto_loop0038.png" id="42_bn8ag"]
+[ext_resource type="Texture2D" uid="uid://cg45u7s7fb7i2" path="res://ghetto_loop0039.png" id="43_5y4ia"]
+[ext_resource type="Texture2D" uid="uid://7a5gdf5rivyb" path="res://ghetto_loop0040.png" id="44_if46t"]
+[ext_resource type="Texture2D" uid="uid://w0uvskc71pmo" path="res://ghetto_loop0041.png" id="45_77pn7"]
+[ext_resource type="Texture2D" uid="uid://c6t2oxw2qjnl7" path="res://ghetto_loop0042.png" id="46_ho48n"]
+[ext_resource type="PackedScene" uid="uid://dlrejyj4f0gun" path="res://Jimmy.tscn" id="47_ckbl2"]
+[ext_resource type="PackedScene" uid="uid://dxl88r5v7hnly" path="res://Minions.tscn" id="48_s54dc"]
+[ext_resource type="Texture2D" uid="uid://cjs76nxme803g" path="res://2411557aeedd50cd04de5f752dedd06a--blacker-than-black-a-color.jpg" id="50_7dhr0"]
+[ext_resource type="Texture2D" uid="uid://vxmfu7ygykow" path="res://Energy_flow.png" id="51_c8hkb"]
+[ext_resource type="Script" uid="uid://3tu3a28y7ijm" path="res://energy.gd" id="52_yx7eo"]
+[ext_resource type="Texture2D" uid="uid://dwdq6pp5iuhv5" path="res://Tongue_Phill.png" id="53_xqhoe"]
+[ext_resource type="Script" uid="uid://od7dxny5ldun" path="res://sprite_2d.gd" id="54_4nsfu"]
+[ext_resource type="Texture2D" uid="uid://c713fo3702wjs" path="res://Blood background.png" id="55_mks1w"]
+[ext_resource type="Script" uid="uid://cvjbhwqmlauty" path="res://player_hp_bar.gd" id="56_umcq4"]
+[ext_resource type="Texture2D" uid="uid://bcr3lofjhew1w" path="res://Heart.png" id="57_epbwl"]
+[ext_resource type="Script" uid="uid://bw5b5bxso3ab0" path="res://player_heart.gd" id="58_4d6ng"]
+[ext_resource type="Script" uid="uid://cdmfc8024m7om" path="res://enemyenergy.gd" id="59_lc8s1"]
+[ext_resource type="Script" uid="uid://baymd8y8r4jp3" path="res://enemy_hp_bar.gd" id="60_0l2sk"]
+[ext_resource type="Script" uid="uid://dfw8yfjwljqra" path="res://enemy_heart.gd" id="61_i3jbg"]
+[ext_resource type="Texture2D" uid="uid://digwpr8vrk4pc" path="res://new ui sketch transparent.png" id="62_pisdh"]
+[ext_resource type="Texture2D" uid="uid://b701kn6qqlsxs" path="res://Energy_bar.png" id="63_kctk1"]
+[ext_resource type="Texture2D" uid="uid://cuuvfsaqrd380" path="res://Jimmy_basic.png" id="64_srwq7"]
+[ext_resource type="Script" uid="uid://br70xfykpn7gw" path="res://moonman_basicattack_icon.gd" id="65_jkyxn"]
+[ext_resource type="Texture2D" uid="uid://crgu5adp1a6jv" path="res://Keyboard key 1.png" id="66_bt1hp"]
+[ext_resource type="Texture2D" uid="uid://dhgtai20vxeri" path="res://moonman_heal_icon.png" id="67_q51ed"]
+[ext_resource type="Script" uid="uid://ckb6bebsllqr3" path="res://moonman_heal_icon.gd" id="68_5h288"]
+[ext_resource type="Texture2D" uid="uid://dv47ovks5iprt" path="res://Keyboard key 2.png" id="69_c6vd1"]
+[ext_resource type="Texture2D" uid="uid://cvk2cw880xvif" path="res://jimmy_ultimate.png" id="70_rtmda"]
+[ext_resource type="Script" uid="uid://cuij3h7nm4yq4" path="res://moonman_ultimate_icon.gd" id="71_8q4mr"]
+[ext_resource type="Texture2D" uid="uid://ceyhp7exwi4ty" path="res://Keyboard key 3.png" id="72_75536"]
+[ext_resource type="Texture2D" uid="uid://bum8vflnyspep" path="res://Unknown Icon.png" id="73_s8qf6"]
+[ext_resource type="Script" uid="uid://1asbr4hradhj" path="res://unknown_icon.gd" id="74_2ousy"]
+[ext_resource type="Script" uid="uid://ciec17ygvjr3r" path="res://unknown_icon_2.gd" id="75_y4fxy"]
+[ext_resource type="Script" uid="uid://r1kp0guxxkqw" path="res://unknown_icon_3.gd" id="76_tjlhg"]
+[ext_resource type="AudioStream" uid="uid://bmeledhxx7fwv" path="res://Street Beat 8Bit.wav" id="77_so5u8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8qpxs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_6fc3j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_r7n4w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ptq24")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_1wb0h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_st4rg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ljnon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ydi3d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_uqrxe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_n7g5b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_2h0ej")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_7m0dl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_r4o2h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_sex6o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_6rh3r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_p4eb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_jv4rp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_8rk4n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_5x5kh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_2ly3p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_h8l8h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_vf4fu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_r6bo0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_t2moh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_nt0tv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_v5mio")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_2f7j5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_jqw7b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_cmpmi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_cow8q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_hstgo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_sguxy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_a0ud7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_pdt8n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_deos2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_d16nx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_bq1e2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_qy5ns")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_7fokf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_bn8ag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_5y4ia")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_if46t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_77pn7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_ho48n")
+}],
+"loop": true,
+"name": &"ghetto_loop",
+"speed": 10.0
+}]
+
+[sub_resource type="GDScript" id="GDScript_5ki62"]
+script/source = "extends AnimatedSprite2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	play(\"ghetto_loop\")
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1rupc"]
+load_path = "res://.godot/imported/Energy_marker.png-fd416e5a66ec922a6d3a89271d52fb67.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_12vya"]
+load_path = "res://.godot/imported/Energy_marker.png-fd416e5a66ec922a6d3a89271d52fb67.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nvfd8"]
+load_path = "res://.godot/imported/Energy_marker.png-fd416e5a66ec922a6d3a89271d52fb67.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_i24dh"]
+load_path = "res://.godot/imported/Energy_marker.png-fd416e5a66ec922a6d3a89271d52fb67.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wgdxf"]
+load_path = "res://.godot/imported/Energy_marker.png-fd416e5a66ec922a6d3a89271d52fb67.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1xjr1"]
+load_path = "res://.godot/imported/Energy_marker.png-fd416e5a66ec922a6d3a89271d52fb67.ctex"
+
+[node name="Node2D" type="Node2D" unique_id=382972580]
+script = ExtResource("1_lvkj8")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=572826913]
+process_mode = 3
+
+[node name="ResultScreen" type="Control" parent="CanvasLayer" unique_id=180874407]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_murmr")
+
+[node name="Panel" type="Panel" parent="CanvasLayer/ResultScreen" unique_id=1081444261]
+process_mode = 3
+modulate = Color(0.8175213, 0.8175213, 0.81752115, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1880.0
+offset_bottom = 1040.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ResultLabel" type="Label" parent="CanvasLayer/ResultScreen/Panel" unique_id=363651155]
+process_mode = 3
+layout_mode = 0
+offset_left = 760.0
+offset_top = 400.0
+offset_right = 1160.0
+offset_bottom = 500.0
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 1
+
+[node name="PathMapButton" type="Button" parent="CanvasLayer/ResultScreen/Panel" unique_id=856068887]
+layout_mode = 0
+offset_left = 760.0
+offset_top = 539.0
+offset_right = 1160.0
+offset_bottom = 619.0
+theme_override_fonts/font = ExtResource("3_xqtho")
+theme_override_font_sizes/font_size = 36
+text = "Back to bus"
+
+[node name="Background" type="Sprite2D" parent="." unique_id=181043682]
+position = Vector2(960, 540)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Background" unique_id=511713236]
+sprite_frames = SubResource("SpriteFrames_8qpxs")
+animation = &"ghetto_loop"
+script = SubResource("GDScript_5ki62")
+
+[node name="Player" parent="." unique_id=1213359912 node_paths=PackedStringArray("enemy_hp_bar") instance=ExtResource("47_ckbl2")]
+enemy_hp_bar = NodePath("../EnemyHPBar")
+
+[node name="Enemy" parent="." unique_id=1723246231 instance=ExtResource("48_s54dc")]
+
+[node name="PlayerEnergyBar" type="TextureProgressBar" parent="." unique_id=1277075371]
+custom_minimum_size = Vector2(151, 756)
+offset_left = 166.99998
+offset_top = 104.0
+offset_right = 1225.0
+offset_bottom = 860.0
+rotation = -3.1415927
+scale = Vector2(0.07198495, -0.85516465)
+size_flags_horizontal = 4
+value = 100.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_under = ExtResource("50_7dhr0")
+texture_progress = ExtResource("51_c8hkb")
+tint_progress = Color(1, 0.29411727, 0.14686409, 1)
+script = ExtResource("52_yx7eo")
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="PlayerEnergyBar" unique_id=1626977990 node_paths=PackedStringArray("energy_bar")]
+visible = false
+position = Vector2(514.88477, 84.09076)
+scale = Vector2(16.433, 0.982)
+texture = ExtResource("53_xqhoe")
+script = ExtResource("54_4nsfu")
+energy_bar = NodePath("..")
+
+[node name="PlayerHPBar" type="TextureProgressBar" parent="." unique_id=1988750124]
+offset_left = 63.0
+offset_top = 832.0
+offset_right = 1121.0
+offset_bottom = 1472.0
+scale = Vector2(0.182, 0.302)
+fill_mode = 3
+nine_patch_stretch = true
+texture_under = ExtResource("55_mks1w")
+texture_progress = ExtResource("55_mks1w")
+tint_under = Color(0.33850017, 0, 0.04767386, 1)
+script = ExtResource("56_umcq4")
+metadata/_edit_use_anchors_ = true
+
+[node name="PlayerHeart" type="Sprite2D" parent="PlayerHPBar" unique_id=1167588955 node_paths=PackedStringArray("hp_bar")]
+position = Vector2(532.9671, 317.8807)
+scale = Vector2(2.747253, 1.6556294)
+texture = ExtResource("57_epbwl")
+script = ExtResource("58_4d6ng")
+hp_bar = NodePath("..")
+
+[node name="EnemyEnergyBar" type="TextureProgressBar" parent="." unique_id=2025529345]
+offset_left = 1752.0
+offset_top = 104.0
+offset_right = 2810.0
+offset_bottom = 860.0
+rotation = -3.1415927
+scale = Vector2(-0.072314866, -0.85968196)
+value = 100.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_progress = ExtResource("51_c8hkb")
+script = ExtResource("59_lc8s1")
+metadata/_edit_use_anchors_ = true
+
+[node name="EnemyHPBar" type="TextureProgressBar" parent="." unique_id=1269053381]
+offset_left = 1664.0
+offset_top = 832.0
+offset_right = 2722.0
+offset_bottom = 1472.0001
+scale = Vector2(0.18157175, 0.30044073)
+fill_mode = 3
+nine_patch_stretch = true
+texture_under = ExtResource("55_mks1w")
+texture_progress = ExtResource("55_mks1w")
+tint_under = Color(0.3372549, 0, 0.047058824, 1)
+script = ExtResource("60_0l2sk")
+
+[node name="EnemyHeart" type="Sprite2D" parent="EnemyHPBar" unique_id=1217218032 node_paths=PackedStringArray("hp_bar")]
+position = Vector2(528.7167, 319.53067)
+scale = Vector2(2.7537324, 1.6642218)
+texture = ExtResource("57_epbwl")
+script = ExtResource("61_i3jbg")
+hp_bar = NodePath("..")
+
+[node name="NewUiSketchTransparent" type="Sprite2D" parent="." unique_id=1753305588]
+visible = false
+position = Vector2(576.54565, 325.82797)
+scale = Vector2(0.60119426, 0.6050542)
+texture = ExtResource("62_pisdh")
+
+[node name="PlayerEnergyBarCover" type="Sprite2D" parent="." unique_id=1321383681]
+position = Vector2(128, 424)
+texture = ExtResource("63_kctk1")
+
+[node name="PlayerEnergyMarker1" type="Sprite2D" parent="PlayerEnergyBarCover" unique_id=1496199191]
+top_level = true
+position = Vector2(136.1938, 597.00006)
+scale = Vector2(1.0766308, 1.0766308)
+texture = SubResource("CompressedTexture2D_1rupc")
+
+[node name="MoonmanBasicattackIcon" type="Sprite2D" parent="PlayerEnergyBarCover" unique_id=2137667812 node_paths=PackedStringArray("energy_bar", "marker", "player")]
+position = Vector2(199, 172)
+texture = ExtResource("64_srwq7")
+script = ExtResource("65_jkyxn")
+energy_bar = NodePath("../../PlayerEnergyBar")
+marker = NodePath("../PlayerEnergyMarker1")
+player = NodePath("../../Player")
+
+[node name="KeyboardKey1" type="Sprite2D" parent="PlayerEnergyBarCover/MoonmanBasicattackIcon" unique_id=301226590]
+position = Vector2(53, 57)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("66_bt1hp")
+
+[node name="PlayerEnergyMarker2" type="Sprite2D" parent="PlayerEnergyBarCover" unique_id=1116364653]
+top_level = true
+position = Vector2(136.1938, 597.00006)
+scale = Vector2(1.0766308, 1.0766308)
+texture = SubResource("CompressedTexture2D_12vya")
+
+[node name="MoonmanHealIcon" type="Sprite2D" parent="PlayerEnergyBarCover" unique_id=869940375 node_paths=PackedStringArray("energy_bar", "marker", "player")]
+position = Vector2(203, 12)
+texture = ExtResource("67_q51ed")
+script = ExtResource("68_5h288")
+energy_bar = NodePath("../../PlayerEnergyBar")
+cost = 45.0
+marker = NodePath("../PlayerEnergyMarker2")
+player = NodePath("../../Player")
+
+[node name="KeyboardKey2" type="Sprite2D" parent="PlayerEnergyBarCover/MoonmanHealIcon" unique_id=791631382]
+position = Vector2(51, 47.000015)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("69_c6vd1")
+
+[node name="PlayerEnergyMarker3" type="Sprite2D" parent="PlayerEnergyBarCover" unique_id=636979958]
+top_level = true
+position = Vector2(136.1938, 597.00006)
+scale = Vector2(1.0766308, 1.0766308)
+texture = SubResource("CompressedTexture2D_nvfd8")
+
+[node name="MoonmanUltimateIcon" type="Sprite2D" parent="PlayerEnergyBarCover" unique_id=715746360 node_paths=PackedStringArray("energy_bar", "marker", "player")]
+position = Vector2(-128, -423)
+texture = ExtResource("70_rtmda")
+script = ExtResource("71_8q4mr")
+energy_bar = NodePath("../../PlayerEnergyBar")
+cost = 75.0
+marker = NodePath("../PlayerEnergyMarker3")
+player = NodePath("../../Player")
+
+[node name="KeyboardKey3" type="Sprite2D" parent="PlayerEnergyBarCover/MoonmanUltimateIcon" unique_id=976078700]
+position = Vector2(51.000004, 47)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("72_75536")
+
+[node name="EnemyEnergyBarCover" type="Sprite2D" parent="." unique_id=1750026012]
+position = Vector2(1792, 424)
+texture = ExtResource("63_kctk1")
+
+[node name="EnemyEnergyMarker1" type="Sprite2D" parent="EnemyEnergyBarCover" unique_id=1934027546]
+top_level = true
+position = Vector2(2159.1938, 622.84106)
+scale = Vector2(1.0766308, 1.0766308)
+texture = SubResource("CompressedTexture2D_i24dh")
+flip_h = true
+
+[node name="EnemyEnergyMarker2" type="Sprite2D" parent="EnemyEnergyBarCover" unique_id=2050967510]
+top_level = true
+position = Vector2(2138.1938, 621.84106)
+scale = Vector2(1.0766308, 1.0766308)
+texture = SubResource("CompressedTexture2D_wgdxf")
+flip_h = true
+
+[node name="EnemyEnergyMarker3" type="Sprite2D" parent="EnemyEnergyBarCover" unique_id=390852910]
+top_level = true
+position = Vector2(2138.1938, 621.84106)
+scale = Vector2(1.0766308, 1.0766308)
+texture = SubResource("CompressedTexture2D_1xjr1")
+flip_h = true
+
+[node name="UnknownIcon" type="Sprite2D" parent="EnemyEnergyBarCover" unique_id=231051913 node_paths=PackedStringArray("energy_bar", "marker", "enemy")]
+position = Vector2(-187, 230)
+texture = ExtResource("73_s8qf6")
+script = ExtResource("74_2ousy")
+energy_bar = NodePath("../../EnemyEnergyBar")
+cost = 30.0
+marker = NodePath("../EnemyEnergyMarker1")
+enemy = NodePath("../../Enemy")
+
+[node name="UnknownIcon2" type="Sprite2D" parent="EnemyEnergyBarCover" unique_id=1684797233 node_paths=PackedStringArray("energy_bar", "marker", "enemy")]
+position = Vector2(-187, 230)
+texture = ExtResource("73_s8qf6")
+script = ExtResource("75_y4fxy")
+energy_bar = NodePath("../../EnemyEnergyBar")
+cost = 45.0
+marker = NodePath("../EnemyEnergyMarker2")
+enemy = NodePath("../../Enemy")
+
+[node name="UnknownIcon3" type="Sprite2D" parent="EnemyEnergyBarCover" unique_id=337089563 node_paths=PackedStringArray("energy_bar", "marker", "enemy")]
+position = Vector2(-187, 230)
+texture = ExtResource("73_s8qf6")
+script = ExtResource("76_tjlhg")
+energy_bar = NodePath("../../EnemyEnergyBar")
+cost = 80.0
+marker = NodePath("../EnemyEnergyMarker3")
+enemy = NodePath("../../Enemy")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=993170252]
+position = Vector2(2138.1938, 621.84106)
+scale = Vector2(1.0766308, 1.0766308)
+stream = ExtResource("77_so5u8")
+volume_db = 5.0
+autoplay = true
+
+[node name="PlayerMutationIcon" type="Sprite2D" parent="." unique_id=204010169]
+position = Vector2(410, 924)
+
+[node name="EnemyMutationIcon" type="Sprite2D" parent="." unique_id=1441163307]
+position = Vector2(1500, 924)
+
+[connection signal="pressed" from="CanvasLayer/ResultScreen/Panel/PathMapButton" to="CanvasLayer/ResultScreen" method="_on_path_map_pressed"]
