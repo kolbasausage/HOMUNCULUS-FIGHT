@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://cf5mkqf1btbd4"]
+
+[ext_resource type="Script" uid="uid://bs0ljmn0bv133" path="res://End.gd" id="1_lry8e"]
+[ext_resource type="FontFile" uid="uid://bh4lvs1oudup5" path="res://Super Pandora.ttf" id="2_ede3x"]
+
+[node name="Control" type="Control" unique_id=330497583]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lry8e")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=815606184]
+layout_mode = 0
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 1942.0
+offset_bottom = 1108.0
+color = Color(0, 0, 0, 1)
+
+[node name="StoryLabel" type="Label" parent="." unique_id=1893507783]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 160.0
+offset_right = -155.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_ede3x")
+theme_override_font_sizes/font_size = 56
+text = "The end. 
+But this is only the beginning of your story."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
