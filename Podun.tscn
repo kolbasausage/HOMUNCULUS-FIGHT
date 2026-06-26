@@ -1,0 +1,141 @@
+[gd_scene format=3 uid="uid://c5expfary3hpj"]
+
+[ext_resource type="Script" uid="uid://bxg6d4sbuiimu" path="res://Podun.gd" id="1_hpw78"]
+[ext_resource type="Texture2D" uid="uid://bniadwejnvrrb" path="res://Attack_Podun0000.png" id="2_5cosu"]
+[ext_resource type="Resource" uid="uid://cptsxfcwl4rvu" path="res://Podun.tres" id="2_k0kbp"]
+[ext_resource type="Texture2D" uid="uid://dy1yx2xyg7xwn" path="res://Attack_Podun0001.png" id="3_k0kbp"]
+[ext_resource type="Texture2D" uid="uid://bliblnul3us88" path="res://Attack_Podun0002.png" id="4_pc44r"]
+[ext_resource type="Texture2D" uid="uid://dg057hgo0mrih" path="res://Attack_Podun0003.png" id="5_cu2fj"]
+[ext_resource type="Texture2D" uid="uid://d0ocp5qyguc27" path="res://Attack_Podun0004.png" id="6_8x1as"]
+[ext_resource type="Texture2D" uid="uid://bs5ih7doao3kn" path="res://Attack_Podun0005.png" id="7_tpxpn"]
+[ext_resource type="Texture2D" uid="uid://b7mewsjupowes" path="res://Attack_Podun0006.png" id="8_c8tmg"]
+[ext_resource type="Texture2D" uid="uid://blhj6lrefxntf" path="res://Idle_Podun0000.png" id="9_vwjqb"]
+[ext_resource type="Texture2D" uid="uid://bxgp8lt125v4w" path="res://Idle_Podun0001.png" id="10_cg6ix"]
+[ext_resource type="Texture2D" uid="uid://b34c13c73io6f" path="res://Idle_Podun0002.png" id="11_f257o"]
+[ext_resource type="Texture2D" uid="uid://bw2ai7a5yjywe" path="res://Idle_Podun0003.png" id="12_an0u8"]
+[ext_resource type="Texture2D" uid="uid://blc8yutxvuf5p" path="res://Idle_Podun0004.png" id="13_fqglp"]
+[ext_resource type="Texture2D" uid="uid://71w5dnwle4ye" path="res://Idle_Podun0005.png" id="14_bktwq"]
+[ext_resource type="Texture2D" uid="uid://c6rh41xbx4it0" path="res://Idle_Podun0006.png" id="15_3l00u"]
+[ext_resource type="Texture2D" uid="uid://cvcsfdq0fvfbv" path="res://Idle_Podun0007.png" id="16_2282u"]
+[ext_resource type="Texture2D" uid="uid://dqgsqdsaq4bpa" path="res://Idle_Podun0008.png" id="17_101wu"]
+[ext_resource type="Texture2D" uid="uid://xn2g6lgfynne" path="res://Idle_Podun0009.png" id="18_14oiu"]
+[ext_resource type="Texture2D" uid="uid://bdda65w85djjv" path="res://Idle_Podun0010.png" id="19_66hd7"]
+[ext_resource type="Texture2D" uid="uid://28fa1uu1yli1" path="res://universal_death_animation0000.png" id="20_y5s07"]
+[ext_resource type="Texture2D" uid="uid://dqsa8ai4hku0q" path="res://universal_death_animation0001.png" id="21_gt5r0"]
+[ext_resource type="Texture2D" uid="uid://oh1slagegx7o" path="res://universal_death_animation0002.png" id="22_yh6j1"]
+[ext_resource type="Texture2D" uid="uid://dwo21il8y8vmn" path="res://universal_death_animation0003.png" id="23_wmn06"]
+[ext_resource type="Texture2D" uid="uid://bt0og6bn3rmpl" path="res://universal_death_animation0004.png" id="24_65yu3"]
+[ext_resource type="Texture2D" uid="uid://b8uudfwydfew0" path="res://universal_death_animation0005.png" id="25_3pxbq"]
+[ext_resource type="Texture2D" uid="uid://de1gouuorga4p" path="res://universal_death_animation0006.png" id="26_57lq4"]
+[ext_resource type="Texture2D" uid="uid://bggafqcx1dydq" path="res://universal_death_animation0007.png" id="27_y0xe5"]
+[ext_resource type="Texture2D" uid="uid://cexev5gdt8ulv" path="res://universal_death_animation0008.png" id="28_s07a4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bh545"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_5cosu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_k0kbp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pc44r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_cu2fj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_8x1as")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_tpxpn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_c8tmg")
+}],
+"loop": true,
+"name": &"Attack_Podun",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_vwjqb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_cg6ix")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_f257o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_an0u8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_fqglp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_bktwq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_3l00u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_2282u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_101wu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_14oiu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_66hd7")
+}],
+"loop": true,
+"name": &"Idle_Podun",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_y5s07")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_gt5r0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_yh6j1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_wmn06")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_65yu3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_3pxbq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_57lq4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_y0xe5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_s07a4")
+}],
+"loop": false,
+"name": &"death_animation",
+"speed": 10.0
+}]
+
+[node name="Enemy" type="Sprite2D" unique_id=384300469]
+script = ExtResource("1_hpw78")
+enemy_data = ExtResource("2_k0kbp")
+
+[node name="EnemyAnimation" type="AnimatedSprite2D" parent="." unique_id=522973745]
+sprite_frames = SubResource("SpriteFrames_bh545")
+animation = &"death_animation"
+frame = 8
+frame_progress = 1.0
+flip_h = true

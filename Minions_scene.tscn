@@ -48,6 +48,7 @@
 [ext_resource type="Texture2D" uid="uid://c6t2oxw2qjnl7" path="res://ghetto_loop0042.png" id="46_ho48n"]
 [ext_resource type="PackedScene" uid="uid://dlrejyj4f0gun" path="res://Jimmy.tscn" id="47_ckbl2"]
 [ext_resource type="PackedScene" uid="uid://dxl88r5v7hnly" path="res://Minions.tscn" id="48_s54dc"]
+[ext_resource type="AudioStream" uid="uid://d1tkq5wlv2kvr" path="res://We are many you are one.wav" id="49_lvkj8"]
 [ext_resource type="Texture2D" uid="uid://cjs76nxme803g" path="res://2411557aeedd50cd04de5f752dedd06a--blacker-than-black-a-color.jpg" id="50_7dhr0"]
 [ext_resource type="Texture2D" uid="uid://vxmfu7ygykow" path="res://Energy_flow.png" id="51_c8hkb"]
 [ext_resource type="Script" uid="uid://3tu3a28y7ijm" path="res://energy.gd" id="52_yx7eo"]
@@ -300,6 +301,11 @@ enemy_hp_bar = NodePath("../EnemyHPBar")
 
 [node name="Enemy" parent="." unique_id=1723246231 node_paths=PackedStringArray("player_hp_bar") instance=ExtResource("48_s54dc")]
 player_hp_bar = NodePath("../PlayerHPBar")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Enemy" unique_id=1481186006]
+stream = ExtResource("49_lvkj8")
+volume_db = 5.0
+autoplay = true
 
 [node name="PlayerEnergyBar" type="TextureProgressBar" parent="." unique_id=1277075371]
 custom_minimum_size = Vector2(151, 756)

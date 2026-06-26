@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bs0ljmn0bv133" path="res://End.gd" id="1_lry8e"]
 [ext_resource type="FontFile" uid="uid://bh4lvs1oudup5" path="res://Super Pandora.ttf" id="2_ede3x"]
+[ext_resource type="Script" uid="uid://cinywwqkhq00d" path="res://Start.gd" id="3_ede3x"]
 
 [node name="Control" type="Control" unique_id=330497583]
 layout_mode = 3
@@ -36,3 +37,26 @@ But this is only the beginning of your story."
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
+
+[node name="Button" type="Button" parent="StoryLabel" unique_id=636357048]
+top_level = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -182.00006
+offset_top = 141.0
+offset_right = 290.0
+offset_bottom = 267.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.76, 0.76)
+theme_override_fonts/font = ExtResource("2_ede3x")
+theme_override_font_sizes/font_size = 105
+action_mode = 0
+text = "Restart?"
+script = ExtResource("3_ede3x")
+
+[connection signal="pressed" from="StoryLabel/Button" to="StoryLabel/Button" method="_on_pressed"]

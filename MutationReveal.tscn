@@ -45,6 +45,7 @@
 [ext_resource type="AudioStream" uid="uid://byqlyvvc5d72" path="res://Is this really owrth ur health.wav" id="43_smh54"]
 [ext_resource type="AudioStream" uid="uid://rhxaw15yixk5" path="res://You are a dracula man.wav" id="44_ntsiq"]
 [ext_resource type="AudioStream" uid="uid://b1mdalyhvrnrh" path="res://You feel heavy.wav" id="45_pin03"]
+[ext_resource type="FontFile" uid="uid://bh4lvs1oudup5" path="res://Super Pandora.ttf" id="46_safp2"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2plns"]
 animations = [{
@@ -237,3 +238,20 @@ stream = ExtResource("44_ntsiq")
 
 [node name="SFX_HyperkeratosisReveal" type="AudioStreamPlayer" parent="." unique_id=1992201820]
 stream = ExtResource("45_pin03")
+
+[node name="Label" type="Label" parent="." unique_id=2050185009]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 870.0
+offset_top = 974.0
+offset_right = 1097.0
+offset_bottom = 997.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 0.4745098, 1, 0.14901961)
+theme_override_fonts/font = ExtResource("46_safp2")
+text = "PRESS ANY BUTTON TO OPEN"
+horizontal_alignment = 1
+vertical_alignment = 1

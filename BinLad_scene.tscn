@@ -61,7 +61,6 @@
 [ext_resource type="Script" uid="uid://cdmfc8024m7om" path="res://enemyenergy.gd" id="57_arkun"]
 [ext_resource type="Script" uid="uid://baymd8y8r4jp3" path="res://enemy_hp_bar.gd" id="58_egqms"]
 [ext_resource type="Script" uid="uid://dfw8yfjwljqra" path="res://enemy_heart.gd" id="59_qfnbh"]
-[ext_resource type="Texture2D" uid="uid://digwpr8vrk4pc" path="res://new ui sketch transparent.png" id="60_rsvvv"]
 [ext_resource type="Texture2D" uid="uid://b701kn6qqlsxs" path="res://Energy_bar.png" id="61_ue4jo"]
 [ext_resource type="Texture2D" uid="uid://cuuvfsaqrd380" path="res://Jimmy_basic.png" id="62_xa5sl"]
 [ext_resource type="Script" uid="uid://br70xfykpn7gw" path="res://moonman_basicattack_icon.gd" id="63_dlx7u"]
@@ -387,12 +386,6 @@ scale = Vector2(2.7537324, 1.6642218)
 texture = ExtResource("55_joup6")
 script = ExtResource("59_qfnbh")
 hp_bar = NodePath("..")
-
-[node name="NewUiSketchTransparent" type="Sprite2D" parent="." unique_id=1753305588]
-visible = false
-position = Vector2(576.54565, 325.82797)
-scale = Vector2(0.60119426, 0.6050542)
-texture = ExtResource("60_rsvvv")
 
 [node name="PlayerEnergyBarCover" type="Sprite2D" parent="." unique_id=1321383681]
 position = Vector2(128, 424)

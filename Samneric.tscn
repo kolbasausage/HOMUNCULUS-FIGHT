@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://b8uudfwydfew0" path="res://universal_death_animation0005.png" id="22_ibkqg"]
 [ext_resource type="Texture2D" uid="uid://de1gouuorga4p" path="res://universal_death_animation0006.png" id="23_h75i0"]
 [ext_resource type="Texture2D" uid="uid://bggafqcx1dydq" path="res://universal_death_animation0007.png" id="24_p4iwe"]
+[ext_resource type="Texture2D" uid="uid://bgru4i6yvdx2g" path="res://shield.png" id="26_560k3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hsdmk"]
 animations = [{
@@ -122,3 +123,8 @@ sprite_frames = SubResource("SpriteFrames_hsdmk")
 animation = &"Attack_Samneric"
 frame_progress = 1.0
 flip_h = true
+
+[node name="ShieldIcon" type="Sprite2D" parent="." unique_id=1119834716]
+visible = false
+position = Vector2(-1, 36)
+texture = ExtResource("26_560k3")

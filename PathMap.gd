@@ -5,9 +5,9 @@ extends Node2D
 @onready var movement_label = $CanvasLayer/MovementLabel
 @onready var streets = $Streets
 var bus_speed = 400.0
-var stop_positions = [900, 1800, 2700]
-var stop_names = ["⚔️ Angry Sam", "⚔️ BinLad", "⚔️ Samneric"]
-var stop_scenes = ["res://Fight_scene.tscn", "res://BinLad_scene.tscn", "res://Samneric_scene.tscn"]
+var stop_positions = [900, 1800, 2700, 3800, 4900]
+var stop_names = ["⚔️ Angry Sam", "⚔️ BinLad", "⚔️ Samneric", "⚔️ Minions", "⚔️ Who is this?"]
+var stop_scenes = ["res://Fight_scene.tscn", "res://BinLad_scene.tscn", "res://Samneric_scene.tscn", "res://Minions_scene.tscn", "res://Podun_scene.tscn"]
 var proximity = 100.0
 var current_stop_index = -1
 var levels_unlocked = 1
@@ -20,8 +20,10 @@ func _ready():
 	$Bus/AnimatedSprite2D.play("Idle_Bus")
 	movement_label.visible = true
 	_animate_building($GhettoStreetHouse)
+	_animate_building($HotcatStation)
+	_animate_building($Backrooms)
 	_animate_building($GhettoStreetHouse2)
-	_animate_building($GhettoStreetHouse3)
+	_animate_building($Adminlevel)
 
 
 func _animate_building(building):
@@ -45,7 +47,7 @@ func _process(delta):
 	else:
 		$Bus/AnimatedSprite2D.play("Idle_Bus")
 
-	bus.position.x = clamp(bus.position.x, 100, 7580)
+	bus.position.x = clamp(bus.position.x, 100, 5280)
 
 	var near_stop = false
 	for i in range(stop_positions.size()):

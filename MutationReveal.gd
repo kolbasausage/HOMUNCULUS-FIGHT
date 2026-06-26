@@ -37,6 +37,19 @@ func _on_fall_finished():
 	sfx_close.play()
 	medkit.play("chest_closed")
 
+var can_skip = false
+
+func _on_opening_finished():
+	medkit.play("chest_opened")
+	opened = true
+	var mutation = mutations[randi() % mutations.size()]
+	GameState.current_mutation = mutation
+	sfx_reveal[mutation.mutation_name].play()
+	_show_syringe(mutation)
+	await get_tree().create_timer(3.0).timeout
+	can_skip = true
+	get_tree().change_scene_to_file(GameState.next_fight_scene)
+
 func _input(event):
 	if event.is_pressed():
 		if not opened and medkit.animation == "chest_closed":
@@ -44,18 +57,8 @@ func _input(event):
 			sfx_open.play()
 			medkit.play("chest_opening")
 			medkit.animation_finished.connect(_on_opening_finished)
-		elif opened:
+		elif opened and can_skip:
 			get_tree().change_scene_to_file(GameState.next_fight_scene)
-
-func _on_opening_finished():
-	medkit.play("chest_opened")
-	opened = true
-
-	var mutation = mutations[randi() % mutations.size()]
-	GameState.current_mutation = mutation
-
-	sfx_reveal[mutation.mutation_name].play()
-	_show_syringe(mutation)
 
 func _show_syringe(mutation):
 	var syringe = syringes[mutation.mutation_name]

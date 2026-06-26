@@ -17,6 +17,8 @@
 [ext_resource type="Texture2D" uid="uid://5cawdb4ixjik" path="res://BushesFront0005.png" id="13_cirwc"]
 [ext_resource type="AudioStream" uid="uid://b4vegq5l72kk" path="res://bus engine.wav" id="14_wrtjv"]
 [ext_resource type="FontFile" uid="uid://bh4lvs1oudup5" path="res://Super Pandora.ttf" id="16_de744"]
+[ext_resource type="Texture2D" uid="uid://ce57mjl0agas0" path="res://backrooms.png" id="17_g1rhc"]
+[ext_resource type="Texture2D" uid="uid://bujpkadlb4htq" path="res://hotcat_station.png" id="17_i0cj8"]
 [ext_resource type="AudioStream" uid="uid://c2bhnwb6g1t" path="res://birds singing.wav" id="18_rhxw0"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_de744"]
@@ -109,25 +111,31 @@ autoplay = true
 position = Vector2(2853, 0)
 texture = ExtResource("8_5ki62")
 
+[node name="Adminlevel" type="Sprite2D" parent="." unique_id=2057097834]
+position = Vector2(4900, -95)
+texture = ExtResource("17_i0cj8")
+offset = Vector2(0, 80)
+flip_v = true
+
+[node name="GhettoStreetHouse2" type="Sprite2D" parent="." unique_id=11832791]
+position = Vector2(3800, -95)
+texture = ExtResource("9_qkd0e")
+offset = Vector2(0, -150)
+flip_h = true
+
 [node name="GhettoStreetHouse" type="Sprite2D" parent="." unique_id=609445090]
 position = Vector2(900, -95)
 texture = ExtResource("9_qkd0e")
 offset = Vector2(0, -150)
 
-[node name="GhettoStreetHouse2" type="Sprite2D" parent="." unique_id=2134074990]
-position = Vector2(1800, -95)
-texture = ExtResource("9_qkd0e")
-offset = Vector2(0, -150)
-
-[node name="GhettoStreetHouse3" type="Sprite2D" parent="." unique_id=1195669502]
+[node name="Backrooms" type="Sprite2D" parent="." unique_id=282000652]
 position = Vector2(2700, -95)
-texture = ExtResource("9_qkd0e")
+texture = ExtResource("17_g1rhc")
 offset = Vector2(0, -150)
 
-[node name="GhettoStreetHouse4" type="Sprite2D" parent="." unique_id=1423693908]
-visible = false
-position = Vector2(3700, -95)
-texture = ExtResource("9_qkd0e")
+[node name="HotcatStation" type="Sprite2D" parent="." unique_id=895868643]
+position = Vector2(1800, -95)
+texture = ExtResource("17_i0cj8")
 offset = Vector2(0, -150)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1215609575]
