@@ -51,7 +51,7 @@ func _physics_process(delta):
 
 func activate_shield():
 	is_attacking = true
-	shield_hp = 30.0
+	shield_hp = 20.0
 	shield_icon.visible = true
 	print("BinLad shields!")
 	is_attacking = false
