@@ -17,7 +17,6 @@ func _process(_delta):
 	
 	var t = Time.get_ticks_msec() * 0.001 * beat_speed
 	
-	# Two bumps per beat — big bump then small bump (tuk-tuk)
 	var beat1 = max(0.0, sin(t * 3.14159)) 
 	var beat2 = max(0.0, sin(t * 3.14159 - 1.2)) * 0.5
 	var pulse = (beat1 + beat2) * pulse_amount

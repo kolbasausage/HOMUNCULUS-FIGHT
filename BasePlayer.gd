@@ -20,7 +20,7 @@ var original_scale: Vector2
 
 var infected = false
 var infection_timer = 0.0
-var infection_damage = 5.0  # per second
+var infection_damage = 5.0 
 
 
 func _place_marker(marker, cost):
@@ -105,7 +105,7 @@ func _on_death():
 	is_attacking = true
 
 	var s = AudioStreamPlayer.new()
-	s.stream = preload("res://death animation.wav")   # ← your sound here
+	s.stream = preload("res://death animation.wav") 
 	add_child(s)
 	s.play(0.6)
 

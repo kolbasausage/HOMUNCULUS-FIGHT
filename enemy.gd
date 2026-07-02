@@ -47,7 +47,7 @@ func _physics_process(_delta):
 
 func random_attack_loop() -> void:
 	while true:
-		var wait_time = randf_range(0.5, 2.5)  # faster than before
+		var wait_time = randf_range(0.5, 2.5) 
 		await get_tree().create_timer(wait_time, false).timeout
 		if get_tree().paused or is_dead:
 			return

@@ -21,9 +21,9 @@ func take_damage(amount: float):
 	label.add_theme_font_size_override("font_size", 48)
 	label.add_theme_color_override("font_color", Color.RED)
 	label.add_theme_font_override("font", preload("res://Super Pandora.ttf"))
-	get_tree().root.add_child(label)  # add first
+	get_tree().root.add_child(label) 
 
-	var tween = label.create_tween()  # THEN create tween
+	var tween = label.create_tween() 
 	tween.tween_property(label, "position:y", label.position.y - 80, 1) 
 	tween.parallel().tween_property(label, "modulate:a", 0.0, 1)
 	tween.tween_callback(label.queue_free)
