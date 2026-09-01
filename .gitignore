@@ -19,3 +19,6 @@ export_credentials.cfg
 data_*/
 mono_crash.*.json
 >>>>>>> fdfdcec2edfc41390e530bb7196d5adb3a88b986
+
+Builds/
+.godot/

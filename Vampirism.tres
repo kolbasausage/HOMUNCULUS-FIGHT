@@ -9,5 +9,5 @@ mutation_name = "Vampirism"
 description = "Steal some blood!"
 mutation_icon = ExtResource("1_gw8b3")
 hp_multiplier = 0.8
-vampiric_heal = 10.0
+vampiric_heal = 8.0
 metadata/_custom_type_script = "uid://u4barkvj3v6x"

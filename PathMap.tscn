@@ -20,6 +20,11 @@
 [ext_resource type="Texture2D" uid="uid://ce57mjl0agas0" path="res://backrooms.png" id="17_g1rhc"]
 [ext_resource type="Texture2D" uid="uid://bujpkadlb4htq" path="res://hotcat_station.png" id="17_i0cj8"]
 [ext_resource type="AudioStream" uid="uid://c2bhnwb6g1t" path="res://birds singing.wav" id="18_rhxw0"]
+[ext_resource type="Texture2D" uid="uid://b7gf1kq337axi" path="res://gas.png" id="20_ytd7m"]
+[ext_resource type="Texture2D" uid="uid://cm4e8t1v4a3q2" path="res://Gas pressed.png" id="21_6bsyr"]
+[ext_resource type="Texture2D" uid="uid://vhshs2ko2jbc" path="res://brake.png" id="22_h6grb"]
+[ext_resource type="Texture2D" uid="uid://b8rkgp232jxs6" path="res://Brake pressed.png" id="23_l6snf"]
+[ext_resource type="AudioStream" uid="uid://d4a7b3b033yh7" path="res://Jump.wav" id="27_l6snf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_de744"]
 animations = [{
@@ -78,6 +83,8 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ytd7m"]
+
 [sub_resource type="FontVariation" id="FontVariation_qkd0e"]
 base_font = ExtResource("16_de744")
 variation_embolden = -0.65
@@ -111,11 +118,38 @@ autoplay = true
 position = Vector2(2853, 0)
 texture = ExtResource("8_5ki62")
 
-[node name="Adminlevel" type="Sprite2D" parent="." unique_id=2057097834]
-position = Vector2(4900, -95)
+[node name="GhettoStreetHouse" type="Sprite2D" parent="." unique_id=609445090]
+position = Vector2(900, -95)
+texture = ExtResource("9_qkd0e")
+offset = Vector2(0, -150)
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="GhettoStreetHouse" unique_id=1080427169]
+position = Vector2(6, -119)
+scale = Vector2(17.598726, -21.889786)
+shape = SubResource("RectangleShape2D_ytd7m")
+action = "ui_accept"
+
+[node name="HotcatStation" type="Sprite2D" parent="." unique_id=895868643]
+position = Vector2(1800, -95)
 texture = ExtResource("17_i0cj8")
-offset = Vector2(0, 80)
-flip_v = true
+offset = Vector2(0, -150)
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="HotcatStation" unique_id=1891250735]
+position = Vector2(6, -119)
+scale = Vector2(17.598726, -21.889786)
+shape = SubResource("RectangleShape2D_ytd7m")
+action = "ui_accept"
+
+[node name="Backrooms" type="Sprite2D" parent="." unique_id=282000652]
+position = Vector2(2700, -95)
+texture = ExtResource("17_g1rhc")
+offset = Vector2(0, -150)
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="Backrooms" unique_id=1213106737]
+position = Vector2(6, -119)
+scale = Vector2(17.598726, -21.889786)
+shape = SubResource("RectangleShape2D_ytd7m")
+action = "ui_accept"
 
 [node name="GhettoStreetHouse2" type="Sprite2D" parent="." unique_id=11832791]
 position = Vector2(3800, -95)
@@ -123,20 +157,23 @@ texture = ExtResource("9_qkd0e")
 offset = Vector2(0, -150)
 flip_h = true
 
-[node name="GhettoStreetHouse" type="Sprite2D" parent="." unique_id=609445090]
-position = Vector2(900, -95)
-texture = ExtResource("9_qkd0e")
-offset = Vector2(0, -150)
+[node name="TouchScreenButton" type="TouchScreenButton" parent="GhettoStreetHouse2" unique_id=730465785]
+position = Vector2(6, -119)
+scale = Vector2(17.598726, -21.889786)
+shape = SubResource("RectangleShape2D_ytd7m")
+action = "ui_accept"
 
-[node name="Backrooms" type="Sprite2D" parent="." unique_id=282000652]
-position = Vector2(2700, -95)
-texture = ExtResource("17_g1rhc")
-offset = Vector2(0, -150)
-
-[node name="HotcatStation" type="Sprite2D" parent="." unique_id=895868643]
-position = Vector2(1800, -95)
+[node name="Adminlevel" type="Sprite2D" parent="." unique_id=2057097834]
+position = Vector2(4900, -95)
 texture = ExtResource("17_i0cj8")
-offset = Vector2(0, -150)
+offset = Vector2(0, 80)
+flip_v = true
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="Adminlevel" unique_id=1494242944]
+position = Vector2(6, -119)
+scale = Vector2(17.598726, -21.889786)
+shape = SubResource("RectangleShape2D_ytd7m")
+action = "ui_accept"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1215609575]
 
@@ -161,9 +198,27 @@ theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Gas" type="TouchScreenButton" parent="CanvasLayer" unique_id=1646377390]
+position = Vector2(1510, 668)
+scale = Vector2(0.8, 0.8)
+texture_normal = ExtResource("20_ytd7m")
+texture_pressed = ExtResource("21_6bsyr")
+action = "ui_right"
+
+[node name="Brake" type="TouchScreenButton" parent="CanvasLayer" unique_id=840982456]
+position = Vector2(3.9999998, 663.99994)
+scale = Vector2(0.8, 0.8)
+texture_normal = ExtResource("22_h6grb")
+texture_pressed = ExtResource("23_l6snf")
+action = "ui_left"
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=967676111]
 
 [node name="Streets" type="AudioStreamPlayer" parent="." unique_id=1365535928]
 stream = ExtResource("18_rhxw0")
 volume_db = -20.0
 autoplay = true
+
+[node name="Enter" type="AudioStreamPlayer" parent="." unique_id=71382329]
+stream = ExtResource("27_l6snf")
+mix_target = 2

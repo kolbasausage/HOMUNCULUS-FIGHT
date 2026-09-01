@@ -49,14 +49,11 @@ func _input(event):
 		else:
 			fade_and_exit()
 
-func _process(delta):
+func _process(_delta):
 	if not audio.playing and not is_typing:
 		fade_and_exit()
-
-	if not is_typing:
-		skip_alpha = min(skip_alpha + delta * fade_speed, 1.0)
-	else:
-		skip_alpha = max(skip_alpha - delta * fade_speed, 0.0)
+	skip_alpha = abs(sin(Time.get_ticks_msec() * 0.002))
+	skip_label.modulate.a = skip_alpha
 
 	skip_label.modulate.a = skip_alpha
 

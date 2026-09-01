@@ -47,8 +47,8 @@
 [ext_resource type="Texture2D" uid="uid://w0uvskc71pmo" path="res://ghetto_loop0041.png" id="45_77pn7"]
 [ext_resource type="Texture2D" uid="uid://c6t2oxw2qjnl7" path="res://ghetto_loop0042.png" id="46_ho48n"]
 [ext_resource type="PackedScene" uid="uid://dlrejyj4f0gun" path="res://Jimmy.tscn" id="47_ckbl2"]
-[ext_resource type="PackedScene" uid="uid://dxl88r5v7hnly" path="res://Minions.tscn" id="48_s54dc"]
-[ext_resource type="AudioStream" uid="uid://d1tkq5wlv2kvr" path="res://We are many you are one.wav" id="49_lvkj8"]
+[ext_resource type="PackedScene" uid="uid://dxl88r5v7hnly" path="res://Minions.tscn" id="48_iovfa"]
+[ext_resource type="AudioStream" uid="uid://d1tkq5wlv2kvr" path="res://We are many you are one.wav" id="49_dy1hc"]
 [ext_resource type="Texture2D" uid="uid://cjs76nxme803g" path="res://2411557aeedd50cd04de5f752dedd06a--blacker-than-black-a-color.jpg" id="50_7dhr0"]
 [ext_resource type="Texture2D" uid="uid://vxmfu7ygykow" path="res://Energy_flow.png" id="51_c8hkb"]
 [ext_resource type="Script" uid="uid://3tu3a28y7ijm" path="res://energy.gd" id="52_yx7eo"]
@@ -242,6 +242,8 @@ load_path = "res://.godot/imported/Energy_marker.png-fd416e5a66ec922a6d3a89271d5
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1xjr1"]
 load_path = "res://.godot/imported/Energy_marker.png-fd416e5a66ec922a6d3a89271d52fb67.ctex"
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_lvkj8"]
+
 [node name="Node2D" type="Node2D" unique_id=382972580]
 script = ExtResource("1_lvkj8")
 
@@ -275,6 +277,7 @@ offset_left = 760.0
 offset_top = 400.0
 offset_right = 1160.0
 offset_bottom = 500.0
+theme_override_fonts/font = ExtResource("3_xqtho")
 theme_override_font_sizes/font_size = 64
 horizontal_alignment = 1
 
@@ -299,11 +302,11 @@ script = SubResource("GDScript_5ki62")
 [node name="Player" parent="." unique_id=1213359912 node_paths=PackedStringArray("enemy_hp_bar") instance=ExtResource("47_ckbl2")]
 enemy_hp_bar = NodePath("../EnemyHPBar")
 
-[node name="Enemy" parent="." unique_id=1723246231 node_paths=PackedStringArray("player_hp_bar") instance=ExtResource("48_s54dc")]
+[node name="Enemy" parent="." unique_id=1723246231 node_paths=PackedStringArray("player_hp_bar") instance=ExtResource("48_iovfa")]
 player_hp_bar = NodePath("../PlayerHPBar")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Enemy" unique_id=1481186006]
-stream = ExtResource("49_lvkj8")
+stream = ExtResource("49_dy1hc")
 volume_db = 5.0
 autoplay = true
 
@@ -521,5 +524,23 @@ position = Vector2(410, 924)
 
 [node name="EnemyMutationIcon" type="Sprite2D" parent="." unique_id=1441163307]
 position = Vector2(1500, 924)
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="." unique_id=1294521287]
+position = Vector2(327, 595)
+scale = Vector2(6.924651, 6.924651)
+shape = SubResource("CircleShape2D_lvkj8")
+action = "Ability_1"
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="." unique_id=877417649]
+position = Vector2(331, 436)
+scale = Vector2(7.044656, 7.044656)
+shape = SubResource("CircleShape2D_lvkj8")
+action = "Ability_2"
+
+[node name="TouchScreenButton3" type="TouchScreenButton" parent="." unique_id=2085873790]
+position = Vector2(332, 266)
+scale = Vector2(6.991151, 6.991151)
+shape = SubResource("CircleShape2D_lvkj8")
+action = "Ability_3"
 
 [connection signal="pressed" from="CanvasLayer/ResultScreen/Panel/PathMapButton" to="CanvasLayer/ResultScreen" method="_on_path_map_pressed"]

@@ -18,6 +18,8 @@
 [ext_resource type="Texture2D" uid="uid://de1gouuorga4p" path="res://universal_death_animation0006.png" id="16_254hc"]
 [ext_resource type="Texture2D" uid="uid://bggafqcx1dydq" path="res://universal_death_animation0007.png" id="17_vekrd"]
 [ext_resource type="Texture2D" uid="uid://cexev5gdt8ulv" path="res://universal_death_animation0008.png" id="18_worhc"]
+[ext_resource type="AudioStream" uid="uid://dof3cnb41o2s" path="res://Heal.wav" id="19_qa8dg"]
+[ext_resource type="AudioStream" uid="uid://dpjyst0oow5mi" path="res://Stun2.wav" id="20_b6qxi"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pknka"]
 animations = [{
@@ -88,3 +90,10 @@ character_data = ExtResource("2_qa8dg")
 position = Vector2(0, 1)
 sprite_frames = SubResource("SpriteFrames_pknka")
 animation = &"Idle_Jimmy"
+
+[node name="Heal" type="AudioStreamPlayer" parent="." unique_id=1599252194]
+stream = ExtResource("19_qa8dg")
+
+[node name="Stun" type="AudioStreamPlayer" parent="." unique_id=1770950787]
+stream = ExtResource("20_b6qxi")
+volume_db = 5.0

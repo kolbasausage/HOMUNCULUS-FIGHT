@@ -19,6 +19,8 @@
 [ext_resource type="Texture2D" uid="uid://bou7d0s6ucq5a" path="res://Idle_BinLad0004.png" id="16_3a2jr"]
 [ext_resource type="Texture2D" uid="uid://c6istgj00ui6p" path="res://Idle_BinLad0005.png" id="17_j07j0"]
 [ext_resource type="Texture2D" uid="uid://qbvsheufgjmc" path="res://Idle_BinLad0006.png" id="18_f5y14"]
+[ext_resource type="AudioStream" uid="uid://dneeg2hf0xj2p" path="res://Shield2.wav" id="20_1fl6y"]
+[ext_resource type="AudioStream" uid="uid://c6pnr4012mbj6" path="res://ShieldBreak.wav" id="21_7rvxp"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lnbl2"]
 animations = [{
@@ -95,3 +97,9 @@ flip_h = true
 visible = false
 position = Vector2(-1, 117)
 texture = ExtResource("3_61dmi")
+
+[node name="ShieldActivate" type="AudioStreamPlayer" parent="." unique_id=67593059]
+stream = ExtResource("20_1fl6y")
+
+[node name="ShieldBreak" type="AudioStreamPlayer" parent="." unique_id=1016121274]
+stream = ExtResource("21_7rvxp")

@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://cexev5gdt8ulv" path="res://universal_death_animation0008.png" id="18_r5row"]
 [ext_resource type="Texture2D" uid="uid://cpexulov8iqx4" path="res://heal cross.png" id="19_dkc25"]
 [ext_resource type="Script" uid="uid://chhpnglbutdxa" path="res://Minions.gd" id="19_ebcr6"]
+[ext_resource type="AudioStream" uid="uid://bqum2hp2u7jpy" path="res://EnemyHeal.wav" id="20_ebcr6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dqyhx"]
 animations = [{
@@ -94,3 +95,6 @@ flip_h = true
 visible = false
 position = Vector2(-1, 36)
 texture = ExtResource("19_dkc25")
+
+[node name="EnemyHeal" type="AudioStreamPlayer" parent="." unique_id=545925437]
+stream = ExtResource("20_ebcr6")

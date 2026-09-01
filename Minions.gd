@@ -45,6 +45,7 @@ func _physics_process(delta):
 
 func activate_heal():
 	is_attacking = true
+	$EnemyHeal.play()
 	show_ability_icon(enemy_data.ability2_icon)
 	get_parent().get_node("EnemyHPBar").heal(enemy_data.heavy_attack_damage)  # reuse heavy damage as heal amount
 	print("Minion heals!")

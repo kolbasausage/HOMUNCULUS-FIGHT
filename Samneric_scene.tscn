@@ -182,6 +182,8 @@ load_path = "res://.godot/imported/Energy_marker.png-fd416e5a66ec922a6d3a89271d5
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1xjr1"]
 load_path = "res://.godot/imported/Energy_marker.png-fd416e5a66ec922a6d3a89271d52fb67.ctex"
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_y05je"]
+
 [node name="Node2D" type="Node2D" unique_id=382972580]
 script = ExtResource("1_63wtv")
 
@@ -215,6 +217,7 @@ offset_left = 760.0
 offset_top = 400.0
 offset_right = 1160.0
 offset_bottom = 500.0
+theme_override_fonts/font = ExtResource("3_y05je")
 theme_override_font_sizes/font_size = 64
 horizontal_alignment = 1
 
@@ -458,5 +461,23 @@ position = Vector2(0, 1)
 stream = ExtResource("59_ihwqe")
 volume_db = 10.0
 autoplay = true
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="." unique_id=397150742]
+position = Vector2(327, 595)
+scale = Vector2(6.924651, 6.924651)
+shape = SubResource("CircleShape2D_y05je")
+action = "Ability_1"
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="." unique_id=1171328953]
+position = Vector2(331, 436)
+scale = Vector2(7.044656, 7.044656)
+shape = SubResource("CircleShape2D_y05je")
+action = "Ability_2"
+
+[node name="TouchScreenButton3" type="TouchScreenButton" parent="." unique_id=211878677]
+position = Vector2(332, 266)
+scale = Vector2(6.991151, 6.991151)
+shape = SubResource("CircleShape2D_y05je")
+action = "Ability_3"
 
 [connection signal="pressed" from="CanvasLayer/ResultScreen/Panel/PathMapButton" to="CanvasLayer/ResultScreen" method="_on_path_map_pressed"]

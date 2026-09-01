@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://lrkqy0hf4tim"]
 
+[ext_resource type="Script" uid="uid://drxhcntlqbd7y" path="res://main_menu.gd" id="1_ggy4t"]
 [ext_resource type="Texture2D" uid="uid://cifn46y3rag4c" path="res://play_button.png" id="2_8kasr"]
 [ext_resource type="Script" uid="uid://cinywwqkhq00d" path="res://Start.gd" id="2_x6lt7"]
+[ext_resource type="AudioStream" uid="uid://c66h08frmqtv2" path="res://main menu click.wav" id="3_7hqmf"]
 [ext_resource type="Texture2D" uid="uid://1psivmongbeg" path="res://main_menu0000.png" id="4_vvwtf"]
 [ext_resource type="Texture2D" uid="uid://gtyvkh4iyidl" path="res://main_menu0001.png" id="5_7hqmf"]
 [ext_resource type="Texture2D" uid="uid://bdr6ol62ojsaf" path="res://main_menu0002.png" id="6_ggy4t"]
@@ -100,6 +102,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ggy4t")
 
 [node name="Button" type="Button" parent="." unique_id=1218096621]
 top_level = true
@@ -120,6 +123,9 @@ action_mode = 0
 icon = ExtResource("2_8kasr")
 script = ExtResource("2_x6lt7")
 
+[node name="Click" type="AudioStreamPlayer" parent="Button" unique_id=1755079039]
+stream = ExtResource("3_7hqmf")
+
 [node name="Background" type="AnimatedSprite2D" parent="." unique_id=537076774]
 position = Vector2(960, 540)
 sprite_frames = SubResource("SpriteFrames_lxhqp")
@@ -127,8 +133,7 @@ animation = &"Background"
 frame_progress = 0.6593506
 script = ExtResource("23_8kasr")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=991863697]
+[node name="phat beat" type="AudioStreamPlayer" parent="." unique_id=991863697]
 stream = ExtResource("24_vvwtf")
-autoplay = true
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

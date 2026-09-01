@@ -16,6 +16,7 @@ func ability_1():
 
 func ability_2():
 	if energy_bar.has_enough(character_data.heal_cost):
+		$Heal.play()
 		show_icon(preload("res://heal cross.png"), global_position + Vector2(0, 0))
 		energy_bar.energy -= character_data.heal_cost
 		var heal_amount = get_parent().get_node("PlayerHPBar").max_value * (character_data.heal_amount / 100.0)
@@ -37,6 +38,7 @@ func ability_3():
 		print("ULTIMATE HIT ENEMY =", enemy)
 
 		enemy.apply_stun(4)
+		$Stun.play()
 		enemy.take_hit(damage)
 
 		squish()

@@ -6,7 +6,7 @@ extends Node2D
 @onready var streets = $Streets
 var bus_speed = 400.0
 var stop_positions = [900, 1800, 2700, 3800, 4900]
-var stop_names = ["⚔️ Angry Sam", "⚔️ BinLad", "⚔️ Samneric", "⚔️ Minions", "⚔️ Who is this?"]
+var stop_names = [" Angry Sam", " BinLad", " Samneric", " Minions", " Who is this?"]
 var stop_scenes = ["res://Fight_scene.tscn", "res://BinLad_scene.tscn", "res://Samneric_scene.tscn", "res://Minions_scene.tscn", "res://Podun_scene.tscn"]
 var proximity = 100.0
 var current_stop_index = -1
@@ -37,16 +37,26 @@ func _animate_building(building):
 
 func _process(delta):
 	if Input.is_action_pressed("ui_right"):
+
 		bus.position.x += bus_speed * delta
 		$Bus/AnimatedSprite2D.play("Moving_Bus")
 		movement_label.visible = false
-	elif Input.is_action_pressed("ui_left"):
+		$CanvasLayer/Gas.texture_normal = preload("res://Gas pressed.png")
+	else:
+		$CanvasLayer/Gas.texture_normal = preload("res://gas.png")
+		
+	if Input.is_action_pressed("ui_left"):
+
 		bus.position.x -= bus_speed * delta
 		$Bus/AnimatedSprite2D.play("Moving_Bus")
 		movement_label.visible = false
+		$CanvasLayer/Brake.texture_normal = preload("res://Brake pressed.png")
 	else:
+		$CanvasLayer/Brake.texture_normal = preload("res://brake.png")
+		
+	if not Input.is_action_pressed("ui_right") and not Input.is_action_pressed("ui_left"):
 		$Bus/AnimatedSprite2D.play("Idle_Bus")
-
+		
 	bus.position.x = clamp(bus.position.x, 100, 5280)
 
 	var near_stop = false
@@ -55,12 +65,14 @@ func _process(delta):
 			near_stop = true
 			current_stop_index = i
 			if i < levels_unlocked:
-				prompt_label.text = "Press SPACE to enter - " + stop_names[i]
+				prompt_label.text = "Press on Building or SPACE to enter - " + stop_names[i]
 				if Input.is_action_just_pressed("ui_accept"):
+					$Enter.play()
+					await get_tree().create_timer(0.4).timeout
 					GameState.bus_position_x = bus.position.x
 					GameState.next_fight_scene = stop_scenes[i]
 					get_tree().change_scene_to_file("res://MutationReveal.tscn")
 			else:
-				prompt_label.text = "🚧 Road works - Beat previous level first!"
+				prompt_label.text = "Road works - Beat previous level first!"
 
 	prompt_label.visible = near_stop

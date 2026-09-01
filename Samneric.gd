@@ -51,16 +51,19 @@ func _physics_process(delta):
 
 func activate_shield():
 	is_attacking = true
-	shield_hp = 20.0
+	shield_hp = 10.0
 	shield_icon.visible = true
-	print("BinLad shields!")
+	$ShieldActivate.play()
+	print("Samneric shields!")
 	is_attacking = false
+	
 
 func take_hit(amount: float):
 	super.take_hit(amount)
-	if shield_hp <= 0:
+	if shield_hp <= 0 and shield_icon.visible:
 		shield_icon.visible = false
-
+		$ShieldBreak.play()
+		
 func attack():
 	is_attacking = true
 	anim_enemy.play("Attack_Samneric")

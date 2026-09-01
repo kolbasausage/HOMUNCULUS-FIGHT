@@ -26,6 +26,8 @@
 [ext_resource type="Texture2D" uid="uid://de1gouuorga4p" path="res://universal_death_animation0006.png" id="23_h75i0"]
 [ext_resource type="Texture2D" uid="uid://bggafqcx1dydq" path="res://universal_death_animation0007.png" id="24_p4iwe"]
 [ext_resource type="Texture2D" uid="uid://bgru4i6yvdx2g" path="res://shield.png" id="26_560k3"]
+[ext_resource type="AudioStream" uid="uid://dneeg2hf0xj2p" path="res://Shield2.wav" id="27_hsdmk"]
+[ext_resource type="AudioStream" uid="uid://c6pnr4012mbj6" path="res://ShieldBreak.wav" id="28_5asep"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hsdmk"]
 animations = [{
@@ -128,3 +130,9 @@ flip_h = true
 visible = false
 position = Vector2(-1, 36)
 texture = ExtResource("26_560k3")
+
+[node name="ShieldActivate" type="AudioStreamPlayer" parent="." unique_id=161065160]
+stream = ExtResource("27_hsdmk")
+
+[node name="ShieldBreak" type="AudioStreamPlayer" parent="." unique_id=663742769]
+stream = ExtResource("28_5asep")
