@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+[ext_resource path="res://AbilityData.gd" type="Script" id=1]
+[resource]
+script = ExtResource(1)
+ability_name = "Jimmy Basic"
+cost = 25.0
+damage = 20.0
+animation = "Attack"
+target = "enemy"
+ultimate_charge = 1

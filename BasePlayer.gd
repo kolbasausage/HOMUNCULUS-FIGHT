@@ -1,4 +1,4 @@
-extends Sprite2D
+extends BaseCharacter
 class_name BasePlayer
 
 
@@ -40,14 +40,9 @@ func _place_marker(marker, cost):
 	marker.global_position.y = BAR_BOTTOM_Y - ((BAR_BOTTOM_Y - BAR_TOP_Y) * ratio)
 
 func _ready():
-	original_scale = scale
+	# call base ready to set up effect and ability components
+	BaseCharacter._ready(self)
 	_place_markers()
-	# ensure an EffectManager child exists so status effects can be applied per-character
-	if not has_node("EffectManager"):
-		var em = preload("res://EffectManager.gd").new()
-		em.name = "EffectManager"
-		add_child(em)
-	effect_manager = get_node("EffectManager")
 	$"../PlayerHPBar".player_died.connect(_on_death)
 
 func _place_markers():

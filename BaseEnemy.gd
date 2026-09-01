@@ -1,4 +1,4 @@
-extends Sprite2D
+extends BaseCharacter
 class_name BaseEnemy
 
 @onready var energy_bar = $"../EnemyEnergyBar"
@@ -17,15 +17,11 @@ var effect_manager = null
 
 
 func _ready():
+	# call base ready to set up effect and ability components
+	BaseCharacter._ready(self)
 	randomize()
 	original_scale = scale
 	_place_emarkers()
-	# ensure an EffectManager child exists for this enemy
-	if not has_node("EffectManager"):
-		var em = preload("res://EffectManager.gd").new()
-		em.name = "EffectManager"
-		add_child(em)
-	effect_manager = get_node("EffectManager")
 	random_attack_loop()
 	$"../EnemyHPBar".enemy_died.connect(_on_death)
 	call_deferred("_store_home")

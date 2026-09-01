@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+[ext_resource path="res://AbilityData.gd" type="Script" id=1]
+[resource]
+script = ExtResource(1)
+ability_name = "Jimmy Ultimate"
+cost = 75.0
+# Massive damage applied when required_charge reached
+required_charge = 3
+damage = 150.0
+animation = "Ultimate"
+target = "enemy"
