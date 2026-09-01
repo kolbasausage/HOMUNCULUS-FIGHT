@@ -13,12 +13,19 @@ var home_position: Vector2
 var is_stunned = false
 var stun_timer = 0.0
 var stun_icon = null
+var effect_manager = null
 
 
 func _ready():
 	randomize()
 	original_scale = scale
 	_place_emarkers()
+	# ensure an EffectManager child exists for this enemy
+	if not has_node("EffectManager"):
+		var em = preload("res://EffectManager.gd").new()
+		em.name = "EffectManager"
+		add_child(em)
+	effect_manager = get_node("EffectManager")
 	random_attack_loop()
 	$"../EnemyHPBar".enemy_died.connect(_on_death)
 	call_deferred("_store_home")
@@ -77,6 +84,10 @@ func _on_death():
 func _physics_process(delta):
 	if is_dead:
 		return
+
+	# tick status effects
+	if effect_manager:
+		effect_manager.tick(delta)
 
 	if is_stunned:
 		stun_timer -= delta

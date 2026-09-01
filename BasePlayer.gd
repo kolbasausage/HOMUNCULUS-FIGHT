@@ -11,6 +11,7 @@ class_name BasePlayer
 @onready var marker3 = $"../PlayerEnergyBarCover/PlayerEnergyMarker3"
 
 var mutation: MutationData = null
+var effect_manager = null
 var BAR_TOP_Y = 80.0
 var BAR_BOTTOM_Y = 751.0
 var BAR_CENTER_X = 135.0
@@ -22,6 +23,16 @@ var infected = false
 var infection_timer = 0.0
 var infection_damage = 5.0 
 
+func apply_effect(effect_data):
+	if effect_manager:
+		effect_manager.apply_effect(effect_data)
+
+func get_damage_multiplier():
+	if effect_manager:
+		return effect_manager.damage_multiplier()
+	return 1.0
+
+
 
 func _place_marker(marker, cost):
 	var ratio = float(cost) / 100.0
@@ -31,6 +42,12 @@ func _place_marker(marker, cost):
 func _ready():
 	original_scale = scale
 	_place_markers()
+	# ensure an EffectManager child exists so status effects can be applied per-character
+	if not has_node("EffectManager"):
+		var em = preload("res://EffectManager.gd").new()
+		em.name = "EffectManager"
+		add_child(em)
+	effect_manager = get_node("EffectManager")
 	$"../PlayerHPBar".player_died.connect(_on_death)
 
 func _place_markers():
@@ -53,6 +70,9 @@ func on_hit():
 func _physics_process(_delta):
 	if is_dead:
 		return
+	# tick status effects first
+	if effect_manager:
+		effect_manager.tick(_delta)
 	# HP regen/drain from mutation
 	if mutation:
 		if mutation.hp_regen > 0:
