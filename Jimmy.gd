@@ -1,5 +1,15 @@
 extends BasePlayer
 
+func _ready():
+	._ready()
+	# Demo: apply Poison to the enemy after 1s so effects can be tested quickly
+	get_tree().create_timer(1.0).timeout.connect(func():
+		var enemy = get_parent().get_node("Enemy")
+		if enemy:
+			enemy.apply_effect(preload("res://effects/Poison.tres"))
+			print("Applied Poison to enemy for testing")
+	)
+
 func ability_1():
 	if energy_bar.has_enough(character_data.basic_attack_cost):
 		anim_player.play(character_data.attack_anim)
@@ -37,6 +47,8 @@ func ability_3():
 		print("ULTIMATE HIT ENEMY =", enemy)
 
 		enemy.apply_stun(4)
+		# also apply Stun effect resource for any effect-system driven logic
+		enemy.apply_effect(preload("res://effects/Stun.tres"))
 		enemy.take_hit(damage)
 
 		squish()

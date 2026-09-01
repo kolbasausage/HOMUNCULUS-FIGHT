@@ -48,6 +48,15 @@ func apply_mutation(m: MutationData):
 	hp_bar.value = hp_bar.max_value
 	energy_bar.energy_speed *= m.energy_regen_multiplier
 
+func apply_effect(effect_data):
+	if effect_manager:
+		effect_manager.apply_effect(effect_data)
+
+func get_damage_multiplier():
+	if effect_manager:
+		return effect_manager.damage_multiplier()
+	return 1.0
+
 var original_scale: Vector2
 var is_attacking := false
 var is_dead = false
