@@ -13,12 +13,11 @@ var home_position: Vector2
 var is_stunned = false
 var stun_timer = 0.0
 var stun_icon = null
-var effect_manager = null
 
 
 func _ready():
-	# call base ready to set up effect and ability components
-	BaseCharacter._ready(self)
+	# call base setup to set up effect and ability components
+	setup_character()
 	randomize()
 	original_scale = scale
 	_place_emarkers()
@@ -33,8 +32,6 @@ func attack_move():
 	position += Vector2(-300, 0)
 	await get_tree().create_timer(0.2).timeout
 	position = home_position
-
-var mutation: MutationData = null
 
 func apply_mutation(m: MutationData):
 	mutation = m

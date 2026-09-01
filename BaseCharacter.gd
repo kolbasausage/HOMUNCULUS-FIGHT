@@ -14,7 +14,7 @@ var original_scale: Vector2
 @export var ultimate_charge: int = 0
 @export var ultimate_required: int = 3
 
-func _ready():
+func setup_character():
 	original_scale = scale
 	# ensure per-character EffectManager
 	if not has_node("EffectManager"):
@@ -28,6 +28,9 @@ func _ready():
 		ae.name = "AbilityExecutor"
 		add_child(ae)
 	ability_executor = get_node("AbilityExecutor")
+
+func _ready():
+	setup_character()
 
 func _physics_process(delta):
 	if is_dead:

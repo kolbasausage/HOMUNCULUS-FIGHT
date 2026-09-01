@@ -10,14 +10,9 @@ class_name BasePlayer
 @onready var marker2 = $"../PlayerEnergyBarCover/PlayerEnergyMarker2"
 @onready var marker3 = $"../PlayerEnergyBarCover/PlayerEnergyMarker3"
 
-var mutation: MutationData = null
-var effect_manager = null
 var BAR_TOP_Y = 80.0
 var BAR_BOTTOM_Y = 751.0
 var BAR_CENTER_X = 135.0
-var is_dead = false
-var is_attacking = false
-var original_scale: Vector2
 
 var infected = false
 var infection_timer = 0.0
@@ -40,8 +35,8 @@ func _place_marker(marker, cost):
 	marker.global_position.y = BAR_BOTTOM_Y - ((BAR_BOTTOM_Y - BAR_TOP_Y) * ratio)
 
 func _ready():
-	# call base ready to set up effect and ability components
-	BaseCharacter._ready(self)
+	# call base setup to set up effect and ability components
+	setup_character()
 	_place_markers()
 	$"../PlayerHPBar".player_died.connect(_on_death)
 

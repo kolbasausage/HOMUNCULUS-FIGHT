@@ -10,4 +10,4 @@ func init(effect_data: EffectData) -> void:
 
 func is_alive() -> bool:
 	# permanent effects (duration == 0) are considered alive
-	return data == null ? false : (data.duration == 0.0 or remaining > 0.0)
+	return data != null and (data.duration == 0.0 or remaining > 0.0)
