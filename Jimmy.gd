@@ -1,7 +1,8 @@
 extends BasePlayer
 
 func _ready():
-	._ready()
+	# call base class _ready to ensure EffectManager is created
+	BasePlayer._ready(self)
 	# Demo: apply Poison to the enemy after 1s so effects can be tested quickly
 	get_tree().create_timer(1.0).timeout.connect(func():
 		var enemy = get_parent().get_node("Enemy")
